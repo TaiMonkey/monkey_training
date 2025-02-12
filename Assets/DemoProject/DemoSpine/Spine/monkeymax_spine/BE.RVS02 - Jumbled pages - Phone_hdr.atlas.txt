@@ -1,0 +1,431 @@
+
+BE.RVS02 - Jumbled pages - Phone_hdr.png
+size: 2045,1508
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ban_chan
+  rotate: false
+  xy: 2, 1304
+  size: 183, 99
+  orig: 183, 99
+  offset: 0, 0
+  index: -1
+Bong_mat
+  rotate: true
+  xy: 1334, 1455
+  size: 51, 52
+  orig: 51, 52
+  offset: 0, 0
+  index: -1
+Canh_tay
+  rotate: false
+  xy: 1223, 1354
+  size: 226, 97
+  orig: 226, 97
+  offset: 0, 0
+  index: -1
+Con_nguoi_a
+  rotate: true
+  xy: 597, 1286
+  size: 114, 135
+  orig: 114, 135
+  offset: 0, 0
+  index: -1
+Con_nguoi_b
+  rotate: false
+  xy: 1107, 1460
+  size: 95, 46
+  orig: 95, 46
+  offset: 0, 0
+  index: -1
+Con_nguoi_c
+  rotate: false
+  xy: 2, 1411
+  size: 126, 79
+  orig: 126, 79
+  offset: 0, 0
+  index: -1
+Con_nguoi_d
+  rotate: false
+  xy: 130, 1405
+  size: 126, 79
+  orig: 126, 79
+  offset: 0, 0
+  index: -1
+Con_nguoi_e
+  rotate: true
+  xy: 1795, 1324
+  size: 102, 119
+  orig: 102, 119
+  offset: 0, 0
+  index: -1
+Con_nguoi_f
+  rotate: true
+  xy: 1204, 1459
+  size: 47, 56
+  orig: 47, 56
+  offset: 0, 0
+  index: -1
+Dau
+  rotate: true
+  xy: 604, 2
+  size: 580, 589
+  orig: 580, 589
+  offset: 0, 0
+  index: -1
+Dui
+  rotate: true
+  xy: 385, 1291
+  size: 109, 210
+  orig: 109, 210
+  offset: 0, 0
+  index: -1
+Duoi
+  rotate: false
+  xy: 605, 1464
+  size: 500, 42
+  orig: 500, 42
+  offset: 0, 0
+  index: -1
+Duoi_1
+  rotate: false
+  xy: 663, 1094
+  size: 420, 153
+  orig: 420, 153
+  offset: 0, 0
+  index: -1
+Duoi_2
+  rotate: false
+  xy: 200, 1135
+  size: 461, 149
+  orig: 461, 149
+  offset: 0, 0
+  index: -1
+Duoi_3
+  rotate: false
+  xy: 951, 1249
+  size: 447, 103
+  orig: 447, 103
+  offset: 0, 0
+  index: -1
+Khoang_bung
+  rotate: true
+  xy: 2, 1141
+  size: 157, 196
+  orig: 157, 196
+  offset: 0, 0
+  index: -1
+Khuon_mat
+  rotate: false
+  xy: 1366, 383
+  size: 498, 441
+  orig: 498, 441
+  offset: 0, 0
+  index: -1
+Khuyu_chan
+  rotate: true
+  xy: 734, 1265
+  size: 109, 215
+  orig: 109, 215
+  offset: 0, 0
+  index: -1
+Khuyu_tay
+  rotate: false
+  xy: 1451, 1351
+  size: 220, 97
+  orig: 220, 97
+  offset: 0, 0
+  index: -1
+Kinh
+  rotate: false
+  xy: 1085, 1016
+  size: 380, 192
+  orig: 380, 192
+  offset: 0, 0
+  index: -1
+Long_may
+  rotate: false
+  xy: 2, 1497
+  size: 84, 9
+  orig: 84, 9
+  offset: 0, 0
+  index: -1
+Ma_a
+  rotate: true
+  xy: 1956, 1392
+  size: 114, 84
+  orig: 114, 84
+  offset: 0, 0
+  index: -1
+Ma_b
+  rotate: false
+  xy: 740, 1381
+  size: 116, 81
+  orig: 116, 81
+  offset: 0, 0
+  index: -1
+Mat
+  rotate: false
+  xy: 1598, 1175
+  size: 156, 156
+  orig: 156, 156
+  offset: 0, 0
+  index: -1
+Mat kinh
+  rotate: false
+  xy: 984, 822
+  size: 380, 192
+  orig: 380, 192
+  offset: 0, 0
+  index: -1
+May bay.Canh 1
+  rotate: true
+  xy: 2, 168
+  size: 500, 600
+  orig: 500, 600
+  offset: 0, 0
+  index: -1
+May bay.Canh 2
+  rotate: true
+  xy: 2, 710
+  size: 240, 292
+  orig: 240, 292
+  offset: 0, 0
+  index: -1
+May bay.Canh quat
+  rotate: true
+  xy: 2, 952
+  size: 140, 980
+  orig: 140, 980
+  offset: 0, 0
+  index: -1
+May bay.Dau canh quat
+  rotate: false
+  xy: 1673, 1333
+  size: 120, 100
+  orig: 120, 100
+  offset: 0, 0
+  index: -1
+May bay.Duoi
+  rotate: true
+  xy: 296, 670
+  size: 280, 340
+  orig: 280, 340
+  offset: 0, 0
+  index: -1
+May bay.Vet 1
+  rotate: true
+  xy: 258, 1402
+  size: 60, 480
+  orig: 60, 480
+  offset: 0, 0
+  index: -1
+May bay.Vet 2
+  rotate: true
+  xy: 144, 1486
+  size: 20, 160
+  orig: 20, 160
+  offset: 0, 0
+  index: -1
+Mi_mat
+  rotate: false
+  xy: 1756, 1065
+  size: 197, 197
+  orig: 197, 197
+  offset: 0, 0
+  index: -1
+Mieng_1
+  rotate: false
+  xy: 393, 1472
+  size: 94, 34
+  orig: 94, 34
+  offset: 0, 0
+  index: -1
+Mieng_10
+  rotate: false
+  xy: 1262, 1457
+  size: 70, 49
+  orig: 70, 49
+  offset: 0, 0
+  index: -1
+Mieng_11
+  rotate: false
+  xy: 1481, 1453
+  size: 91, 53
+  orig: 91, 53
+  offset: 0, 0
+  index: -1
+Mieng_12
+  rotate: false
+  xy: 489, 1472
+  size: 55, 34
+  orig: 55, 34
+  offset: 0, 0
+  index: -1
+Mieng_2
+  rotate: false
+  xy: 1388, 1453
+  size: 91, 53
+  orig: 91, 53
+  offset: 0, 0
+  index: -1
+Mieng_3
+  rotate: false
+  xy: 1754, 1435
+  size: 100, 71
+  orig: 100, 71
+  offset: 0, 0
+  index: -1
+Mieng_4
+  rotate: false
+  xy: 858, 1376
+  size: 120, 86
+  orig: 120, 86
+  offset: 0, 0
+  index: -1
+Mieng_5
+  rotate: false
+  xy: 1400, 1210
+  size: 196, 139
+  orig: 196, 139
+  offset: 0, 0
+  index: -1
+Mieng_6
+  rotate: false
+  xy: 1916, 1264
+  size: 127, 126
+  orig: 127, 126
+  offset: 0, 0
+  index: -1
+Mieng_7
+  rotate: false
+  xy: 1574, 1450
+  size: 178, 56
+  orig: 178, 56
+  offset: 0, 0
+  index: -1
+Mieng_8
+  rotate: true
+  xy: 1856, 1428
+  size: 78, 98
+  orig: 78, 98
+  offset: 0, 0
+  index: -1
+Mieng_9
+  rotate: false
+  xy: 980, 1372
+  size: 144, 86
+  orig: 144, 86
+  offset: 0, 0
+  index: -1
+Mo_hoi
+  rotate: true
+  xy: 546, 1468
+  size: 38, 57
+  orig: 38, 57
+  offset: 0, 0
+  index: -1
+Mui
+  rotate: false
+  xy: 88, 1492
+  size: 54, 14
+  orig: 54, 14
+  offset: 0, 0
+  index: -1
+Nuoc_mat
+  rotate: false
+  xy: 306, 1473
+  size: 85, 33
+  orig: 85, 33
+  offset: 0, 0
+  index: -1
+Quai kinh
+  rotate: false
+  xy: 187, 1300
+  size: 196, 100
+  orig: 196, 100
+  offset: 0, 0
+  index: -1
+Tai_a
+  rotate: false
+  xy: 1706, 826
+  size: 251, 237
+  orig: 251, 237
+  offset: 0, 0
+  index: -1
+Tai_b
+  rotate: true
+  xy: 1467, 940
+  size: 233, 237
+  orig: 233, 237
+  offset: 0, 0
+  index: -1
+Than
+  rotate: false
+  xy: 638, 584
+  size: 292, 366
+  orig: 292, 366
+  offset: 0, 0
+  index: -1
+Toc
+  rotate: true
+  xy: 1126, 1366
+  size: 91, 95
+  orig: 91, 95
+  offset: 0, 0
+  index: -1
+
+BE.RVS02 - Jumbled pages - Phone_hdr2.png
+size: 1956,1696
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Data 1
+  rotate: true
+  xy: 1084, 604
+  size: 1090, 850
+  orig: 1090, 850
+  offset: 0, 0
+  index: -1
+Data 2
+  rotate: true
+  xy: 2, 32
+  size: 1090, 850
+  orig: 1090, 850
+  offset: 0, 0
+  index: -1
+To giay 1
+  rotate: false
+  xy: 854, 2
+  size: 1100, 600
+  orig: 1100, 600
+  offset: 0, 0
+  index: -1
+To giay 2
+  rotate: false
+  xy: 2, 1124
+  size: 1080, 570
+  orig: 1080, 570
+  offset: 0, 0
+  index: -1
+
+BE.RVS02 - Jumbled pages - Phone_hdr3.png
+size: 1496,1204
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Khung
+  rotate: true
+  xy: 2, 112
+  size: 1090, 850
+  orig: 1090, 850
+  offset: 0, 0
+  index: -1
+May bay.Than
+  rotate: true
+  xy: 854, 2
+  size: 1200, 640
+  orig: 1200, 640
+  offset: 0, 0
+  index: -1

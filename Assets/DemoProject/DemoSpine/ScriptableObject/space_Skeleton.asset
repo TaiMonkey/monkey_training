@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924446f841ebf194cb772150d0c9e8b0, type: 3}
+  m_Name: space_Skeleton
+  m_EditorClassIdentifier: 
+  spaceship_fly_3: Spaceship Fly 3
+  spaceship_on: Spaceship On
+  cheer: Cheer
+  space_fly_3: {fileID: 8300000, guid: 3b037273f481ed344b6724f3c3a5efcc, type: 3}
+  space_on: {fileID: 8300000, guid: 8d1f2ff27607a2c4084a8cb6cc447068, type: 3}
+  space_cheer: {fileID: 8300000, guid: 0a3376c207368764fbeb46c90f34f417, type: 3}
