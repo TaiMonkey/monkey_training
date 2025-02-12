@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: BE.PS02 - Re-fueling Spacecraft - Tau_hdr_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: 94822559189037c4082d1578ef02d90b, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 443929cfaba987342874b307581b9a75, type: 2}
+  - {fileID: 2100000, guid: 62eeae63350d60b4482df8894400a987, type: 2}
+  - {fileID: 2100000, guid: 3d1017ad165b18c4680ce04f339120e4, type: 2}
+  - {fileID: 2100000, guid: 460bb005b344f88419a612fe0787bf62, type: 2}
+  - {fileID: 2100000, guid: 1adde0e57c653c54b992b32a975f3486, type: 2}
