@@ -27,15 +27,6 @@ public class ChangeSlot : MonoBehaviour
         ChangeImageBySloteSpine(dataSlot2, itemSlot2, itemKey2);
 
     }
-    public void SetSkin(SkeletonGraphic skeletonGraphic, string skinName)
-    {
-        var skeleton = skeletonGraphic.Skeleton;
-        var skin = skeleton.Data.FindSkin(skinName);
-        if (skin == null) return;
-        skeleton.SetSkin(skin);
-        skeleton.SetToSetupPose();
-        skeletonGraphic.AnimationState.Apply(skeleton);
-    }
     private void ChangeImageBySloteSpine(Sprite data, string itemSlot, string itemkey)
     {
         sourceMaterial = spaceshipAnimation.SkeletonDataAsset.atlasAssets[0].PrimaryMaterial;
