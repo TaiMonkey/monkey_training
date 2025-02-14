@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idle: Idie
   userUntap: user Untap
-  userUntapLoop: user Untap loop
-  usertap: user tap
+  usertap: user Untap loop
+  userTaploop: user Untap loop
+  listSkins:
+  - than hong
+  - than xanh
+  - than vang

@@ -12,6 +12,7 @@ public class ButtonDemo1 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     [SerializeField] private CanvasGroup canvasGroup;
     public Vector3 orgPos;
     private int indexSlibing = 0;
+    private BELT01ButtonData databutton;
 
     public Vector3 OrignPos { get => orgPos; set { orgPos = value; } }
     public Transform pointMoved;
@@ -67,6 +68,9 @@ public class ButtonDemo1 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         Debug.LogError("OnEndDrag");
         transform.DOMove(orgPos, 0.5f);
     }
-
+    public void InitData(BELT01ButtonData data)
+    {
+        databutton = data;
+    }
     
 }

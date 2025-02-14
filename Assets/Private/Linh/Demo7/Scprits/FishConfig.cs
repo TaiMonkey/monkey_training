@@ -8,8 +8,10 @@ public class FishConfig : ScriptableObject
 {
     public string idle;
     public string userUntap;
-    public string userUntapLoop;
     public string usertap;
+    public string userTaploop;
+    public List<string> listSkins;
 }
+
 
 

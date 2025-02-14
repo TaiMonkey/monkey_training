@@ -7,30 +7,36 @@ using UnityEngine.EventSystems;
 
 public class FishButtonController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-     private SkeletonGraphic fishAnimation;
+    private SkeletonGraphic fishAnimation;
     [SerializeField] private FishConfig fishConfig;
     [SerializeField, SpineSkin] private List<string> listAllSkin;
-
-    void Start()
+   
+    public SkeletonGraphic FishAnimation { get => fishAnimation; }
+  
+    void Awake()
     {
-        fishAnimation = GetComponentInChildren<SkeletonGraphic>();
-        fishAnimation.AnimationState.SetAnimation(0, fishConfig.idle, true);
-        SetSkin(fishAnimation, listAllSkin[0]);
         
-
+        fishAnimation = GetComponentInChildren<SkeletonGraphic>();
+    }
+    private void Start()
+    {
+        fishAnimation.AnimationState.SetAnimation(0, fishConfig.idle, true);
+        // SetSkin(fishAnimation, listAllSkin[0]);
+        // int randomSkinIndex = Random.Range(0, listAllSkin.Count);
+        // SetSkin(fishAnimation, listAllSkin[randomSkinIndex]);
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        SetSkin(fishAnimation, listAllSkin[1]);
+        //SetSkin(fishAnimation, listAllSkin[1]);
         fishAnimation.AnimationState.SetAnimation(0, fishConfig.usertap, false).Complete += (trackEntry) =>
         {
-            fishAnimation.AnimationState.SetAnimation(0, fishConfig.userUntapLoop, true);
+            fishAnimation.AnimationState.SetAnimation(0, fishConfig.userTaploop, true);
         };
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        SetSkin(fishAnimation, listAllSkin[2]);
+        //SetSkin(fishAnimation, listAllSkin[2]);
         fishAnimation.AnimationState.SetAnimation(0, fishConfig.userUntap, false).Complete += (trackEntry) =>
         {
             fishAnimation.AnimationState.SetAnimation(0, fishConfig.idle, true);
@@ -45,7 +51,9 @@ public class FishButtonController : MonoBehaviour, IPointerDownHandler, IPointer
         skeleton.SetToSetupPose();
         skeletonGraphic.AnimationState.Apply(skeleton);
     }
-   
-
     
-}
+ }
+
+
+
+
