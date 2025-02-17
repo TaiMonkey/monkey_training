@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6ecd139dc7780c48a8c434806f9d4f4, type: 3}
-  m_Name: fish_skeleton
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: skeleton_hdr_Atlas
   m_EditorClassIdentifier: 
-  idie: Idie
-  user_untap: user Untap
-  user_tap_loop: user Untap loop
-  user_tap: user tap
-  skins:
-  - than hong
-  - than xanh
-  - than vang
+  atlasFile: {fileID: 4900000, guid: a6c8b3e2d87f9074d8107746e1d38343, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 41d12ce5dd10b11488d105c50a27145c, type: 2}

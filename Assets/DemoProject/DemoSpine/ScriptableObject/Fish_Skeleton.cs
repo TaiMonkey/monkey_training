@@ -9,7 +9,5 @@ public class Fish_Skeleton : ScriptableObject
     public string user_untap;
     public string user_tap_loop;
     public string user_tap;
-    public string than_hong;
-    public string than_vang;
-    public string than_xanh;
+    public List<string> skins;
 }

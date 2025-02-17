@@ -19,15 +19,6 @@ public class DemoMonkey : MonoBehaviour
         ChangeImageBySlotSpine(monkey_Skeleton.dataSlot, monkey_Skeleton.itemSlot[0], monkey_Skeleton.itemKey[0]);
         ChangeImageBySlotSpine(monkey_Skeleton.dataSlot, monkey_Skeleton.itemSlot[1], monkey_Skeleton.itemKey[1]);
     }
-    public void SetSkin(SkeletonGraphic skeletonGraphic, string skinName)
-    {
-        var skeleton = skeletonGraphic.Skeleton;
-        var skin = skeleton.Data.FindSkin(skinName);
-        if (skin == null) return;
-        skeleton.SetSkin(skin);
-        skeleton.SetBonesToSetupPose();
-        skeletonGraphic.AnimationState.Apply(skeleton);
-    }
 
     private void ChangeImageBySlotSpine(Sprite data, string itemSlot, string itemKey)
     {

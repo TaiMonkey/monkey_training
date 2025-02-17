@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e095cf22fa64141aae14cfaf1e3cf4, type: 3}
+  m_Name: demoConfig
+  m_EditorClassIdentifier: 
+  audioBackGround: {fileID: 8300000, guid: 809e9f756bd9d7c498e69218d632be8d, type: 3}
+  introConfig:
+    audioCTA:
+    - {fileID: 0}
+    animPhaohoa:
+    - Phao hoa 1
+    - Phao hoa 2
+    - Phao hoa 3
+    sfxPopup:
+    - {fileID: 8300000, guid: a76c2063edb4fd54799912d8cb9a27d4, type: 3}
+    - {fileID: 8300000, guid: 867fe4427f2440c47af3f032c3f6cb23, type: 3}
+    - {fileID: 8300000, guid: 775e88bbed19b194fae7339b0ca3a8f7, type: 3}
+    timeDelay200: 200
+    timeDelay100: 100
+  clickConfig:
+    sfxCorrect: {fileID: 8300000, guid: adad8d63cd4799643b758870304e8561, type: 3}
+    sfxWrong: {fileID: 8300000, guid: 2bc2bcd6be08496498fa8259a6ca1fb8, type: 3}
+    sfxClick: {fileID: 8300000, guid: 9986617ebc964354d924da1b570895ae, type: 3}
+  guidingConfig:
+    sfxGuiding: {fileID: 8300000, guid: ec73cf5bda25afc408a925763f53f22e, type: 3}
+    timeWaitStartGuiding: 5
+  fadeConfig:
+    fade100: 0
+    fade200: 0
+    fade300: 0

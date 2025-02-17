@@ -18,10 +18,11 @@ public class DemoAnimState : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        fishAnimState.AnimationState.SetAnimation(0, fish_Skeleton.user_tap, false).Complete += (trackEntry) => {
+        //fishAnimState.AnimationState.SetAnimation(0, fish_Skeleton.user_tap, false).Complete += (trackEntry) =>
+        //{
             fishAnimState.AnimationState.SetAnimation(0, fish_Skeleton.user_tap_loop, true);
-        };
-        SetSkin(fishAnimState, fish_Skeleton.than_xanh);
+        //};
+       // SetSkin(fishAnimState, fish_Skeleton.skins[0]);
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -29,7 +30,7 @@ public class DemoAnimState : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         fishAnimState.AnimationState.SetAnimation(0, fish_Skeleton.user_untap, false).Complete += (trackEntry) => {
             fishAnimState.AnimationState.SetAnimation(0, fish_Skeleton.idie, true);
         };
-        SetSkin(fishAnimState, fish_Skeleton.than_hong);
+       // SetSkin(fishAnimState, fish_Skeleton.skins[1]);
     }
 
     public void SetSkin(SkeletonGraphic skeletonGraphic, string skinName)
