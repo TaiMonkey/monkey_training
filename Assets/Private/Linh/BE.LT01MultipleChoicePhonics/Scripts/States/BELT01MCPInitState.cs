@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class BELT01MCPInitState : FSMState
 {
     private BELT01MCPInitStateData bELT01MCPInitStateData;
+
     private List<ButtonDemo1> listButton;
     private GameObject gameObject;
     private HorizontalLayoutGroup layoutGroup;
+    private BELT01MCPInitStateObjectDependency dependency;
 
     public override void SetUp(object data)
     {
-        throw new System.NotImplementedException();
+        dependency = (BELT01MCPInitStateObjectDependency)data;
     }
     public override void OnEnter(object data)
     {
@@ -26,13 +28,15 @@ public class BELT01MCPInitState : FSMState
             ButtonDemo1 buttonDemo1 = obj.GetComponent<ButtonDemo1>();
             buttonDemo1.InitData(bELT01MCPInitStateData.CurrentTurn.listButton[i]);
             listButton.Add(buttonDemo1);
-
-
-
         }
     }
 }
 public class BELT01MCPInitStateData
 {
     public BELT01Turn CurrentTurn { get; set; }
+}
+public class BELT01MCPInitStateObjectDependency
+{
+    public List<Button> Buttons { get; set; }
+    public Button ButtonSpeaker { get; set; }
 }
