@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: demo
   m_EditorClassIdentifier: 
   mockDataGamePlay:
-    demoData:
-      sprites:
-      - {fileID: 21300000, guid: d5c31d90d747342359d21b7379bc50e5, type: 3}
-      - {fileID: 21300000, guid: d5c31d90d747342359d21b7379bc50e5, type: 3}
-      - {fileID: 21300000, guid: d5c31d90d747342359d21b7379bc50e5, type: 3}
-      texts:
-      - strawberry juice
-      - stair
-      - irstomachache
+    ListTurn:
+    - demoData:
+        buttons:
+        - {fileID: 0}
+        - {fileID: 0}
+        - {fileID: 0}
+        audioCta: {fileID: 8300000, guid: 25b1cfed9c2c3c44194a75df4eb607e5, type: 3}
+        buttonSpeaker: {fileID: 0}
+  audioPopups:
+  - {fileID: 8300000, guid: a76c2063edb4fd54799912d8cb9a27d4, type: 3}
+  - {fileID: 8300000, guid: 867fe4427f2440c47af3f032c3f6cb23, type: 3}
+  - {fileID: 8300000, guid: 775e88bbed19b194fae7339b0ca3a8f7, type: 3}

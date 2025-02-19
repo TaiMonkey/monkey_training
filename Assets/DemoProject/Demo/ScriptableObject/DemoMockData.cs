@@ -7,4 +7,5 @@ using UnityEngine.UI;
 public class DemoMockData : ScriptableObject
 {
     public DemoGamePlayData1 mockDataGamePlay;
+    public List<AudioClip> audioPopups;
 }

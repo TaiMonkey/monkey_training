@@ -42,12 +42,20 @@ public class DemoAdapter1 : Adapter
 [Serializable]
 public class DemoData
 {
-    public List<Sprite> sprites;
-    public List<string> texts;
+    public List<ButtonAnswer> buttons;
+    //public List<string> texts;
+    public AudioClip audioCta;
+    public ButtonSpeaker buttonSpeaker;
 }
 
 [Serializable]
 public class DemoGamePlayData1
+{
+    public List<ListTurn> ListTurn;
+}
+
+[Serializable]
+public class ListTurn
 {
     public DemoData demoData;
 }

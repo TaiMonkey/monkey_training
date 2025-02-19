@@ -1,3 +1,4 @@
+using MonkeyBase.Observer;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 public class DemoFSMStateInit : FSMState
 {
     private DemoInitStateObjectDependency dependency;
+    private DemoConstValue state;
 
     public override void SetUp(object data)
     {
@@ -15,15 +17,24 @@ public class DemoFSMStateInit : FSMState
     public override void OnEnter(object data)
     {
         base.OnEnter();
-        DemoGamePlayData1 demoGamePlayData = (DemoGamePlayData1)data;
-        dependency.sprites[0].sprite = demoGamePlayData.demoData.sprites[0];
-        dependency.sprites[1].sprite = demoGamePlayData.demoData.sprites[1];
-        dependency.sprites[2].sprite = demoGamePlayData.demoData.sprites[2];
-        Debug.LogError(demoGamePlayData.demoData.texts[0]);
+        //DemoGamePlayData1 demoGamePlayData = (DemoGamePlayData1)data;
+        foreach(var answer in dependency.buttonAnswers)
+        {
+            answer.transform.localScale = Vector3.zero;
+        }
+        ButtonSpeaker buttonSpeaker = dependency.buttonSpeaker;
+        endInit();
+    }
+
+    public void endInit()
+    {
+        DemoChannel demoChannel = new DemoChannel(DemoConstValue.Intro, "Start Intro");
+        ObserverManager.TriggerEvent(demoChannel);
     }
 }
 
 public class DemoInitStateObjectDependency
 {
-    public List<Image> sprites { get; set; }
+    public List<ButtonAnswer> buttonAnswers  {get; set; }
+    public ButtonSpeaker buttonSpeaker { get; set; }
 }
