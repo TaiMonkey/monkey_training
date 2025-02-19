@@ -20,7 +20,7 @@ public class InitState : FSMState
 
 public class InitStateData
 {
-    public GamePlayData listData { get; set;}
+    public GamePlayData1 listData { get; set;}
 }
 
 public class InitStateObjectDependency

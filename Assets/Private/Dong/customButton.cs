@@ -24,11 +24,6 @@ public class customButton : MonoBehaviour
             buttonText = GetComponentInChildren<TMP_Text>();
         }
 
-        if(button != null)
-        {
-            button.onClick.AddListener(OnButtonClick);
-        }
-
         if (buttonImage == null)
         {
             buttonImage = GetComponentInChildren<Image>();

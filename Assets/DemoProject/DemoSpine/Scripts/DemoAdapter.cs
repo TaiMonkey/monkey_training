@@ -5,17 +5,17 @@ using System;
 
 public class DemoAdapter : Adapter
 {
-    [SerializeField] private MockData mock_data;
+    [SerializeField] private DeMockData mock_data;
     [SerializeField] private bool isMockData;
-    private GamePlayData gamePlayData;
+    private GamePlayData1 gamePlayData;
 
     public override T GetData<T>(int turn)
     {
         T data;
         if (isMockData)
         {
-            gamePlayData = new GamePlayData();
-            gamePlayData = mock_data.mockData;
+            gamePlayData = new GamePlayData1();
+            gamePlayData = mock_data.dataMock;
         }
 
         Type listType = typeof(T);
@@ -46,7 +46,7 @@ public class DemoAdapter : Adapter
 }
 
 [Serializable]
-public class GamePlayData
+public class GamePlayData1
 {
     public List<DemoTurn> listTurn;
 }
@@ -54,11 +54,11 @@ public class GamePlayData
 [Serializable]
 public class DemoTurn
 {
-    public List<DemoButton> buttons;
+    public List<DemoButton1> buttons;
 }
 
 [Serializable]
-public class DemoButton
+public class DemoButton1
 {
     public string textButton;
     public AudioClip audio;

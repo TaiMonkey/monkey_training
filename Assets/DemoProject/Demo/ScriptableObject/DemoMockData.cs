@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "demo", menuName = "demo/demo")]
-public class DeMockData : ScriptableObject
+public class DemoMockData : ScriptableObject
 {
-    public GamePlayData1 dataMock;
+    public DemoGamePlayData1 mockDataGamePlay;
 }

@@ -10,7 +10,6 @@ public abstract class BaseButton : MonoBehaviour
     protected virtual void Awake()
     {
         button = GetComponent<Button>();
-        button.onClick.AddListener(OnClick);
     }
    
     public abstract void Enable(bool isEnable);
