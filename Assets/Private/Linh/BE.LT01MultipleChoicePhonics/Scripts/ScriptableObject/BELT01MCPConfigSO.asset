@@ -21,13 +21,13 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 50d0401d70f6daa4fb6e7386b0590de9, type: 3}
     - {fileID: 8300000, guid: 63b4dc76272b2134c8b03ee7fddcbcc4, type: 3}
     - {fileID: 8300000, guid: 1c8e866dc0bdf0e40849680a16272267, type: 3}
-    timeDelay: c800000064000000
-    timeFadein: 0.2
+    timeDelay: 300
+    timeFadein: 0
   clickconfig:
     sfxClick: {fileID: 8300000, guid: 7ce05ee22615e484097055b788006c1c, type: 3}
     sfxCorrect: {fileID: 8300000, guid: 134dd03fe21c82b4cae9b6379294fc00, type: 3}
     sfxWrong: {fileID: 8300000, guid: e3685849d97e6f04aaa445ab2452a980, type: 3}
-    timeDelay: c8000000f4010000b80b00002c010000
+    timeDelay: 0
   guidingConfig:
     sfxClick: {fileID: 8300000, guid: 7ce05ee22615e484097055b788006c1c, type: 3}
     sfxguiding: {fileID: 8300000, guid: a10563a2cc0a02749a62c2696d78f7d8, type: 3}

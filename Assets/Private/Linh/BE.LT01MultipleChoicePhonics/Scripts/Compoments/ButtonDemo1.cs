@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using TMPro;
 
 public class ButtonDemo1 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] private Button btn;
     [SerializeField] private RectTransform rect;
     [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] public TMP_Text textContent;
     public Vector3 orgPos;
     private int indexSlibing = 0;
     private BELT01ButtonData databutton;
@@ -29,6 +31,7 @@ public class ButtonDemo1 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         //btn.onClick.AddListener(ClickItem);
         originScale = transform.localScale;
         orgPos = transform.position;
+
     }
     public void FadeButton(float value)
     {
@@ -71,6 +74,9 @@ public class ButtonDemo1 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void InitData(BELT01ButtonData data)
     {
         databutton = data;
+        textContent.text = data.text;
+        textContent.ForceMeshUpdate();
+
     }
     
 }

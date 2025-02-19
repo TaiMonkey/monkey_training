@@ -1,18 +1,18 @@
+using MonkeyBase.Observer;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BELT01MCPDataChanner : MonoBehaviour
+public struct BELT01MCPDataChanner : EventListener<BELT01MCPDataChanner>
 {
-    // Start is called before the first frame update
-    void Start()
+    public BELT01MCPStatusOfStateState State;
+    public object Data;
+    public BELT01MCPDataChanner(BELT01MCPStatusOfStateState state,object data)
     {
-        
+        this.State = state;
+        this.Data =  data;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OnMMEvent(BELT01MCPDataChanner eventType)
     {
-        
     }
 }

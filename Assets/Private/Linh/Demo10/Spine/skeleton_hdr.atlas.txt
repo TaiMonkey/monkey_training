@@ -1,0 +1,83 @@
+
+skeleton_hdr.png
+size: 473,139
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Mat-A
+  rotate: false
+  xy: 146, 2
+  size: 97, 50
+  orig: 100, 56
+  offset: 2, 3
+  index: -1
+Mat-B
+  rotate: false
+  xy: 245, 14
+  size: 91, 38
+  orig: 100, 56
+  offset: 5, 9
+  index: -1
+canh-A
+  rotate: true
+  xy: 146, 54
+  size: 83, 158
+  orig: 98, 168
+  offset: 8, 5
+  index: -1
+canh-B
+  rotate: false
+  xy: 385, 74
+  size: 86, 63
+  orig: 98, 72
+  offset: 7, 3
+  index: -1
+chan
+  rotate: false
+  xy: 439, 10
+  size: 21, 62
+  orig: 22, 62
+  offset: 1, 0
+  index: -1
+dau
+  rotate: false
+  xy: 2, 2
+  size: 142, 135
+  orig: 156, 146
+  offset: 8, 5
+  index: -1
+mieng-A
+  rotate: false
+  xy: 408, 57
+  size: 19, 15
+  orig: 26, 20
+  offset: 3, 1
+  index: -1
+mieng-B
+  rotate: false
+  xy: 385, 55
+  size: 21, 17
+  orig: 26, 20
+  offset: 2, 0
+  index: -1
+rau
+  rotate: false
+  xy: 338, 9
+  size: 55, 43
+  orig: 60, 56
+  offset: 3, 5
+  index: -1
+tay
+  rotate: false
+  xy: 395, 9
+  size: 42, 44
+  orig: 44, 44
+  offset: 2, 0
+  index: -1
+than
+  rotate: true
+  xy: 306, 54
+  size: 83, 77
+  orig: 94, 86
+  offset: 6, 4
+  index: -1

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 465338b8f66b3e244a4a188ddb57dd11, type: 3}
+  m_Name: CFMookData
+  m_EditorClassIdentifier: 
+  dataMook:
+    listTurn:
+    - listButtonJar:
+      - imange: {fileID: 21300000, guid: bdb2b6e856d32d9449b792fcca2037b0, type: 3}
+        audioClip: {fileID: 0}
+        iscorrect: 0
+      - imange: {fileID: 21300000, guid: add08f550d8c845429c97de620fee4eb, type: 3}
+        audioClip: {fileID: 0}
+        iscorrect: 0
+      listButtonDomdom:
+      - text: bear
+        audioClip: {fileID: 0}
+        iscorrect: 0
+      - text: strawberry juice
+        audioClip: {fileID: 0}
+        iscorrect: 0
+      - text: pharmacy
+        audioClip: {fileID: 0}
+        iscorrect: 0
+      - text: tiger
+        audioClip: {fileID: 0}
+        iscorrect: 0

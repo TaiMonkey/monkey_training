@@ -18,8 +18,8 @@ public class BELT01MCPIntroConfig
 {
     public List<AudioClip> sfxCTA;
     public List<AudioClip> sfxPopup;
-    public List<int> timeDelay;
-    public float timeFadein;
+    public int timeDelay;
+    public int timeFadein;
 
 }
 
@@ -29,7 +29,7 @@ public class BELT01MCPClickConfig
     public AudioClip sfxClick;
     public AudioClip sfxCorrect;
     public AudioClip sfxWrong;
-    public List<int> timeDelay;
+    public int timeDelay;
    
 }
 [Serializable]

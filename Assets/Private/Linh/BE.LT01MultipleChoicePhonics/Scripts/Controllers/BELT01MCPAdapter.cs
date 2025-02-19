@@ -15,32 +15,45 @@ public class BELT01MCPAdapter : Adapter
     public override T GetData<T>(int turn)
     {
         T data;
-        if (isMookData)
-        {
-            gamePlayData = new BELT01GamePlayData();
-            gamePlayData = mookData.dataMook;
-        }
+
         Type listType = typeof(T);
-        if(listType == typeof(BELT01Turn))
-        {
-            data = ConvertToType<T>(gamePlayData.listTurn[turn]);
-        }
-        else if (listType == typeof(BELT01GamePlayData))
-        {
-            data = ConvertToType<T>(gamePlayData);
-        }
-        else if(listType == typeof(BELT01MCPInitStateData))
+        if (listType == typeof(BELT01MCPInitStateData))
         {
             BELT01MCPInitStateData bELT01MCPInitStateData = new BELT01MCPInitStateData();
             bELT01MCPInitStateData.CurrentTurn = gamePlayData.listTurn[turn];
-            data = ConvertToType<T>(gamePlayData);
+            data = ConvertToType<T>(bELT01MCPInitStateData);
         }
         else
-        {
             data = ConvertToType<T>(null);
-        }
-        return data;
+        return data; 
     }
+    /* if (isMookData)
+     {
+         gamePlayData = new BELT01GamePlayData();
+         gamePlayData = mookData.dataMook;
+     }
+     Type listType = typeof(T);
+     if(listType == typeof(BELT01Turn))
+     {
+         data = ConvertToType<T>(gamePlayData.listTurn[turn]);
+     }
+     else if (listType == typeof(BELT01GamePlayData))
+     {
+         data = ConvertToType<T>(gamePlayData);
+     }
+     else if(listType == typeof(BELT01MCPInitStateData))
+     {
+         BELT01MCPInitStateData bELT01MCPInitStateData = new BELT01MCPInitStateData();
+         bELT01MCPInitStateData.CurrentTurn = gamePlayData.listTurn[turn];
+         data = ConvertToType<T>(gamePlayData);
+     }
+     else
+     {
+         data = ConvertToType<T>(null);
+      }
+    */
+      
+    
 
     public override int GetMaxTurn()
     {
