@@ -7,11 +7,13 @@ public class DemoFSMSystem : FSMSystem
 {
     private DemoFSMStateInit demoFSMStateInit;
     private DemoFSMStateIntro demoFSMStateIntro;
+    private DemoFSMStateDrag demoFSMStateDrag;
 
     private void Awake()
     {
         demoFSMStateInit = new DemoFSMStateInit();
         demoFSMStateIntro = new DemoFSMStateIntro();
+        demoFSMStateDrag = new DemoFSMStateDrag();
     }
 
     public override void SetupStateData<T>(T data)
@@ -25,6 +27,10 @@ public class DemoFSMSystem : FSMSystem
             //Intro
             DemoStateIntroDependency demoStateIntroDependency = dependency.GetStateData<DemoStateIntroDependency>();
             demoFSMStateIntro.SetUp(demoStateIntroDependency);
+
+            //Drag
+            DemoFSMStateDragDependency demoFSMStateDragDependency = dependency.GetStateData<DemoFSMStateDragDependency>();
+            demoFSMStateDrag.SetUp(demoFSMStateDragDependency);
         }
     }
     public override void GotoState(string eventName, object data)
@@ -37,6 +43,9 @@ public class DemoFSMSystem : FSMSystem
                 break;
             case DemoConstValue.Intro:
                 GotoState(demoFSMStateIntro, data);
+                break;
+            case DemoConstValue.DragStart:
+                GotoState(demoFSMStateDrag, data);
                 break;
             default:
                 return;

@@ -26,7 +26,7 @@ public class DemoFSMStateIntro : FSMState
     {
         cts = new CancellationTokenSource();
         ButtonSpeaker buttonSpeaker = dependency.buttonSpeaker;
-        buttonSpeaker.canvasGroup.DOFade(1, 0.2f);
+        buttonSpeaker.GetComponent<CanvasGroup>().DOFade(1, 0.2f);
         await UniTask.Delay(200, cancellationToken : cts.Token);
         bool isPopup = false;
         bool isPlaySoud = false;
@@ -46,12 +46,20 @@ public class DemoFSMStateIntro : FSMState
             isPopup = false;
             isPlaySoud = false;
         }
+        for (int i = 0; i < dependency.listAnswer.Count; i++)
+        {
+            ButtonAnswer buttonAnswer = dependency.listAnswer[i];
+            buttonAnswer.OriginPos = buttonAnswer.transform.position;
+            buttonAnswer.IsEnable = true;
+        }
+
         SoundChannel soudDataFinal = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.audioCta, () =>
         {
             isPlaySoud = true;
         });
         ObserverManager.TriggerEvent(soudDataFinal);
-        // buttonSpeaker.transform.DOF
+        //DemoChannel demoChannel = new DemoChannel(DemoConstValue.DragStart, null);
+        //ObserverManager.TriggerEvent(demoChannel);
     }
 }
 

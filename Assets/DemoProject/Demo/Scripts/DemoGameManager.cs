@@ -35,6 +35,10 @@ public class DemoGameManager : GameManager, EventListener<DemoChannel>
             case DemoConstValue.Intro:
                 fSMSystem.GotoState(DemoConstValue.Intro.ToString(), "");
                 break;
+            case DemoConstValue.DragStart:
+                ButtonAnswer buttonAnswer = (ButtonAnswer)eventType.Data;
+                fSMSystem.GotoState(DemoConstValue.DragStart.ToString(), buttonAnswer);
+                break;
             default:
                 return;
         }    

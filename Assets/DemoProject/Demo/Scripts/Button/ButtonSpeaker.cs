@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ButtonSpeaker : MonoBehaviour
 {
-    public CanvasGroup canvasGroup;
+    private CanvasGroup canvasGroup;
     // Start is called before the first frame update
     void Start()
     {

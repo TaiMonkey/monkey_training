@@ -31,6 +31,12 @@ public class DemoDependency1 : Dependency
             introData.listAudioPopup = demoMockData.audioPopups;
             data = ConvertToType<T>(introData);
         }
+        else if(listType == typeof(DemoFSMStateDragDependency))
+        {
+            DemoFSMStateDragDependency dragData = new DemoFSMStateDragDependency();
+            dragData.buttonSpeaker = buttonSpeaker.transform;
+            data = ConvertToType<T>(dragData);
+        }
             
         else
         {

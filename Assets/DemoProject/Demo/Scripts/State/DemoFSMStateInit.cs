@@ -21,6 +21,8 @@ public class DemoFSMStateInit : FSMState
         foreach(var answer in dependency.buttonAnswers)
         {
             answer.transform.localScale = Vector3.zero;
+            answer.IsEnable = false;
+            answer.InitData(dependency.buttonSpeaker.GetComponent<RectTransform>());
         }
         ButtonSpeaker buttonSpeaker = dependency.buttonSpeaker;
         endInit();
