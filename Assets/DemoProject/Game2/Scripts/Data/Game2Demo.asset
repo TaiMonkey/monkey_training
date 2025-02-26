@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6660485c58fe4876bfb8d741e79f60a, type: 3}
+  m_Name: Game2Demo
+  m_EditorClassIdentifier: 
+  Game2DataConfig:
+    turn:
+      QuestionAudio: {fileID: 8300000, guid: 0a3376c207368764fbeb46c90f34f417, type: 3}
+      TextQuestion: Where does the dialog place take?
+      ListAnswerButtons:
+      - Image: {fileID: 21300000, guid: 3dd173acf9f3f03479d95c1ece37a59e, type: 3}
+        AnswerAudio: {fileID: 8300000, guid: adad8d63cd4799643b758870304e8561, type: 3}
+        Iscorrect: 1
+      - Image: {fileID: 21300000, guid: da9f4afa23749bc44adb39a6886bc5cc, type: 3}
+        AnswerAudio: {fileID: 8300000, guid: 2bc2bcd6be08496498fa8259a6ca1fb8, type: 3}
+        Iscorrect: 0
+      - Image: {fileID: 21300000, guid: 328b566867f3209428da5bc87e463abe, type: 3}
+        AnswerAudio: {fileID: 8300000, guid: 2bc2bcd6be08496498fa8259a6ca1fb8, type: 3}
+        Iscorrect: 0

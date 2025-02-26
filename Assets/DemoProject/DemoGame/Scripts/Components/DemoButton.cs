@@ -5,6 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     internal bool interactable;
+    internal object onClick;
     private DemoButton demoButton;
 }
 
