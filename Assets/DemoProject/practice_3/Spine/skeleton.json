@@ -1,0 +1,288 @@
+{
+"skeleton": {
+	"hash": "KyrL3/6KVpuWZA7z0sUM4Ez8TpI",
+	"spine": "3.8.99",
+	"x": -566.52,
+	"y": -315,
+	"width": 1141.76,
+	"height": 651.29,
+	"images": "../IMAGES/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "light-4 R", "parent": "root", "x": 279.26, "y": 235.16 },
+	{ "name": "Light scale 1R", "parent": "root", "x": 441.63, "y": 169.24 },
+	{ "name": "light-8 R", "parent": "Light scale 1R", "x": -148.42, "y": -61.22 },
+	{ "name": "Light scale 2R", "parent": "root", "x": 547.93, "y": 97.68 },
+	{ "name": "light-3 R", "parent": "Light scale 2R", "x": -72.97, "y": -17.32 },
+	{ "name": "Light scale 3R", "parent": "root", "x": 545.61, "y": -35.35 },
+	{ "name": "light-7 R", "parent": "Light scale 3R", "x": -210.42, "y": 19.17 },
+	{ "name": "light-5 R2", "parent": "root", "x": 201.86, "y": 23.48 },
+	{ "name": "light-6 L", "parent": "root", "x": -204.59, "y": 97.68 },
+	{ "name": "light-4  L", "parent": "root", "rotation": 7.68, "x": -372.88, "y": -55.15 },
+	{ "name": "Light scale 2L", "parent": "root", "x": -550.77, "y": 194.37 },
+	{ "name": "light-3 L", "parent": "Light scale 2L", "x": 74.07, "y": -21.9 },
+	{ "name": "Light scale 1", "parent": "root", "x": -479.45, "y": 315.03 },
+	{ "name": "light-1 L", "parent": "Light scale 1", "x": 174.74, "y": -122.25 },
+	{ "name": "Light scale 3L", "parent": "root", "x": -487.27, "y": 81.96 },
+	{ "name": "light-2 L", "parent": "Light scale 3L", "x": 157.53, "y": -16.42 }
+],
+"slots": [
+	{ "name": "Plug-in-bulbs", "bone": "root" },
+	{ "name": "ref", "bone": "root" },
+	{ "name": "light-1", "bone": "light-1 L", "color": "64ffcbff", "attachment": "light-1" },
+	{ "name": "light-7", "bone": "light-7 R", "color": "64ffcbff", "attachment": "light-1" },
+	{ "name": "light-4", "bone": "light-4 R", "color": "64ffcbff", "attachment": "light-4" },
+	{ "name": "light-9", "bone": "light-4  L", "color": "64ffcbff", "attachment": "light-4" },
+	{ "name": "light-5 R", "bone": "light-5 R2", "color": "ffcd2eff", "attachment": "light-4" },
+	{ "name": "light-6", "bone": "light-6 L", "color": "ffcd2eff", "attachment": "light-4" },
+	{ "name": "light-2", "bone": "light-2 L", "color": "ffcd2eff", "attachment": "light-2" },
+	{ "name": "light-8", "bone": "light-8 R", "color": "ffcd2eff", "attachment": "light-2" },
+	{ "name": "light-3", "bone": "light-3 L", "color": "ffcd2eff", "attachment": "light-3" },
+	{ "name": "light-5", "bone": "light-3 R", "color": "ffcd2eff", "attachment": "light-3" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"light-1": {
+				"light-1": { "x": -86.2, "y": 62.51, "width": 222, "height": 162 }
+			},
+			"light-2": {
+				"light-2": { "x": -79.62, "y": 9.21, "width": 204, "height": 60 }
+			},
+			"light-3": {
+				"light-3": { "x": -38.82, "y": 13.16, "width": 102, "height": 51 }
+			},
+			"light-4": {
+				"light-4": { "width": 117, "height": 114 }
+			},
+			"light-5": {
+				"light-3": { "x": 37.13, "y": 9.85, "rotation": 27.45, "width": 102, "height": 51 }
+			},
+			"light-5 R": {
+				"light-4": { "scaleX": 0.5528, "scaleY": 0.5528, "width": 117, "height": 114 }
+			},
+			"light-6": {
+				"light-4": { "scaleX": 0.5528, "scaleY": 0.5528, "rotation": 7.65, "width": 117, "height": 114 }
+			},
+			"light-7": {
+				"light-1": { "x": 103.8, "y": -9.09, "rotation": 28.66, "width": 222, "height": 162 }
+			},
+			"light-8": {
+				"light-2": { "x": 74.25, "y": 31.07, "rotation": 27.65, "width": 204, "height": 60 }
+			},
+			"light-9": {
+				"light-4": { "width": 117, "height": 114 }
+			}
+		}
+	}
+],
+"animations": {
+	"tia dien": {
+		"slots": {
+			"Plug-in-bulbs": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		},
+		"bones": {
+			"light-4 R": {
+				"translate": [
+					{ "x": -82.5, "y": -94.46 },
+					{ "time": 0.1667 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0 },
+					{ "time": 0.1667 },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				]
+			},
+			"light-5 R2": {
+				"translate": [
+					{ "x": -42.93, "y": 25.59, "curve": "stepped" },
+					{ "time": 0.0667, "x": -42.93, "y": 25.59 },
+					{ "time": 0.2333, "x": 76.77, "y": -36.32 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0667, "x": 0, "y": 0 },
+					{ "time": 0.2333 },
+					{ "time": 0.4, "x": 0, "y": 0 }
+				]
+			},
+			"light-8 R": {
+				"translate": [
+					{ "x": -106.86, "y": -55.5, "curve": "stepped" },
+					{ "time": 0.0333, "x": -106.86, "y": -55.5 },
+					{ "time": 0.2 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0333, "x": 0, "y": 0 },
+					{ "time": 0.2 },
+					{ "time": 0.3667, "x": 0, "y": 0 }
+				]
+			},
+			"light-3 R": {
+				"translate": [
+					{ "x": -248.88, "y": -66.03 },
+					{ "time": 0.1667 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0 },
+					{ "time": 0.1667 }
+				]
+			},
+			"light-7 R": {
+				"translate": [
+					{ "x": -148.31, "y": -34.54, "curve": "stepped" },
+					{ "time": 0.0333, "x": -148.31, "y": -34.54 },
+					{ "time": 0.2 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0333, "x": 0, "y": 0 },
+					{ "time": 0.2 }
+				]
+			},
+			"light-4  L": {
+				"translate": [
+					{ "x": 158.49, "y": 69.34, "curve": "stepped" },
+					{ "time": 0.0667, "x": 158.49, "y": 69.34 },
+					{ "time": 0.2333 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0667, "x": 0, "y": 0 },
+					{ "time": 0.2333 },
+					{ "time": 0.4, "x": 0, "y": 0 }
+				]
+			},
+			"light-2 L": {
+				"translate": [
+					{ "x": 144.5, "y": -33.28, "curve": "stepped" },
+					{ "time": 0.0667, "x": 144.5, "y": -33.28 },
+					{ "time": 0.2333 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0667, "x": 0, "y": 0 },
+					{ "time": 0.2333 }
+				]
+			},
+			"light-1 L": {
+				"translate": [
+					{ "x": 164.89, "y": -83.69, "curve": "stepped" },
+					{ "time": 0.0333, "x": 164.89, "y": -83.69 },
+					{ "time": 0.2 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0333, "x": 0, "y": 0 },
+					{ "time": 0.2 }
+				]
+			},
+			"light-3 L": {
+				"translate": [
+					{ "x": 203.76, "y": -76.31, "curve": "stepped" },
+					{ "time": 0.0667, "x": 203.76, "y": -76.31 },
+					{ "time": 0.2333 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0, "curve": "stepped" },
+					{ "time": 0.0667, "x": 0, "y": 0 },
+					{ "time": 0.2333 }
+				]
+			},
+			"light-6 L": {
+				"translate": [
+					{ "x": 64.45, "y": -33.96 },
+					{ "time": 0.1667, "x": -81.85, "y": 35.09 }
+				],
+				"scale": [
+					{ "x": 0, "y": 0 },
+					{ "time": 0.1667 },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				]
+			},
+			"Light scale 1": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.2 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 0.2 },
+					{ "time": 0.3667, "x": 0, "y": 0 }
+				]
+			},
+			"Light scale 2L": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.2333 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 0.2333 },
+					{ "time": 0.4, "x": 0, "y": 0 }
+				]
+			},
+			"Light scale 3L": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.2333 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 0.2333 },
+					{ "time": 0.4, "x": 0, "y": 0 }
+				]
+			},
+			"Light scale 1R": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.2 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 0.2 },
+					{ "time": 0.3667, "x": 0, "y": 0 }
+				]
+			},
+			"Light scale 2R": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.1667 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 0.1667 },
+					{ "time": 0.3333, "x": 0, "y": 0 }
+				]
+			},
+			"Light scale 3R": {
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.2 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 0.2 },
+					{ "time": 0.3667, "x": 0, "y": 0 }
+				]
+			},
+			"root": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{}
+				]
+			}
+		}
+	}
+}
+}
