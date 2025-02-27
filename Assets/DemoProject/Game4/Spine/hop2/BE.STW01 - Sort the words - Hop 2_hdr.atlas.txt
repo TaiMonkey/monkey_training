@@ -1,0 +1,48 @@
+
+BE.STW01 - Sort the words - Hop 2_hdr.png
+size: 1730,786
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Letter
+  rotate: false
+  xy: 1626, 411
+  size: 102, 111
+  orig: 102, 111
+  offset: 0, 0
+  index: -1
+Level
+  rotate: true
+  xy: 1626, 524
+  size: 260, 100
+  orig: 260, 100
+  offset: 0, 0
+  index: -1
+Manh hop 1
+  rotate: false
+  xy: 2, 2
+  size: 1140, 140
+  orig: 1140, 140
+  offset: 0, 0
+  index: -1
+Manh hop 2
+  rotate: false
+  xy: 1144, 2
+  size: 520, 140
+  orig: 520, 140
+  offset: 0, 0
+  index: -1
+Manh hop 3
+  rotate: false
+  xy: 2, 144
+  size: 1120, 640
+  orig: 1120, 640
+  offset: 0, 0
+  index: -1
+Manh hop 4
+  rotate: false
+  xy: 1124, 144
+  size: 500, 640
+  orig: 500, 640
+  offset: 0, 0
+  index: -1
