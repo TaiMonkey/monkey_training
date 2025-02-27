@@ -8,7 +8,13 @@ namespace Monkey.Game.Game2Demo
     [Serializable]
     public class Game2DataConfig
     {
-        public Turn turn;
+        public ListTurn listTurn;
+    }
+
+    [Serializable]
+    public class ListTurn
+    {
+        public List<Turn> turn;
     }
 
     [Serializable]

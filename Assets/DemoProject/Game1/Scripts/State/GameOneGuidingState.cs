@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace Monkey.Game.GameOneDemo
 {
-    public class GameOneGuidingState : FSMState
+    public class GameOneGuidingState : FSMState, EventListener<AnswerChanel>
     {
         private GameOneGuidingStateDependency dependency;
         private CancellationTokenSource cts;
@@ -27,17 +27,17 @@ namespace Monkey.Game.GameOneDemo
         public override void OnEnter()
         {
             base.OnEnter();
-
+            this.ObserverStartListening<AnswerChanel>();
             DoWork();
         }
 
         private void DoWork()
         {
             cts = new CancellationTokenSource();
-            StartGuidingClick(true);
+            StartGuidingClick();
         }
 
-        public async void StartGuidingClick(bool isDelay)
+        public async void StartGuidingClick()
         {
             ResetGuidingClick();
             isGuiding = true;
@@ -52,17 +52,16 @@ namespace Monkey.Game.GameOneDemo
                         break;
                     }
                 }
-                if (isDelay) await UniTask.Delay((int)TIME_DELAY_START, cancellationToken: cts.Token);
                 bool tscFadeDone = false;
                 while (isGuiding)
                 {
-                    dependency.UiGuiding.transform.localScale = Vector3.one;
                     dependency.UiGuiding.transform.position = answerCorrect.transform.position;
+                    dependency.UiGuiding.transform.localScale = Vector3.one;
                     await UniTask.Delay((int)TIME_DELAY, cancellationToken: cts.Token);
 
-                    dependency.UiGuiding.DOFade(1f, 0.35f).SetEase(Ease.Linear).onComplete += () => { tscFadeDone = true; };
-                    soundData = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, null);
-                    ObserverManager.TriggerEvent<SoundChannel>(soundData);
+                    dependency.UiGuiding.DOFade(1f, 0.5f).SetEase(Ease.Linear).onComplete += () => { tscFadeDone = true; };
+                    //soundData = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, null);
+                    //ObserverManager.TriggerEvent<SoundChannel>(soundData);
                     await UniTask.WaitUntil(() => tscFadeDone, cancellationToken: cts.Token);
                     await UniTask.Delay((int)TIME_DELAY, cancellationToken: cts.Token);
 
@@ -114,6 +113,7 @@ namespace Monkey.Game.GameOneDemo
             base.OnExit();
             ResetGuidingClick();
             cts?.Cancel();
+            this.ObserverStopListening<AnswerChanel>();
         }
 
         public override void OnDestroy()
@@ -121,6 +121,16 @@ namespace Monkey.Game.GameOneDemo
             base.OnDestroy();
             cts?.Dispose();
             cts?.Cancel();
+            this.ObserverStopListening<AnswerChanel>();
+        }
+
+        public void OnMMEvent(AnswerChanel eventType)
+        {
+            if (eventType.TypeEvent == AnswerChanel.Type.Answer)
+            {
+                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingFinish, eventType.Data);
+                ObserverManager.TriggerEvent(stateChanel);
+            }
         }
     }
 

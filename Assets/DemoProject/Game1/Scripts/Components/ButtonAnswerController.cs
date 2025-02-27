@@ -45,13 +45,10 @@ namespace Monkey.Game.GameOneDemo
 
         private void OnClick()
         {
-            StateChanel stateChanel = new StateChanel(StateName.Status.OnClick);
-            ObserverManager.TriggerEvent(stateChanel);
-
             AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Answer, this);
             ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
         }
-
+          
         public void SetColor()
         {
             if (IsCorrect)

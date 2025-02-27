@@ -10,7 +10,7 @@ using System;
 
 namespace Monkey.Game.Game2Demo
 {
-    public class Game2GuidingState : FSMState
+    public class Game2GuidingState : FSMState, EventListener<AnswerChanel>
     {
         private CancellationTokenSource cts;
         private Game2GuidingStateDependency dependency;
@@ -27,19 +27,13 @@ namespace Monkey.Game.Game2Demo
         public override void OnEnter()
         {
             base.OnEnter();
+            this.ObserverStartListening<AnswerChanel>();
 
             cts = new CancellationTokenSource();
-            if (StaticValue.CountWrong == 3)
-            {
-                StartGuidingClick(false);
-                StaticValue.CountWrong = 0;
-            } else
-            {
-                StartGuidingClick(true);
-            }
+            StartGuidingClick();
         }
 
-        public async void StartGuidingClick(bool isDelay)
+        public async void StartGuidingClick()
         {
             ResetGuidingClick();
             isGuiding = true;
@@ -54,7 +48,6 @@ namespace Monkey.Game.Game2Demo
                         break;
                     }
                 }
-                if (isDelay) await UniTask.Delay((int)TIME_DELAY_START, cancellationToken: cts.Token);
                 bool tscFadeDone = false;
                 while (isGuiding)
                 {
@@ -117,6 +110,7 @@ namespace Monkey.Game.Game2Demo
             base.OnExit();
             ResetGuidingClick();
             cts?.Cancel();
+            this.ObserverStopListening<AnswerChanel>();
         }
 
         public override void OnDestroy()
@@ -124,6 +118,16 @@ namespace Monkey.Game.Game2Demo
             base.OnDestroy();
             cts?.Dispose();
             cts?.Cancel();
+            this.ObserverStopListening<AnswerChanel>();
+        }
+
+        public void OnMMEvent(AnswerChanel eventType)
+        {
+            if (eventType.TypeEvent == AnswerChanel.Type.Answer)
+            {
+                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingEnd, eventType.Data);
+                ObserverManager.TriggerEvent(stateChanel);
+            }
         }
     }
 

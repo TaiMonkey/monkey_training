@@ -13,7 +13,8 @@ namespace Monkey.Game.Game2Demo
             Init = 1,
             Intro = 2,
             GamePlay = 3,
-            Guiding = 4
+            Guiding = 4,
+            Delay = 5
         }
 
         public enum Status
@@ -26,13 +27,15 @@ namespace Monkey.Game.Game2Demo
             PlayEnd = 5,
             GuidingStart = 6,
             GuidingEnd = 7,
-            OnClick = 8
+            DelayStart = 8,
+            OnClickWrong =9,
         }
     }
 
     public class StaticValue
     {
         public static int CountWrong = 0;
+        public static int CurrentTurn = 0;
     }
 
     public struct StateChanel: EventListener<StateChanel>

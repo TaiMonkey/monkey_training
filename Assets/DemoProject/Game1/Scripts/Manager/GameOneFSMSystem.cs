@@ -12,6 +12,7 @@ namespace Monkey.Game.GameOneDemo
         private GameOneGamePlayState gamePlayState;
         private GameOneNextTurnState nextTurnState;
         private GameOneGuidingState guidingState;
+        private GameOneDelayRightState delayRightState;
 
         private void Awake()
         {
@@ -20,6 +21,7 @@ namespace Monkey.Game.GameOneDemo
             gamePlayState = new GameOneGamePlayState();
             nextTurnState = new GameOneNextTurnState();
             guidingState = new GameOneGuidingState();
+            delayRightState = new GameOneDelayRightState();
         }
 
         public override void SetupStateData<T>(T data)
@@ -61,6 +63,9 @@ namespace Monkey.Game.GameOneDemo
                     break;
                 case StateName.Name.Guiding:
                     GotoState(guidingState);
+                    break;
+                case StateName.Name.DelayRight:
+                    GotoState(delayRightState, data);
                     break;
             }
         }       

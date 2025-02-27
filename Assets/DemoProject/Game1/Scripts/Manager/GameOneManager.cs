@@ -42,13 +42,11 @@ namespace Monkey.Game.GameOneDemo
                     GameOneIntroStateData introStateData = adapter.GetData<GameOneIntroStateData>(0);
                     fSMSystem.GotoState(StateName.Name.Intro.ToString(), introStateData);
                     break;
-                case StateName.Status.IntroFinish:
+                case StateName.Status.GuidingStart:
                     fSMSystem.GotoState(StateName.Name.Guiding.ToString(), null);
                     break;
-
-                case StateName.Status.OnClick:
-                    int maxTurn = adapter.GetMaxTurn();
-                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), maxTurn);
+                case StateName.Status.IntroFinish:
+                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), null);
                     break;
                 case StateName.Status.NexTurnStart:
                     fSMSystem.GotoState(StateName.Name.NextTurn.ToString(), null);
@@ -56,6 +54,13 @@ namespace Monkey.Game.GameOneDemo
                 case StateName.Status.NextTurnFinish:
                     GameOneInitStateData initStateData = adapter.GetData<GameOneInitStateData>(StaticValue.CurrentTurn);
                     fSMSystem.GotoState(StateName.Name.Init.ToString(), initStateData);
+                    break;
+                case StateName.Status.PlayFinish:
+                    int maxTurn = adapter.GetMaxTurn();
+                    fSMSystem.GotoState(StateName.Name.DelayRight.ToString(), maxTurn);
+                    break;
+                case StateName.Status.GuidingFinish:
+                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), eventType.Data);
                     break;
             }
         }

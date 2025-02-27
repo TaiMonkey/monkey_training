@@ -9,44 +9,48 @@ namespace Monkey.Game.GameOneDemo
     public class GameOneGamePlayState : FSMState, EventListener<AnswerChanel>
     {
         private ButtonAnswerController currentButtonAnswerController;
-        private int maxTurn;
-        private const float TIME_DELAY_START = 1000;
-        private CancellationTokenSource cts;
+        private bool isCorrect = false;
+        private ButtonAnswerController buttonAnswerController;
+        private float timer = 0f;
 
         public async void OnMMEvent(AnswerChanel eventType)
         {
             if (eventType.TypeEvent == AnswerChanel.Type.Answer)
             {
-                if (currentButtonAnswerController != null)
-                    currentButtonAnswerController.ResetColor();
+                buttonAnswerController = (ButtonAnswerController)eventType.Data;
+                DoWork(buttonAnswerController);
+            }
+        }
 
-                ButtonAnswerController buttonAnswerController = (ButtonAnswerController)eventType.Data;
-                buttonAnswerController.SetColor();
-                SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, buttonAnswerController.AudioClip);
-                ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
-                currentButtonAnswerController = buttonAnswerController;
+        private void DoWork(ButtonAnswerController buttonAnswerController)
+        {
+            if (currentButtonAnswerController != null)
+                currentButtonAnswerController.ResetColor();
 
-                bool isCorrect = buttonAnswerController.IsCorrect;
-                if(isCorrect)
-                {
-                    cts = new();
-                    await UniTask.Delay((int)TIME_DELAY_START, cancellationToken: cts.Token);
-                    if (StaticValue.CurrentTurn < (maxTurn - 1))
-                    {
-                        // chuyen turn
-                        StateChanel stateChanel = new StateChanel(StateName.Status.NexTurnStart);
-                        ObserverManager.TriggerEvent(stateChanel);
-                    }
-                    else
-                    {
-                        UnityEngine.Debug.LogError("xxxx");
-                        // end game
-                    }
-                }
-                else
-                {
+            buttonAnswerController.SetColor();
+            SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, buttonAnswerController.AudioClip);
+            ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
+            currentButtonAnswerController = buttonAnswerController;
 
-                }
+            isCorrect = buttonAnswerController.IsCorrect;
+            if (isCorrect)
+            {
+                StateChanel stateChanel = new StateChanel(StateName.Status.PlayFinish);
+                ObserverManager.TriggerEvent(stateChanel);
+            }
+            else
+            {
+            }
+        }
+
+        public override void OnUpdate()
+        {
+            timer += Time.deltaTime;
+            if (timer >= 5)
+            {
+              StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
+              ObserverManager.TriggerEvent(stateChanel);
+              timer = 0;
             }
         }
 
@@ -57,9 +61,11 @@ namespace Monkey.Game.GameOneDemo
 
         public override void OnEnter(object data)
         {
-            base.OnEnter(data);
-            maxTurn = (int)data;
-            Debug.LogError("GamePlay......");
+            if( data != null)
+            {
+                buttonAnswerController = (ButtonAnswerController)data;
+                DoWork(buttonAnswerController);
+            }
             this.ObserverStartListening<AnswerChanel>();
         }
 

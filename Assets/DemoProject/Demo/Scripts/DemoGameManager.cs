@@ -24,7 +24,7 @@ public class DemoGameManager : GameManager, EventListener<DemoChannel>
         string data = "";
         fSMSystem.SetupStateData(dependency);
         adapter.SetData(data);
-        fSMSystem.GotoState(DemoConstValue.Init.ToString(), adapter.GetData<DemoGamePlayData1>(0));
+        fSMSystem.GotoState(DemoConstValue.Init.ToString(), adapter.GetData<DemoGamePlayData1>(0));  
     }
     public void OnMMEvent(DemoChannel eventType)
     {

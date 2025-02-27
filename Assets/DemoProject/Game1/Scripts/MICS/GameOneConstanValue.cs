@@ -13,6 +13,7 @@ namespace Monkey.Game.GameOneDemo
             GamePlay = 3,
             NextTurn = 4,
             Guiding = 5,
+            DelayRight = 6,
         }
 
         public enum Status
@@ -23,11 +24,12 @@ namespace Monkey.Game.GameOneDemo
             IntroFinish = 3,
             PlayStart = 4,
             PlayFinish = 5,
-            NexTurnStart = 4,
-            NextTurnFinish = 5,
-            GuidingStart = 6,
-            GuidingFinish = 7,
-            OnClick = 8,
+            NexTurnStart = 6,
+            NextTurnFinish = 7,
+            GuidingStart = 8,
+            GuidingFinish = 9,
+            OnClick = 10,
+            OnClickWrong = 11,
         }
     }
 

@@ -15,7 +15,7 @@ namespace Monkey.Game.Game2Demo
         {
             T data;
             Type typeData = typeof(T);
-            Turn turnData = gameData.turn;
+            Turn turnData = gameData.listTurn.turn[turn];
 
             if (typeData == typeof(Game2InitStateData))
             {

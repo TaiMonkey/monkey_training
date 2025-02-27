@@ -11,6 +11,7 @@ namespace Monkey.Game.Game2Demo
         private Game2IntroState introState;
         private Game2GuidingState guidingState;
         private Game2GamePlayState gamePlayState;
+        private Game2DelayRightState delayRightState;
 
         private void Awake()
         {
@@ -18,6 +19,7 @@ namespace Monkey.Game.Game2Demo
             introState = new Game2IntroState();
             guidingState = new Game2GuidingState();
             gamePlayState = new Game2GamePlayState();
+            delayRightState = new Game2DelayRightState();
         }
 
         public override void SetupStateData<T>(T data)
@@ -50,7 +52,10 @@ namespace Monkey.Game.Game2Demo
                     GotoState(guidingState);
                     break;
                 case StateName.Name.GamePlay:
-                    GotoState(gamePlayState);
+                    GotoState(gamePlayState, data);
+                    break;
+                case StateName.Name.Delay:
+                   GotoState(delayRightState, data);
                     break;
             }
         }

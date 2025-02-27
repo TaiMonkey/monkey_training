@@ -14,7 +14,7 @@ namespace Monkey.Game.Game2Demo
             fSMSystem.SetupStateData(dependency);
             this.ObserverStartListening<StateChanel>();
 
-            Game2InitStateData initStateData = adapter.GetData<Game2InitStateData>(0);
+            Game2InitStateData initStateData = adapter.GetData<Game2InitStateData>(StaticValue.CurrentTurn);
             fSMSystem.GotoState(StateName.Name.Init.ToString(), initStateData);
         }
 
@@ -39,11 +39,17 @@ namespace Monkey.Game.Game2Demo
                     fSMSystem.GotoState(StateName.Name.Intro.ToString(), introStateData);
                     break;
                 case StateName.Status.IntroEnd:
-                case StateName.Status.PlayEnd:
+                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), null);
+                    break;
+                case StateName.Status.GuidingStart:
                     fSMSystem.GotoState(StateName.Name.Guiding.ToString(), null);
                     break;
-                case StateName.Status.OnClick:
-                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), null);
+                case StateName.Status.GuidingEnd:
+                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), eventType.Data);
+                    break;
+                case StateName.Status.PlayEnd:
+                    int maxTurn = adapter.GetMaxTurn();
+                    fSMSystem.GotoState(StateName.Name.Delay.ToString(), maxTurn);
                     break;
             }
         }
