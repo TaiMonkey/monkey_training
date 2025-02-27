@@ -16,8 +16,12 @@ MonoBehaviour:
     turn:
       ButtonBoxes:
       - QuestionText: F
-        audioChoose: {fileID: 0}
+        audioChoose: {fileID: 8300000, guid: c3220c87f0085b24181a5d995753ae83, type: 3}
       - QuestionText: A
-        audioChoose: {fileID: 0}
-      ButtonAns: []
-      AudioQuestion: {fileID: 0}
+        audioChoose: {fileID: 8300000, guid: c3220c87f0085b24181a5d995753ae83, type: 3}
+      ButtonAns:
+      - SpriteAns: {fileID: 21300000, guid: b097ab31229b31f408ce80ce4be50f33, type: 3}
+        audioClick: {fileID: 8300000, guid: c3220c87f0085b24181a5d995753ae83, type: 3}
+      - SpriteAns: {fileID: 21300000, guid: b73f37fe1d0e4324b991c645081aa0b2, type: 3}
+        audioClick: {fileID: 8300000, guid: c3220c87f0085b24181a5d995753ae83, type: 3}
+      AudioQuestion: {fileID: 8300000, guid: 7e60e56f0d6442546b40d86e185b21f4, type: 3}
