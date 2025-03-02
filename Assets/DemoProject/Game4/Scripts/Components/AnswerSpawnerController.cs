@@ -2,49 +2,86 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnswerSpawnerController : MonoBehaviour
+namespace Monkey.Game.Game4Demo
 {
-    // Start is called before the first frame update
-    [SerializeField] GameObject[] answerPrefabs;
-    public Transform spawnPoint;
-    public float spawnRate = 2f;
-    public float speed = 5f;
-
-    private Queue<GameObject> activeAnswers = new Queue<GameObject>();
-    private int maxAnswers = 4;
-    private float spawnSpacing = 3f;
-    void Start()
+    public class AnswerSpawnerController : MonoBehaviour
     {
-        for (int i = 0; i < maxAnswers; i++)
+        public List<AnswerButtonController> AnswerPrefabs { get; set; }
+        public bool IsAnyAnswerBeingDragged { get; set; } = false;
+        public Transform spawnPoint;
+        public float spawnRate = 2f;
+        public float speed = 5f;
+        private bool isPaused = false;
+
+        private Queue<AnswerButtonController> activeAnswers = new Queue<AnswerButtonController>();
+
+        void Start()
         {
-            SpawnNewAnswer(i * spawnSpacing * 92);
-        }
-    }
-    void SpawnNewAnswer(float offsetX = 0)
-    {
-        // Chọn ngẫu nhiên 1 loại đáp án
-        int index = Random.Range(0, answerPrefabs.Length);
-        Vector3 spawnPosition = spawnPoint.position + new Vector3(offsetX, 0, 0); // Dịch sang phải một khoảng
-        GameObject answer = Instantiate(answerPrefabs[index], spawnPosition, Quaternion.identity);
-        answer.transform.SetParent(spawnPoint, false);
-
-        activeAnswers.Enqueue(answer); // Thêm vào hàng đợi
-        StartCoroutine(MoveAnswer(answer));
-    }
-
-    IEnumerator MoveAnswer(GameObject answer)
-    {
-        while (answer.transform.position.x > -10) // Khi chưa ra khỏi màn hình
-        {
-            answer.transform.position += Vector3.left * speed * Time.deltaTime;
-            yield return null;
+            AnswerPrefabs = new List<AnswerButtonController>();
         }
 
-        // Khi thẻ ra khỏi màn hình, xóa nó khỏi danh sách
-        activeAnswers.Dequeue();
-        Destroy(answer);
+        public void PauseConveyor()
+        {
+            Debug.Log("🛑 Băng chuyền TẠM DỪNG");
+            isPaused = true;
+        }
 
-        // Spawn thẻ mới để đảm bảo luôn có 4 thẻ trên màn hình
-        SpawnNewAnswer();
+        public void ResumeConveyor()
+        {
+            Debug.Log("▶️ Băng chuyền CHẠY TIẾP");
+            isPaused = false;
+        }
+
+        public void SpawnNewAnswer(float offsetX = 0)
+        {
+            if (activeAnswers.Count >= 4) return;
+
+            int index = Random.Range(0, AnswerPrefabs.Count);
+            Vector3 spawnPosition = transform.position + new Vector3(offsetX, 0, 0);
+
+            float spacing = 2f; 
+            spawnPosition.x += activeAnswers.Count * spacing;
+
+            AnswerButtonController answer = Instantiate(AnswerPrefabs.ToArray()[index], spawnPosition, Quaternion.identity);
+            answer.Initialize(this);
+            answer.OriginalParent = transform;
+            answer.transform.SetParent(transform, false);
+
+            activeAnswers.Enqueue(answer);
+            StartCoroutine(MoveAnswer(answer));
+        }
+
+        public void RequeueAnswer(AnswerButtonController answer)
+        {
+            activeAnswers.Enqueue(answer);
+
+            float newXPosition = transform.position.x + (activeAnswers.Count * 2.5f);
+            answer.transform.position = new Vector3(newXPosition, answer.transform.position.y, answer.transform.position.z);
+        }
+
+
+
+        IEnumerator MoveAnswer(AnswerButtonController answer)
+        {
+            while (answer.transform.position.x > -10)
+            {
+                while (isPaused)
+                {
+                    yield return null;
+                }
+
+                answer.transform.position += Vector3.left * speed * Time.deltaTime;
+                yield return null;
+            }
+
+            if (!answer.IsBeingDragged)
+            {
+                RequeueAnswer(answer);
+                //activeAnswers.Dequeue();
+                //Destroy(answer.gameObject);
+                //SpawnNewAnswer(); 
+            }
+        }
+
     }
 }

@@ -1,18 +1,42 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Game4Dependency : MonoBehaviour
+namespace Monkey.Game.Game4Demo
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Game4Dependency : Dependency
     {
-        
-    }
+        [SerializeField] private List<AnswerButtonController> answerButtonController;
+        [SerializeField] private List<BoxQuesController> boxQuesController;
+        [SerializeField] private AnswerSpawnerController answerSpawnerController;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override T GetStateData<T>()
+        {
+            T data;
+            Type typeData = typeof(T);
+
+            if (typeData == typeof(Game4InitStateDependency))
+            {
+                Game4InitStateDependency initStateDependency = new Game4InitStateDependency();
+                initStateDependency.answerButtonControllers = answerButtonController;
+                initStateDependency.boxQuesControllers = boxQuesController;
+
+                data = ConvertToType<T>(initStateDependency);
+            }
+            else if(typeData == typeof(Game4IntroStateDependency))
+            {
+                Game4IntroStateDependency introStateDependency = new Game4IntroStateDependency();
+                introStateDependency.AnswerButtonControllers = answerButtonController;
+                introStateDependency.AnswerSpawnerController = answerSpawnerController;
+
+                data = ConvertToType<T>(introStateDependency);
+            }
+            else
+            {
+                data = ConvertToType<T>(null);
+            }
+            return data;
+        }
     }
 }
