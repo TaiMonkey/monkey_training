@@ -7,10 +7,10 @@ namespace Monkey.Game.GameTest
 {
     public class GameTestDependency : Dependency
     {
-        [SerializeField] private List<ButtonBearController> buttonBearControllers;
-        [SerializeField] private List<ButtonTigerController> buttonTigerControllers;
-        [SerializeField] private CageController cageTiger;
-        [SerializeField] private CageController cageBear;
+        [SerializeField] private List<AnimalButtonController> buttonBearControllers;
+        [SerializeField] private List<AnimalButtonController> buttonTigerControllers;
+        [SerializeField] private RectTransform cageTiger;
+        [SerializeField] private RectTransform cageBear;
         [SerializeField] private GameTestConfig gameTestConfig;
 
         public override T GetStateData<T>()
@@ -35,6 +35,8 @@ namespace Monkey.Game.GameTest
                 GameTestGamePlayStateDependency gamePlayDependency = new GameTestGamePlayStateDependency();
                 gamePlayDependency.AnimalButtonConfig = gameTestConfig.AnimalButton;
                 gamePlayDependency.AnimConfig = gameTestConfig.AnimConfig;
+                gamePlayDependency.TigerButtonControllers = buttonTigerControllers;
+                gamePlayDependency.BearButtonControllers = buttonBearControllers;
 
                 data = ConvertToType<T>(gamePlayDependency);
             }

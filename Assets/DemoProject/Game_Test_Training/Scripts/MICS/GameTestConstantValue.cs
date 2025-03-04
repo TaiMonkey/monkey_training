@@ -65,7 +65,9 @@ namespace Monkey.Game.GameTest
         {
             None = 0,
             Pointer_Down = 1,
-            Pointer_Up = 2
+            Pointer_Up = 2,
+            OnDrag = 3,
+            BeginDrag = 4,
         }
 
         public object Data { get; private set; }

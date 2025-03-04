@@ -25,16 +25,20 @@ namespace Monkey.Game.GameTest
             Debug.LogError("Init");
             for(int i = 0; i< dependency.ButtonBearControllers.Count; i ++)
             {
-                ButtonBearController buttonBearController = dependency.ButtonBearControllers[i];
+                AnimalButtonController buttonBearController = dependency.ButtonBearControllers[i];
                 buttonBearController.SetAnimStart(dependency.AnimConfig.animNomal);
+                buttonBearController.InitDataCage(dependency.Cage_Bear);
+                buttonBearController.OriginPos = buttonBearController.transform.position;
             }
             for (int i = 0; i < dependency.ButtonTigerControllers.Count; i++)
             {
-                ButtonTigerController buttonTigerController = dependency.ButtonTigerControllers[i];
+                AnimalButtonController buttonTigerController = dependency.ButtonTigerControllers[i];
                 buttonTigerController.SetAnimStart(dependency.AnimConfig.animNomal);
+                buttonTigerController.InitDataCage(dependency.Cage_Tiger);
+                buttonTigerController.OriginPos = buttonTigerController.transform.position;
             }
-            dependency.Cage_Bear.Cage_type = (int)GameTestTypeCage.Cage_Bear;
-            dependency.Cage_Tiger.Cage_type = (int)GameTestTypeCage.Cage_Tiger;
+            //dependency.Cage_Bear.Cage_type = (int)GameTestTypeCage.Cage_Bear;
+            //dependency.Cage_Tiger.Cage_type = (int)GameTestTypeCage.Cage_Tiger;
 
             await UniTask.Delay(TIME_DELAY, cancellationToken: cts.Token);
 
@@ -51,10 +55,10 @@ namespace Monkey.Game.GameTest
     public class GameTestInitStateDependency
     {
         public AudioClip AudioCTA { get; set; }
-        public List<ButtonBearController> ButtonBearControllers { get; set; }
-        public List<ButtonTigerController> ButtonTigerControllers { get; set; }
-        public CageController Cage_Tiger { get; set; }
-        public CageController Cage_Bear { get; set; }
+        public List<AnimalButtonController> ButtonBearControllers { get; set; }
+        public List<AnimalButtonController> ButtonTigerControllers { get; set; }
+        public RectTransform Cage_Tiger { get; set; }
+        public RectTransform Cage_Bear { get; set; }
         public GameTestAnimalConfig AnimConfig { get; set; }
      }
 }
