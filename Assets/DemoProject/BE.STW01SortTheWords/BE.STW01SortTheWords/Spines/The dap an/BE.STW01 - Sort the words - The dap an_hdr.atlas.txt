@@ -1,0 +1,13 @@
+
+BE.STW01 - Sort the words - The dap an_hdr.png
+size: 436,443
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Picture
+  rotate: false
+  xy: 2, 2
+  size: 432, 439
+  orig: 432, 439
+  offset: 0, 0
+  index: -1

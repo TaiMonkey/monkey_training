@@ -1,0 +1,13 @@
+
+Sao_hdr.png
+size: 662,677
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Sao
+  rotate: false
+  xy: 2, 2
+  size: 658, 673
+  orig: 710, 720
+  offset: 26, 23
+  index: -1

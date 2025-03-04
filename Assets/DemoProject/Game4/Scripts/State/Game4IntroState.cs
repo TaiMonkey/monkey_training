@@ -23,7 +23,7 @@ namespace Monkey.Game.Game4Demo
                 dependency.AnswerSpawnerController.AnswerPrefabs.Add(dependency.AnswerButtonControllers[i]);
             }
 
-            dependency.AnswerSpawnerController.InitializeAnswers();
+            //dependency.AnswerSpawnerController.InitializeAnswers();
 
             //for(int i = 0; i < maxAnswers; i++)
             //{

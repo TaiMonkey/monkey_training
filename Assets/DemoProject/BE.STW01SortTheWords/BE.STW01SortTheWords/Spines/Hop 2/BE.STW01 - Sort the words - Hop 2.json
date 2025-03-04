@@ -1,0 +1,3086 @@
+{
+"skeleton": {
+	"hash": "7jCR00v6zkdmMoQhA9Qtbi+iMtk",
+	"spine": "3.8.99",
+	"x": -496.54,
+	"y": -6.71,
+	"width": 991.86,
+	"height": 456.52,
+	"images": "../Images/",
+	"audio": "../Audio/"
+},
+"bones": [
+	{ "name": "root" },
+	{ "name": "All", "parent": "root" },
+	{ "name": "Hop va Letter", "parent": "All" },
+	{ "name": "Hop", "parent": "Hop va Letter", "scaleX": 0.61, "scaleY": 0.61 },
+	{ "name": "Level 1", "parent": "Hop", "x": 542, "y": 97 },
+	{ "name": "Level 2", "parent": "Hop", "x": 542, "y": 202 },
+	{ "name": "Level 3", "parent": "Hop", "x": 542, "y": 307 },
+	{ "name": "Level 4", "parent": "Hop", "x": 542, "y": 412 },
+	{ "name": "Level 5", "parent": "Hop", "x": 542, "y": 517 },
+	{ "name": "Letter Flip", "parent": "Hop va Letter", "x": -137.24, "y": 188 },
+	{ "name": "Letter", "parent": "Letter Flip" }
+],
+"slots": [
+	{ "name": "Manh hop 1", "bone": "Hop", "color": "ff6d00ff", "attachment": "Manh hop 1" },
+	{ "name": "Manh hop 2", "bone": "Hop", "color": "ea5400ff", "attachment": "Manh hop 2" },
+	{ "name": "Manh hop 3", "bone": "Hop", "color": "ff9700ff", "attachment": "Manh hop 3" },
+	{ "name": "Manh hop 4", "bone": "Hop", "color": "ff6d00ff", "attachment": "Manh hop 4" },
+	{ "name": "Level 1", "bone": "Level 1", "color": "ff9700ff", "attachment": "Level" },
+	{ "name": "Level 2", "bone": "Level 2", "color": "ff9700ff", "attachment": "Level" },
+	{ "name": "Level 3", "bone": "Level 3", "color": "ff9700ff", "attachment": "Level" },
+	{ "name": "Level 4", "bone": "Level 4", "color": "ff9700ff", "attachment": "Level" },
+	{ "name": "Level 5", "bone": "Level 5", "color": "ff9700ff", "attachment": "Level" },
+	{ "name": "Letter", "bone": "Letter", "attachment": "Letter" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Letter": {
+				"Letter": { "width": 102, "height": 111 }
+			},
+			"Level 1": {
+				"Level": { "width": 260, "height": 100 }
+			},
+			"Level 2": {
+				"Level": { "width": 260, "height": 100 }
+			},
+			"Level 3": {
+				"Level": { "width": 260, "height": 100 }
+			},
+			"Level 4": {
+				"Level": { "width": 260, "height": 100 }
+			},
+			"Level 5": {
+				"Level": { "width": 260, "height": 100 }
+			},
+			"Manh hop 1": {
+				"Manh hop 1": { "x": -244, "y": 667.4, "width": 1140, "height": 140 }
+			},
+			"Manh hop 2": {
+				"Manh hop 2": { "x": 552, "y": 667.4, "width": 520, "height": 140 }
+			},
+			"Manh hop 3": {
+				"Manh hop 3": { "x": -228, "y": 310, "width": 1120, "height": 640 }
+			},
+			"Manh hop 4": {
+				"Manh hop 4": { "x": 537.8, "y": 309, "width": 500, "height": 640 }
+			}
+		}
+	}
+],
+"events": {
+	"Correct": { "audio": "Correct.mp3" },
+	"Wrong": { "audio": "Wrong.mp3" }
+},
+"animations": {
+	"Hop 2 - Lv0": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{}
+				]
+			}
+		}
+	},
+	"Hop 2 - Lv1": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{}
+				]
+			}
+		}
+	},
+	"Hop 2 - Lv2": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{}
+				]
+			}
+		}
+	},
+	"Hop 2 - Lv3": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{}
+				]
+			}
+		}
+	},
+	"Hop 2 - Lv4": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{}
+				]
+			}
+		}
+	},
+	"Hop 2 - Lv5": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{}
+				]
+			}
+		}
+	},
+	"Hop 2 - xanh": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "66c61cff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "4ba30dff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "85e139ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "66c61cff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{}
+				]
+			}
+		}
+	},
+	"Hop 2 - xanh - Click": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "66c61cff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "4ba30dff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "85e139ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "66c61cff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.046, "y": 0.954 },
+					{ "time": 0.0667, "x": 1.125, "y": 0.875 },
+					{ "time": 0.1, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1333, "x": 1.138, "y": 0.862 },
+					{ "time": 0.1667, "x": 1.101, "y": 0.899 },
+					{ "time": 0.2, "x": 1.035, "y": 0.965 },
+					{ "time": 0.2333, "x": 0.947, "y": 1.053 },
+					{ "time": 0.2667, "x": 0.875, "y": 1.125 },
+					{ "time": 0.3, "x": 0.85, "y": 1.15 },
+					{ "time": 0.3333, "x": 0.863, "y": 1.137 },
+					{ "time": 0.3667, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4, "x": 0.934, "y": 1.066 },
+					{ "time": 0.4333, "x": 0.978, "y": 1.022 },
+					{ "time": 0.4667, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5, "x": 1.048, "y": 0.952 },
+					{ "time": 0.5333, "x": 1.06, "y": 0.94 },
+					{ "time": 0.5667, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6, "x": 1.035, "y": 0.965 },
+					{ "time": 0.6333, "x": 1.015, "y": 0.985 },
+					{ "time": 0.6667, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7333, "x": 0.992, "y": 1.008 },
+					{ "time": 0.7667, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8333 }
+				]
+			}
+		}
+	},
+	"Hop 2 bao dung - Lv0": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "fdb140ff" },
+					{ "time": 0.2333, "color": "fbe3b5ff" },
+					{ "time": 0.2667, "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61bff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "66c61cff" },
+					{ "time": 1.2, "color": "75bc19ff" },
+					{ "time": 1.2333, "color": "9ba612ff" },
+					{ "time": 1.2667, "color": "c88c09ff" },
+					{ "time": 1.3, "color": "ee7602ff" },
+					{ "time": 1.3333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ea5400ff" },
+					{ "time": 0.2, "color": "c06803ff" },
+					{ "time": 0.2333, "color": "748e09ff" },
+					{ "time": 0.2667, "color": "4ba30dff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "4ba30dff" },
+					{ "time": 1.2, "color": "5b9a0bff" },
+					{ "time": 1.2333, "color": "838708ff" },
+					{ "time": 1.2667, "color": "b16f04ff" },
+					{ "time": 1.3, "color": "d95c01ff" },
+					{ "time": 1.3333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61cff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "66c61cff" },
+					{ "time": 1.2, "color": "75bc19ff" },
+					{ "time": 1.2333, "color": "9ba612ff" },
+					{ "time": 1.2667, "color": "c88c09ff" },
+					{ "time": 1.3, "color": "ee7602ff" },
+					{ "time": 1.3333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.028, "y": 0.972 },
+					{ "time": 0.0667, "x": 1.088, "y": 0.912 },
+					{ "time": 0.1, "x": 1.134, "y": 0.866 },
+					{ "time": 0.1333, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1667, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2, "x": 1.112, "y": 0.888 },
+					{ "time": 0.2333, "x": 1.063, "y": 0.937 },
+					{ "time": 0.2667, "x": 0.996, "y": 1.004 },
+					{ "time": 0.3, "x": 0.924, "y": 1.076 },
+					{ "time": 0.3333, "x": 0.87, "y": 1.13 },
+					{ "time": 0.3667, "x": 0.85, "y": 1.15 },
+					{ "time": 0.4, "x": 0.863, "y": 1.137 },
+					{ "time": 0.4333, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4667, "x": 0.934, "y": 1.066 },
+					{ "time": 0.5, "x": 0.978, "y": 1.022 },
+					{ "time": 0.5333, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5667, "x": 1.048, "y": 0.952 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6667, "x": 1.035, "y": 0.965 },
+					{ "time": 0.7, "x": 1.015, "y": 0.985 },
+					{ "time": 0.7333, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7667, "x": 0.99, "y": 1.01 },
+					{ "time": 0.8, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8333, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8667, "x": 0.998, "y": 1.002 },
+					{ "time": 0.9 }
+				]
+			}
+		},
+		"events": [
+			{ "name": "Correct" }
+		]
+	},
+	"Hop 2 bao dung - Lv1": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "fdb140ff" },
+					{ "time": 0.2333, "color": "fbe3b5ff" },
+					{ "time": 0.2667, "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61cff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "66c61cff" },
+					{ "time": 1.2, "color": "75bc19ff" },
+					{ "time": 1.2333, "color": "9ba612ff" },
+					{ "time": 1.2667, "color": "c88c09ff" },
+					{ "time": 1.3, "color": "ee7602ff" },
+					{ "time": 1.3333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ea5400ff" },
+					{ "time": 0.2, "color": "c06803ff" },
+					{ "time": 0.2333, "color": "748e09ff" },
+					{ "time": 0.2667, "color": "4ba30dff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "4ba30dff" },
+					{ "time": 1.2, "color": "5b9a0bff" },
+					{ "time": 1.2333, "color": "838708ff" },
+					{ "time": 1.2667, "color": "b16f04ff" },
+					{ "time": 1.3, "color": "d95c01ff" },
+					{ "time": 1.3333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61cff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "66c61cff" },
+					{ "time": 1.2, "color": "75bc19ff" },
+					{ "time": 1.2333, "color": "9ba612ff" },
+					{ "time": 1.2667, "color": "c88c09ff" },
+					{ "time": 1.3, "color": "ee7602ff" },
+					{ "time": 1.3333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.028, "y": 0.972 },
+					{ "time": 0.0667, "x": 1.088, "y": 0.912 },
+					{ "time": 0.1, "x": 1.134, "y": 0.866 },
+					{ "time": 0.1333, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1667, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2, "x": 1.112, "y": 0.888 },
+					{ "time": 0.2333, "x": 1.063, "y": 0.937 },
+					{ "time": 0.2667, "x": 0.996, "y": 1.004 },
+					{ "time": 0.3, "x": 0.924, "y": 1.076 },
+					{ "time": 0.3333, "x": 0.87, "y": 1.13 },
+					{ "time": 0.3667, "x": 0.85, "y": 1.15 },
+					{ "time": 0.4, "x": 0.863, "y": 1.137 },
+					{ "time": 0.4333, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4667, "x": 0.934, "y": 1.066 },
+					{ "time": 0.5, "x": 0.978, "y": 1.022 },
+					{ "time": 0.5333, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5667, "x": 1.048, "y": 0.952 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6667, "x": 1.035, "y": 0.965 },
+					{ "time": 0.7, "x": 1.015, "y": 0.985 },
+					{ "time": 0.7333, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7667, "x": 0.99, "y": 1.01 },
+					{ "time": 0.8, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8333, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8667, "x": 0.998, "y": 1.002 },
+					{ "time": 0.9 }
+				]
+			}
+		},
+		"events": [
+			{ "name": "Correct" }
+		]
+	},
+	"Hop 2 bao dung - Lv2": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "fdb140ff" },
+					{ "time": 0.2333, "color": "fbe3b5ff" },
+					{ "time": 0.2667, "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61cff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "66c61cff" },
+					{ "time": 1.2, "color": "75bc19ff" },
+					{ "time": 1.2333, "color": "9ba612ff" },
+					{ "time": 1.2667, "color": "c88c09ff" },
+					{ "time": 1.3, "color": "ee7602ff" },
+					{ "time": 1.3333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ea5400ff" },
+					{ "time": 0.2, "color": "c06803ff" },
+					{ "time": 0.2333, "color": "748e09ff" },
+					{ "time": 0.2667, "color": "4ba30dff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "4ba30dff" },
+					{ "time": 1.2, "color": "5b9a0bff" },
+					{ "time": 1.2333, "color": "838708ff" },
+					{ "time": 1.2667, "color": "b16f04ff" },
+					{ "time": 1.3, "color": "d95c01ff" },
+					{ "time": 1.3333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61cff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "66c61cff" },
+					{ "time": 1.2, "color": "75bc19ff" },
+					{ "time": 1.2333, "color": "9ba612ff" },
+					{ "time": 1.2667, "color": "c88c09ff" },
+					{ "time": 1.3, "color": "ee7602ff" },
+					{ "time": 1.3333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.028, "y": 0.972 },
+					{ "time": 0.0667, "x": 1.088, "y": 0.912 },
+					{ "time": 0.1, "x": 1.134, "y": 0.866 },
+					{ "time": 0.1333, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1667, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2, "x": 1.112, "y": 0.888 },
+					{ "time": 0.2333, "x": 1.063, "y": 0.937 },
+					{ "time": 0.2667, "x": 0.996, "y": 1.004 },
+					{ "time": 0.3, "x": 0.924, "y": 1.076 },
+					{ "time": 0.3333, "x": 0.87, "y": 1.13 },
+					{ "time": 0.3667, "x": 0.85, "y": 1.15 },
+					{ "time": 0.4, "x": 0.863, "y": 1.137 },
+					{ "time": 0.4333, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4667, "x": 0.934, "y": 1.066 },
+					{ "time": 0.5, "x": 0.978, "y": 1.022 },
+					{ "time": 0.5333, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5667, "x": 1.048, "y": 0.952 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6667, "x": 1.035, "y": 0.965 },
+					{ "time": 0.7, "x": 1.015, "y": 0.985 },
+					{ "time": 0.7333, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7667, "x": 0.99, "y": 1.01 },
+					{ "time": 0.8, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8333, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8667, "x": 0.998, "y": 1.002 },
+					{ "time": 0.9 }
+				]
+			}
+		},
+		"events": [
+			{ "name": "Correct" }
+		]
+	},
+	"Hop 2 bao dung - Lv3": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "fdb140ff" },
+					{ "time": 0.2333, "color": "fbe3b5ff" },
+					{ "time": 0.2667, "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61cff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "66c61cff" },
+					{ "time": 1.2, "color": "75bc19ff" },
+					{ "time": 1.2333, "color": "9ba612ff" },
+					{ "time": 1.2667, "color": "c88c09ff" },
+					{ "time": 1.3, "color": "ee7602ff" },
+					{ "time": 1.3333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ea5400ff" },
+					{ "time": 0.2, "color": "c06803ff" },
+					{ "time": 0.2333, "color": "748e09ff" },
+					{ "time": 0.2667, "color": "4ba30dff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "4ba30dff" },
+					{ "time": 1.2, "color": "5b9a0bff" },
+					{ "time": 1.2333, "color": "838708ff" },
+					{ "time": 1.2667, "color": "b16f04ff" },
+					{ "time": 1.3, "color": "d95c01ff" },
+					{ "time": 1.3333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "85e139ff" },
+					{ "time": 1.2, "color": "91d933ff" },
+					{ "time": 1.2333, "color": "afc624ff" },
+					{ "time": 1.2667, "color": "d3b114ff" },
+					{ "time": 1.3, "color": "f29e06ff" },
+					{ "time": 1.3333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61cff", "curve": "stepped" },
+					{ "time": 1.1667, "color": "66c61cff" },
+					{ "time": 1.2, "color": "75bc19ff" },
+					{ "time": 1.2333, "color": "9ba612ff" },
+					{ "time": 1.2667, "color": "c88c09ff" },
+					{ "time": 1.3, "color": "ee7602ff" },
+					{ "time": 1.3333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.028, "y": 0.972 },
+					{ "time": 0.0667, "x": 1.088, "y": 0.912 },
+					{ "time": 0.1, "x": 1.134, "y": 0.866 },
+					{ "time": 0.1333, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1667, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2, "x": 1.112, "y": 0.888 },
+					{ "time": 0.2333, "x": 1.063, "y": 0.937 },
+					{ "time": 0.2667, "x": 0.996, "y": 1.004 },
+					{ "time": 0.3, "x": 0.924, "y": 1.076 },
+					{ "time": 0.3333, "x": 0.87, "y": 1.13 },
+					{ "time": 0.3667, "x": 0.85, "y": 1.15 },
+					{ "time": 0.4, "x": 0.863, "y": 1.137 },
+					{ "time": 0.4333, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4667, "x": 0.934, "y": 1.066 },
+					{ "time": 0.5, "x": 0.978, "y": 1.022 },
+					{ "time": 0.5333, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5667, "x": 1.048, "y": 0.952 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6667, "x": 1.035, "y": 0.965 },
+					{ "time": 0.7, "x": 1.015, "y": 0.985 },
+					{ "time": 0.7333, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7667, "x": 0.99, "y": 1.01 },
+					{ "time": 0.8, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8333, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8667, "x": 0.998, "y": 1.002 },
+					{ "time": 0.9 }
+				]
+			}
+		},
+		"events": [
+			{ "name": "Correct" }
+		]
+	},
+	"Hop 2 bao dung - Lv4": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "fdb140ff" },
+					{ "time": 0.2333, "color": "fbe3b5ff" },
+					{ "time": 0.2667, "color": "fafef5ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61cff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ea5400ff" },
+					{ "time": 0.2, "color": "c06803ff" },
+					{ "time": 0.2333, "color": "748e09ff" },
+					{ "time": 0.2667, "color": "4ba30dff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff9700ff" },
+					{ "time": 0.2, "color": "dfaa0eff" },
+					{ "time": 0.2333, "color": "a4cd2aff" },
+					{ "time": 0.2667, "color": "85e139ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ff6d00ff" },
+					{ "time": 0.2, "color": "d78407ff" },
+					{ "time": 0.2333, "color": "8daf14ff" },
+					{ "time": 0.2667, "color": "66c61cff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.028, "y": 0.972 },
+					{ "time": 0.0667, "x": 1.088, "y": 0.912 },
+					{ "time": 0.1, "x": 1.134, "y": 0.866 },
+					{ "time": 0.1333, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1667, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2, "x": 1.112, "y": 0.888 },
+					{ "time": 0.2333, "x": 1.063, "y": 0.937 },
+					{ "time": 0.2667, "x": 0.996, "y": 1.004 },
+					{ "time": 0.3, "x": 0.924, "y": 1.076 },
+					{ "time": 0.3333, "x": 0.87, "y": 1.13 },
+					{ "time": 0.3667, "x": 0.85, "y": 1.15 },
+					{ "time": 0.4, "x": 0.863, "y": 1.137 },
+					{ "time": 0.4333, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4667, "x": 0.934, "y": 1.066 },
+					{ "time": 0.5, "x": 0.978, "y": 1.022 },
+					{ "time": 0.5333, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5667, "x": 1.048, "y": 0.952 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6667, "x": 1.035, "y": 0.965 },
+					{ "time": 0.7, "x": 1.015, "y": 0.985 },
+					{ "time": 0.7333, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7667, "x": 0.99, "y": 1.01 },
+					{ "time": 0.8, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8333, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8667, "x": 0.998, "y": 1.002 },
+					{ "time": 0.9 }
+				]
+			}
+		},
+		"events": [
+			{ "name": "Correct" }
+		]
+	},
+	"Hop 2 bao sai - Lv0": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ea5400ff" },
+					{ "time": 0.1, "color": "e54908ff" },
+					{ "time": 0.1333, "color": "dd3717ff" },
+					{ "time": 0.1667, "color": "d92d20ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "d92d20ff" },
+					{ "time": 0.7, "color": "da311cff" },
+					{ "time": 0.7333, "color": "de3a14ff" },
+					{ "time": 0.7667, "color": "e3460bff" },
+					{ "time": 0.8, "color": "e84f03ff" },
+					{ "time": 0.8333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{},
+					{ "time": 0.0333, "x": -5.23 },
+					{ "time": 0.0667, "x": -14.8 },
+					{ "time": 0.1, "x": -20 },
+					{ "time": 0.1333, "x": -2.5 },
+					{ "time": 0.1667, "x": 15 },
+					{ "time": 0.2 },
+					{ "time": 0.2333, "x": -15 },
+					{ "time": 0.2667 },
+					{ "time": 0.3, "x": 15 },
+					{ "time": 0.3333 },
+					{ "time": 0.3667, "x": -15 },
+					{ "time": 0.4 },
+					{ "time": 0.4333, "x": 15 },
+					{ "time": 0.4667, "x": 5 },
+					{ "time": 0.5, "x": -5 },
+					{ "time": 0.5333, "x": -2.5 },
+					{ "time": 0.5667 }
+				],
+				"scale": [
+					{}
+				]
+			}
+		},
+		"events": [
+			{ "name": "Wrong" }
+		]
+	},
+	"Hop 2 bao sai - Lv1": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ea5400ff" },
+					{ "time": 0.1, "color": "e54908ff" },
+					{ "time": 0.1333, "color": "dd3717ff" },
+					{ "time": 0.1667, "color": "d92d20ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "d92d20ff" },
+					{ "time": 0.7, "color": "da311cff" },
+					{ "time": 0.7333, "color": "de3a14ff" },
+					{ "time": 0.7667, "color": "e3460bff" },
+					{ "time": 0.8, "color": "e84f03ff" },
+					{ "time": 0.8333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{},
+					{ "time": 0.0333, "x": -5.23 },
+					{ "time": 0.0667, "x": -14.8 },
+					{ "time": 0.1, "x": -20 },
+					{ "time": 0.1333, "x": -2.5 },
+					{ "time": 0.1667, "x": 15 },
+					{ "time": 0.2 },
+					{ "time": 0.2333, "x": -15 },
+					{ "time": 0.2667 },
+					{ "time": 0.3, "x": 15 },
+					{ "time": 0.3333 },
+					{ "time": 0.3667, "x": -15 },
+					{ "time": 0.4 },
+					{ "time": 0.4333, "x": 15 },
+					{ "time": 0.4667, "x": 5 },
+					{ "time": 0.5, "x": -5 },
+					{ "time": 0.5333, "x": -2.5 },
+					{ "time": 0.5667 }
+				],
+				"scale": [
+					{}
+				]
+			}
+		},
+		"events": [
+			{ "name": "Wrong" }
+		]
+	},
+	"Hop 2 bao sai - Lv2": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ea5400ff" },
+					{ "time": 0.1, "color": "e54908ff" },
+					{ "time": 0.1333, "color": "dd3717ff" },
+					{ "time": 0.1667, "color": "d92d20ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "d92d20ff" },
+					{ "time": 0.7, "color": "da311cff" },
+					{ "time": 0.7333, "color": "de3a14ff" },
+					{ "time": 0.7667, "color": "e3460bff" },
+					{ "time": 0.8, "color": "e84f03ff" },
+					{ "time": 0.8333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{},
+					{ "time": 0.0333, "x": -5.23 },
+					{ "time": 0.0667, "x": -14.8 },
+					{ "time": 0.1, "x": -20 },
+					{ "time": 0.1333, "x": -2.5 },
+					{ "time": 0.1667, "x": 15 },
+					{ "time": 0.2 },
+					{ "time": 0.2333, "x": -15 },
+					{ "time": 0.2667 },
+					{ "time": 0.3, "x": 15 },
+					{ "time": 0.3333 },
+					{ "time": 0.3667, "x": -15 },
+					{ "time": 0.4 },
+					{ "time": 0.4333, "x": 15 },
+					{ "time": 0.4667, "x": 5 },
+					{ "time": 0.5, "x": -5 },
+					{ "time": 0.5333, "x": -2.5 },
+					{ "time": 0.5667 }
+				],
+				"scale": [
+					{}
+				]
+			}
+		},
+		"events": [
+			{ "name": "Wrong" }
+		]
+	},
+	"Hop 2 bao sai - Lv3": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ea5400ff" },
+					{ "time": 0.1, "color": "e54908ff" },
+					{ "time": 0.1333, "color": "dd3717ff" },
+					{ "time": 0.1667, "color": "d92d20ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "d92d20ff" },
+					{ "time": 0.7, "color": "da311cff" },
+					{ "time": 0.7333, "color": "de3a14ff" },
+					{ "time": 0.7667, "color": "e3460bff" },
+					{ "time": 0.8, "color": "e84f03ff" },
+					{ "time": 0.8333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{},
+					{ "time": 0.0333, "x": -5.23 },
+					{ "time": 0.0667, "x": -14.8 },
+					{ "time": 0.1, "x": -20 },
+					{ "time": 0.1333, "x": -2.5 },
+					{ "time": 0.1667, "x": 15 },
+					{ "time": 0.2 },
+					{ "time": 0.2333, "x": -15 },
+					{ "time": 0.2667 },
+					{ "time": 0.3, "x": 15 },
+					{ "time": 0.3333 },
+					{ "time": 0.3667, "x": -15 },
+					{ "time": 0.4 },
+					{ "time": 0.4333, "x": 15 },
+					{ "time": 0.4667, "x": 5 },
+					{ "time": 0.5, "x": -5 },
+					{ "time": 0.5333, "x": -2.5 },
+					{ "time": 0.5667 }
+				],
+				"scale": [
+					{}
+				]
+			}
+		},
+		"events": [
+			{ "name": "Wrong" }
+		]
+	},
+	"Hop 2 bao sai - Lv4": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ea5400ff" },
+					{ "time": 0.1, "color": "e54908ff" },
+					{ "time": 0.1333, "color": "dd3717ff" },
+					{ "time": 0.1667, "color": "d92d20ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "d92d20ff" },
+					{ "time": 0.7, "color": "da311cff" },
+					{ "time": 0.7333, "color": "de3a14ff" },
+					{ "time": 0.7667, "color": "e3460bff" },
+					{ "time": 0.8, "color": "e84f03ff" },
+					{ "time": 0.8333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{},
+					{ "time": 0.0333, "x": -5.23 },
+					{ "time": 0.0667, "x": -14.8 },
+					{ "time": 0.1, "x": -20 },
+					{ "time": 0.1333, "x": -2.5 },
+					{ "time": 0.1667, "x": 15 },
+					{ "time": 0.2 },
+					{ "time": 0.2333, "x": -15 },
+					{ "time": 0.2667 },
+					{ "time": 0.3, "x": 15 },
+					{ "time": 0.3333 },
+					{ "time": 0.3667, "x": -15 },
+					{ "time": 0.4 },
+					{ "time": 0.4333, "x": 15 },
+					{ "time": 0.4667, "x": 5 },
+					{ "time": 0.5, "x": -5 },
+					{ "time": 0.5333, "x": -2.5 },
+					{ "time": 0.5667 }
+				],
+				"scale": [
+					{}
+				]
+			}
+		},
+		"events": [
+			{ "name": "Wrong" }
+		]
+	},
+	"Hop 2 bao sai - Lv5": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ea5400ff" },
+					{ "time": 0.1, "color": "e54908ff" },
+					{ "time": 0.1333, "color": "dd3717ff" },
+					{ "time": 0.1667, "color": "d92d20ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "d92d20ff" },
+					{ "time": 0.7, "color": "da311cff" },
+					{ "time": 0.7333, "color": "de3a14ff" },
+					{ "time": 0.7667, "color": "e3460bff" },
+					{ "time": 0.8, "color": "e84f03ff" },
+					{ "time": 0.8333, "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff9700ff" },
+					{ "time": 0.1, "color": "fd8c1aff" },
+					{ "time": 0.1333, "color": "fa7a4bff" },
+					{ "time": 0.1667, "color": "f97066ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f97066ff" },
+					{ "time": 0.7, "color": "f9745bff" },
+					{ "time": 0.7333, "color": "fb7d42ff" },
+					{ "time": 0.7667, "color": "fc8924ff" },
+					{ "time": 0.8, "color": "fe920aff" },
+					{ "time": 0.8333, "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ff6d00ff" },
+					{ "time": 0.1, "color": "fb620eff" },
+					{ "time": 0.1333, "color": "f34e29ff" },
+					{ "time": 0.1667, "color": "f04438ff", "curve": "stepped" },
+					{ "time": 0.6667, "color": "f04438ff" },
+					{ "time": 0.7, "color": "f14832ff" },
+					{ "time": 0.7333, "color": "f55224ff" },
+					{ "time": 0.7667, "color": "f95e13ff" },
+					{ "time": 0.8, "color": "fd6805ff" },
+					{ "time": 0.8333, "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{},
+					{ "time": 0.0333, "x": -5.23 },
+					{ "time": 0.0667, "x": -14.8 },
+					{ "time": 0.1, "x": -20 },
+					{ "time": 0.1333, "x": -2.5 },
+					{ "time": 0.1667, "x": 15 },
+					{ "time": 0.2 },
+					{ "time": 0.2333, "x": -15 },
+					{ "time": 0.2667 },
+					{ "time": 0.3, "x": 15 },
+					{ "time": 0.3333 },
+					{ "time": 0.3667, "x": -15 },
+					{ "time": 0.4 },
+					{ "time": 0.4333, "x": 15 },
+					{ "time": 0.4667, "x": 5 },
+					{ "time": 0.5, "x": -5 },
+					{ "time": 0.5333, "x": -2.5 },
+					{ "time": 0.5667 }
+				],
+				"scale": [
+					{}
+				]
+			}
+		},
+		"events": [
+			{ "name": "Wrong" }
+		]
+	},
+	"Hop 2 nhun xuong - Lv0": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.018, "y": 0.982 },
+					{ "time": 0.0667, "x": 1.063, "y": 0.937 },
+					{ "time": 0.1, "x": 1.11, "y": 0.89 },
+					{ "time": 0.1333, "x": 1.14, "y": 0.86 },
+					{ "time": 0.1667, "x": 1.15, "y": 0.85 },
+					{ "time": 0.2, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2333, "x": 1.115, "y": 0.885 },
+					{ "time": 0.2667, "x": 1.074, "y": 0.926 },
+					{ "time": 0.3, "x": 1.02, "y": 0.98 },
+					{ "time": 0.3333, "x": 0.963, "y": 1.037 },
+					{ "time": 0.3667, "x": 0.918, "y": 1.082 },
+					{ "time": 0.4, "x": 0.9, "y": 1.1 },
+					{ "time": 0.4333, "x": 0.912, "y": 1.088 },
+					{ "time": 0.4667, "x": 0.941, "y": 1.059 },
+					{ "time": 0.5, "x": 0.98, "y": 1.02 },
+					{ "time": 0.5333, "x": 1.02, "y": 0.98 },
+					{ "time": 0.5667, "x": 1.049, "y": 0.951 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.6667, "x": 1.025, "y": 0.975 },
+					{ "time": 0.7 },
+					{ "time": 0.7333, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7667, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8333, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8667 }
+				]
+			}
+		}
+	},
+	"Hop 2 nhun xuong - Lv1": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.018, "y": 0.982 },
+					{ "time": 0.0667, "x": 1.063, "y": 0.937 },
+					{ "time": 0.1, "x": 1.11, "y": 0.89 },
+					{ "time": 0.1333, "x": 1.14, "y": 0.86 },
+					{ "time": 0.1667, "x": 1.15, "y": 0.85 },
+					{ "time": 0.2, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2333, "x": 1.115, "y": 0.885 },
+					{ "time": 0.2667, "x": 1.074, "y": 0.926 },
+					{ "time": 0.3, "x": 1.02, "y": 0.98 },
+					{ "time": 0.3333, "x": 0.963, "y": 1.037 },
+					{ "time": 0.3667, "x": 0.918, "y": 1.082 },
+					{ "time": 0.4, "x": 0.9, "y": 1.1 },
+					{ "time": 0.4333, "x": 0.912, "y": 1.088 },
+					{ "time": 0.4667, "x": 0.941, "y": 1.059 },
+					{ "time": 0.5, "x": 0.98, "y": 1.02 },
+					{ "time": 0.5333, "x": 1.02, "y": 0.98 },
+					{ "time": 0.5667, "x": 1.049, "y": 0.951 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.6667, "x": 1.025, "y": 0.975 },
+					{ "time": 0.7 },
+					{ "time": 0.7333, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7667, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8333, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8667 }
+				]
+			}
+		}
+	},
+	"Hop 2 nhun xuong - Lv2": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.018, "y": 0.982 },
+					{ "time": 0.0667, "x": 1.063, "y": 0.937 },
+					{ "time": 0.1, "x": 1.11, "y": 0.89 },
+					{ "time": 0.1333, "x": 1.14, "y": 0.86 },
+					{ "time": 0.1667, "x": 1.15, "y": 0.85 },
+					{ "time": 0.2, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2333, "x": 1.115, "y": 0.885 },
+					{ "time": 0.2667, "x": 1.074, "y": 0.926 },
+					{ "time": 0.3, "x": 1.02, "y": 0.98 },
+					{ "time": 0.3333, "x": 0.963, "y": 1.037 },
+					{ "time": 0.3667, "x": 0.918, "y": 1.082 },
+					{ "time": 0.4, "x": 0.9, "y": 1.1 },
+					{ "time": 0.4333, "x": 0.912, "y": 1.088 },
+					{ "time": 0.4667, "x": 0.941, "y": 1.059 },
+					{ "time": 0.5, "x": 0.98, "y": 1.02 },
+					{ "time": 0.5333, "x": 1.02, "y": 0.98 },
+					{ "time": 0.5667, "x": 1.049, "y": 0.951 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.6667, "x": 1.025, "y": 0.975 },
+					{ "time": 0.7 },
+					{ "time": 0.7333, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7667, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8333, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8667 }
+				]
+			}
+		}
+	},
+	"Hop 2 nhun xuong - Lv3": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.018, "y": 0.982 },
+					{ "time": 0.0667, "x": 1.063, "y": 0.937 },
+					{ "time": 0.1, "x": 1.11, "y": 0.89 },
+					{ "time": 0.1333, "x": 1.14, "y": 0.86 },
+					{ "time": 0.1667, "x": 1.15, "y": 0.85 },
+					{ "time": 0.2, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2333, "x": 1.115, "y": 0.885 },
+					{ "time": 0.2667, "x": 1.074, "y": 0.926 },
+					{ "time": 0.3, "x": 1.02, "y": 0.98 },
+					{ "time": 0.3333, "x": 0.963, "y": 1.037 },
+					{ "time": 0.3667, "x": 0.918, "y": 1.082 },
+					{ "time": 0.4, "x": 0.9, "y": 1.1 },
+					{ "time": 0.4333, "x": 0.912, "y": 1.088 },
+					{ "time": 0.4667, "x": 0.941, "y": 1.059 },
+					{ "time": 0.5, "x": 0.98, "y": 1.02 },
+					{ "time": 0.5333, "x": 1.02, "y": 0.98 },
+					{ "time": 0.5667, "x": 1.049, "y": 0.951 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.6667, "x": 1.025, "y": 0.975 },
+					{ "time": 0.7 },
+					{ "time": 0.7333, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7667, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8333, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8667 }
+				]
+			}
+		}
+	},
+	"Hop 2 nhun xuong - Lv4": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.018, "y": 0.982 },
+					{ "time": 0.0667, "x": 1.063, "y": 0.937 },
+					{ "time": 0.1, "x": 1.11, "y": 0.89 },
+					{ "time": 0.1333, "x": 1.14, "y": 0.86 },
+					{ "time": 0.1667, "x": 1.15, "y": 0.85 },
+					{ "time": 0.2, "x": 1.141, "y": 0.859 },
+					{ "time": 0.2333, "x": 1.115, "y": 0.885 },
+					{ "time": 0.2667, "x": 1.074, "y": 0.926 },
+					{ "time": 0.3, "x": 1.02, "y": 0.98 },
+					{ "time": 0.3333, "x": 0.963, "y": 1.037 },
+					{ "time": 0.3667, "x": 0.918, "y": 1.082 },
+					{ "time": 0.4, "x": 0.9, "y": 1.1 },
+					{ "time": 0.4333, "x": 0.912, "y": 1.088 },
+					{ "time": 0.4667, "x": 0.941, "y": 1.059 },
+					{ "time": 0.5, "x": 0.98, "y": 1.02 },
+					{ "time": 0.5333, "x": 1.02, "y": 0.98 },
+					{ "time": 0.5667, "x": 1.049, "y": 0.951 },
+					{ "time": 0.6, "x": 1.06, "y": 0.94 },
+					{ "time": 0.6333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.6667, "x": 1.025, "y": 0.975 },
+					{ "time": 0.7 },
+					{ "time": 0.7333, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7667, "x": 0.992, "y": 1.008 },
+					{ "time": 0.8, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8333, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8667 }
+				]
+			}
+		}
+	},
+	"Tap hop 2 - Lv0": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.046, "y": 0.954 },
+					{ "time": 0.0667, "x": 1.125, "y": 0.875 },
+					{ "time": 0.1, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1333, "x": 1.138, "y": 0.862 },
+					{ "time": 0.1667, "x": 1.101, "y": 0.899 },
+					{ "time": 0.2, "x": 1.035, "y": 0.965 },
+					{ "time": 0.2333, "x": 0.947, "y": 1.053 },
+					{ "time": 0.2667, "x": 0.875, "y": 1.125 },
+					{ "time": 0.3, "x": 0.85, "y": 1.15 },
+					{ "time": 0.3333, "x": 0.863, "y": 1.137 },
+					{ "time": 0.3667, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4, "x": 0.934, "y": 1.066 },
+					{ "time": 0.4333, "x": 0.978, "y": 1.022 },
+					{ "time": 0.4667, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5, "x": 1.048, "y": 0.952 },
+					{ "time": 0.5333, "x": 1.06, "y": 0.94 },
+					{ "time": 0.5667, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6, "x": 1.035, "y": 0.965 },
+					{ "time": 0.6333, "x": 1.015, "y": 0.985 },
+					{ "time": 0.6667, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7333, "x": 0.992, "y": 1.008 },
+					{ "time": 0.7667, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8333 }
+				]
+			}
+		}
+	},
+	"Tap hop 2 - Lv1": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.046, "y": 0.954 },
+					{ "time": 0.0667, "x": 1.125, "y": 0.875 },
+					{ "time": 0.1, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1333, "x": 1.138, "y": 0.862 },
+					{ "time": 0.1667, "x": 1.101, "y": 0.899 },
+					{ "time": 0.2, "x": 1.035, "y": 0.965 },
+					{ "time": 0.2333, "x": 0.947, "y": 1.053 },
+					{ "time": 0.2667, "x": 0.875, "y": 1.125 },
+					{ "time": 0.3, "x": 0.85, "y": 1.15 },
+					{ "time": 0.3333, "x": 0.863, "y": 1.137 },
+					{ "time": 0.3667, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4, "x": 0.934, "y": 1.066 },
+					{ "time": 0.4333, "x": 0.978, "y": 1.022 },
+					{ "time": 0.4667, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5, "x": 1.048, "y": 0.952 },
+					{ "time": 0.5333, "x": 1.06, "y": 0.94 },
+					{ "time": 0.5667, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6, "x": 1.035, "y": 0.965 },
+					{ "time": 0.6333, "x": 1.015, "y": 0.985 },
+					{ "time": 0.6667, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7333, "x": 0.992, "y": 1.008 },
+					{ "time": 0.7667, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8333 }
+				]
+			}
+		}
+	},
+	"Tap hop 2 - Lv2": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.046, "y": 0.954 },
+					{ "time": 0.0667, "x": 1.125, "y": 0.875 },
+					{ "time": 0.1, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1333, "x": 1.138, "y": 0.862 },
+					{ "time": 0.1667, "x": 1.101, "y": 0.899 },
+					{ "time": 0.2, "x": 1.035, "y": 0.965 },
+					{ "time": 0.2333, "x": 0.947, "y": 1.053 },
+					{ "time": 0.2667, "x": 0.875, "y": 1.125 },
+					{ "time": 0.3, "x": 0.85, "y": 1.15 },
+					{ "time": 0.3333, "x": 0.863, "y": 1.137 },
+					{ "time": 0.3667, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4, "x": 0.934, "y": 1.066 },
+					{ "time": 0.4333, "x": 0.978, "y": 1.022 },
+					{ "time": 0.4667, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5, "x": 1.048, "y": 0.952 },
+					{ "time": 0.5333, "x": 1.06, "y": 0.94 },
+					{ "time": 0.5667, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6, "x": 1.035, "y": 0.965 },
+					{ "time": 0.6333, "x": 1.015, "y": 0.985 },
+					{ "time": 0.6667, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7333, "x": 0.992, "y": 1.008 },
+					{ "time": 0.7667, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8333 }
+				]
+			}
+		}
+	},
+	"Tap hop 2 - Lv3": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.046, "y": 0.954 },
+					{ "time": 0.0667, "x": 1.125, "y": 0.875 },
+					{ "time": 0.1, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1333, "x": 1.138, "y": 0.862 },
+					{ "time": 0.1667, "x": 1.101, "y": 0.899 },
+					{ "time": 0.2, "x": 1.035, "y": 0.965 },
+					{ "time": 0.2333, "x": 0.947, "y": 1.053 },
+					{ "time": 0.2667, "x": 0.875, "y": 1.125 },
+					{ "time": 0.3, "x": 0.85, "y": 1.15 },
+					{ "time": 0.3333, "x": 0.863, "y": 1.137 },
+					{ "time": 0.3667, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4, "x": 0.934, "y": 1.066 },
+					{ "time": 0.4333, "x": 0.978, "y": 1.022 },
+					{ "time": 0.4667, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5, "x": 1.048, "y": 0.952 },
+					{ "time": 0.5333, "x": 1.06, "y": 0.94 },
+					{ "time": 0.5667, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6, "x": 1.035, "y": 0.965 },
+					{ "time": 0.6333, "x": 1.015, "y": 0.985 },
+					{ "time": 0.6667, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7333, "x": 0.992, "y": 1.008 },
+					{ "time": 0.7667, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8333 }
+				]
+			}
+		}
+	},
+	"Tap hop 2 - Lv4": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.046, "y": 0.954 },
+					{ "time": 0.0667, "x": 1.125, "y": 0.875 },
+					{ "time": 0.1, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1333, "x": 1.138, "y": 0.862 },
+					{ "time": 0.1667, "x": 1.101, "y": 0.899 },
+					{ "time": 0.2, "x": 1.035, "y": 0.965 },
+					{ "time": 0.2333, "x": 0.947, "y": 1.053 },
+					{ "time": 0.2667, "x": 0.875, "y": 1.125 },
+					{ "time": 0.3, "x": 0.85, "y": 1.15 },
+					{ "time": 0.3333, "x": 0.863, "y": 1.137 },
+					{ "time": 0.3667, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4, "x": 0.934, "y": 1.066 },
+					{ "time": 0.4333, "x": 0.978, "y": 1.022 },
+					{ "time": 0.4667, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5, "x": 1.048, "y": 0.952 },
+					{ "time": 0.5333, "x": 1.06, "y": 0.94 },
+					{ "time": 0.5667, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6, "x": 1.035, "y": 0.965 },
+					{ "time": 0.6333, "x": 1.015, "y": 0.985 },
+					{ "time": 0.6667, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7333, "x": 0.992, "y": 1.008 },
+					{ "time": 0.7667, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8333 }
+				]
+			}
+		}
+	},
+	"Tap hop 2 - Lv5": {
+		"slots": {
+			"Letter": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"Level 1": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 2": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 3": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 4": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Level 5": {
+				"color": [
+					{ "color": "fafef5ff" }
+				]
+			},
+			"Manh hop 1": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			},
+			"Manh hop 2": {
+				"color": [
+					{ "color": "ea5400ff" }
+				]
+			},
+			"Manh hop 3": {
+				"color": [
+					{ "color": "ff9700ff" }
+				]
+			},
+			"Manh hop 4": {
+				"color": [
+					{ "color": "ff6d00ff" }
+				]
+			}
+		},
+		"bones": {
+			"Hop va Letter": {
+				"translate": [
+					{}
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 1.046, "y": 0.954 },
+					{ "time": 0.0667, "x": 1.125, "y": 0.875 },
+					{ "time": 0.1, "x": 1.15, "y": 0.85 },
+					{ "time": 0.1333, "x": 1.138, "y": 0.862 },
+					{ "time": 0.1667, "x": 1.101, "y": 0.899 },
+					{ "time": 0.2, "x": 1.035, "y": 0.965 },
+					{ "time": 0.2333, "x": 0.947, "y": 1.053 },
+					{ "time": 0.2667, "x": 0.875, "y": 1.125 },
+					{ "time": 0.3, "x": 0.85, "y": 1.15 },
+					{ "time": 0.3333, "x": 0.863, "y": 1.137 },
+					{ "time": 0.3667, "x": 0.893, "y": 1.107 },
+					{ "time": 0.4, "x": 0.934, "y": 1.066 },
+					{ "time": 0.4333, "x": 0.978, "y": 1.022 },
+					{ "time": 0.4667, "x": 1.019, "y": 0.981 },
+					{ "time": 0.5, "x": 1.048, "y": 0.952 },
+					{ "time": 0.5333, "x": 1.06, "y": 0.94 },
+					{ "time": 0.5667, "x": 1.053, "y": 0.947 },
+					{ "time": 0.6, "x": 1.035, "y": 0.965 },
+					{ "time": 0.6333, "x": 1.015, "y": 0.985 },
+					{ "time": 0.6667, "x": 0.997, "y": 1.003 },
+					{ "time": 0.7, "x": 0.99, "y": 1.01 },
+					{ "time": 0.7333, "x": 0.992, "y": 1.008 },
+					{ "time": 0.7667, "x": 0.995, "y": 1.005 },
+					{ "time": 0.8, "x": 0.998, "y": 1.002 },
+					{ "time": 0.8333 }
+				]
+			}
+		}
+	}
+}
+}

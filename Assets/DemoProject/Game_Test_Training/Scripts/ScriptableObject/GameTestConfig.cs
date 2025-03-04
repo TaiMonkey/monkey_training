@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+
+namespace Monkey.Game.GameTest
+{
+    [CreateAssetMenu(fileName = "GameTestConfig", menuName = "ScriptableObjects/GameTest/GameTestConfig", order = 1)]
+    public class GameTestConfig : ScriptableObject
+    {
+        public IntroConfig IntroConfig;
+        public AnimalButtonConfig AnimalButton;
+        public GameTestAnimalConfig AnimConfig;
+    }
+
+    [Serializable]
+    public class AnimalButtonConfig
+    {
+        public AudioClip SfxChoose;
+        public float SizeIncrease;
+        public float SpeedIncrease;
+    }
+
+    [Serializable]
+    public class IntroConfig
+    {
+        public int TimeDelay;
+        public AudioClip AudioCTA;
+    }
+
+    [Serializable]
+    public class GameTestAnimalConfig
+    {
+        public string animNomal;
+        public string animKeo;
+        public string animkeo_loop;
+        public string tha;
+        public string vui_mung;
+    }
+}

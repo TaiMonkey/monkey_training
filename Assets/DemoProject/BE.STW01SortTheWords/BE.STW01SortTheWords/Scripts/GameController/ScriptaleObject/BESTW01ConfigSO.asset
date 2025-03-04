@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5710863da98f6ec48a955616c4d7bb5f, type: 3}
+  m_Name: BESTW01ConfigSO
+  m_EditorClassIdentifier: 
+  audioBackground: {fileID: 8300000, guid: a64edc680169f61478d172017687f2de, type: 3}
+  introConfig:
+    audiosTopic:
+    - {fileID: 8300000, guid: 91252fe52bdef6b4b8540fbd18a447f1, type: 3}
+    - {fileID: 8300000, guid: 19d2bc7acf58f0046931fccf03ab2d02, type: 3}
+    audiosTopicPhonic:
+    - {fileID: 8300000, guid: 3367263412426e04f81fa6994db9f974, type: 3}
+    - {fileID: 8300000, guid: 35fb927436c96cd4794e37bcf5d5a70e, type: 3}
+    timeDelay: 500
+  guidingConfig:
+    sfxAppear: {fileID: 8300000, guid: 53cc285cc43c8d24c9bb4dbd3f0f289a, type: 3}
+    sfxClick: {fileID: 8300000, guid: 963bbf5a9b3925744a07a4b6f927452a, type: 3}
+    sfxUnClick: {fileID: 8300000, guid: 1afc72d29020e7a47ac96e342e51f52c, type: 3}
+    secondWaitStartGuiding: 5
+    secondDelay: 0.5
+  dragResultConfig:
+    sfxCorrect: {fileID: 8300000, guid: 4aa5a2f3310f2fc418ee1cdc76368ae3, type: 3}
+    sfxWrong: {fileID: 8300000, guid: 2e742cea3479e064ea897ff95fde3b59, type: 3}
+    timeDelay: 250
+  endGameConfig:
+    sfxYeah: {fileID: 8300000, guid: 82b149b8bfb597048a901d02b95eab61, type: 3}
+    timeDelay: 500
+  cardConfig:
+    cardNormal: Normal
+    tapCard: Tap the dap an
+    cardFlyToBox: The dap an bay vao hop
+    unTapFirstCard: Untap the dap an 1
+    unTapSecondCard: Untap the dap an 2
+    sfxClick: {fileID: 8300000, guid: 963bbf5a9b3925744a07a4b6f927452a, type: 3}
+    sfxUnClick: {fileID: 8300000, guid: 1afc72d29020e7a47ac96e342e51f52c, type: 3}
+  boxConfig:
+    boxNormal: Hop 1 - Lv0
+    boxCorrect: Hop 1 bao dung - Lv0
+    boxWrong: Hop 1 bao sai - Lv0
+    boxPopup: Hop 1 nhun xuong - Lv0
+    boxTap: Tap hop 1 - Lv0
+    boxGreen: Hop 1 - xanh
+    boxGreenTap: Hop 1 - xanh - Click
+    fireworks:
+    - Phao hoa 1
+    - Phao hoa 2
+    - Phao hoa 3
+    sfxSelect: {fileID: 8300000, guid: 2d12f360818d9af4882905d4774a210b, type: 3}

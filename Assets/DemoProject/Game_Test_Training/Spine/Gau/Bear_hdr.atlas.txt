@@ -1,0 +1,132 @@
+
+Bear_hdr.png
+size: 2025,1971
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bear.Chan 1
+  rotate: false
+  xy: 1547, 481
+  size: 357, 686
+  orig: 370, 700
+  offset: 7, 6
+  index: -1
+Bear.Chan 2
+  rotate: false
+  xy: 1175, 265
+  size: 370, 722
+  orig: 370, 750
+  offset: 0, 28
+  index: -1
+Bear.Chan 3
+  rotate: false
+  xy: 1334, 1169
+  size: 370, 800
+  orig: 370, 800
+  offset: 0, 0
+  index: -1
+Bear.Chan 4
+  rotate: false
+  xy: 803, 207
+  size: 370, 780
+  orig: 370, 800
+  offset: 0, 20
+  index: -1
+Bear.Con nguoi 1a
+  rotate: false
+  xy: 1706, 1198
+  size: 136, 135
+  orig: 160, 160
+  offset: 13, 12
+  index: -1
+Bear.Con nguoi 1b
+  rotate: false
+  xy: 375, 93
+  size: 117, 94
+  orig: 140, 110
+  offset: 12, 7
+  index: -1
+Bear.Con nguoi 1c
+  rotate: false
+  xy: 1844, 1228
+  size: 139, 105
+  orig: 160, 120
+  offset: 11, 7
+  index: -1
+Bear.Con nguoi 2a
+  rotate: false
+  xy: 1334, 1031
+  size: 136, 136
+  orig: 160, 160
+  offset: 13, 11
+  index: -1
+Bear.Con nguoi 2b
+  rotate: false
+  xy: 494, 93
+  size: 117, 94
+  orig: 140, 110
+  offset: 12, 7
+  index: -1
+Bear.Con nguoi 2c
+  rotate: false
+  xy: 1375, 158
+  size: 139, 105
+  orig: 160, 120
+  offset: 11, 7
+  index: -1
+Bear.Dau
+  rotate: false
+  xy: 2, 189
+  size: 799, 798
+  orig: 900, 900
+  offset: 51, 50
+  index: -1
+Bear.Duoi
+  rotate: false
+  xy: 1175, 65
+  size: 198, 198
+  orig: 240, 240
+  offset: 22, 20
+  index: -1
+Bear.Mat 1
+  rotate: false
+  xy: 2, 2
+  size: 185, 185
+  orig: 206, 206
+  offset: 11, 10
+  index: -1
+Bear.Mat 2
+  rotate: true
+  xy: 189, 2
+  size: 185, 184
+  orig: 206, 206
+  offset: 11, 10
+  index: -1
+Bear.Mieng
+  rotate: false
+  xy: 1547, 52
+  size: 476, 427
+  orig: 550, 500
+  offset: 38, 36
+  index: -1
+Bear.Tai 1
+  rotate: false
+  xy: 1706, 1653
+  size: 316, 316
+  orig: 350, 351
+  offset: 18, 17
+  index: -1
+Bear.Tai 2
+  rotate: false
+  xy: 1706, 1335
+  size: 316, 316
+  orig: 350, 350
+  offset: 18, 16
+  index: -1
+Bear.Than
+  rotate: false
+  xy: 2, 989
+  size: 1330, 980
+  orig: 1330, 980
+  offset: 0, 0
+  index: -1
