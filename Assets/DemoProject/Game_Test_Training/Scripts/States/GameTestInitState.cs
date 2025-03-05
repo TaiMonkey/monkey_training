@@ -27,18 +27,24 @@ namespace Monkey.Game.GameTest
             {
                 AnimalButtonController buttonBearController = dependency.ButtonBearControllers[i];
                 buttonBearController.SetAnimStart(dependency.AnimConfig.animNomal);
-                buttonBearController.InitDataCage(dependency.Cage_Bear);
+                buttonBearController.InitDataCage(dependency.Cage_Bear.GetComponent<RectTransform>());
                 buttonBearController.OriginPos = buttonBearController.transform.position;
+                buttonBearController.ParentCanvas = dependency.Canvas;
+                buttonBearController.OriginParent = dependency.ParentOrigin;
+                buttonBearController.ParentSnapPoint = dependency.BearParentSnapPoint;
+                buttonBearController.Cage_Type = (int)GameTestTypeCage.Cage_Bear;
             }
             for (int i = 0; i < dependency.ButtonTigerControllers.Count; i++)
             {
                 AnimalButtonController buttonTigerController = dependency.ButtonTigerControllers[i];
                 buttonTigerController.SetAnimStart(dependency.AnimConfig.animNomal);
-                buttonTigerController.InitDataCage(dependency.Cage_Tiger);
+                buttonTigerController.InitDataCage(dependency.Cage_Tiger.GetComponent<RectTransform>());
                 buttonTigerController.OriginPos = buttonTigerController.transform.position;
+                buttonTigerController.ParentCanvas = dependency.Canvas;
+                buttonTigerController.OriginParent = dependency.ParentOrigin;
+                buttonTigerController.ParentSnapPoint = dependency.TigerParentSnapPoint;
+                buttonTigerController.Cage_Type = (int)GameTestTypeCage.Cage_Tiger;
             }
-            //dependency.Cage_Bear.Cage_type = (int)GameTestTypeCage.Cage_Bear;
-            //dependency.Cage_Tiger.Cage_type = (int)GameTestTypeCage.Cage_Tiger;
 
             await UniTask.Delay(TIME_DELAY, cancellationToken: cts.Token);
 
@@ -57,8 +63,12 @@ namespace Monkey.Game.GameTest
         public AudioClip AudioCTA { get; set; }
         public List<AnimalButtonController> ButtonBearControllers { get; set; }
         public List<AnimalButtonController> ButtonTigerControllers { get; set; }
-        public RectTransform Cage_Tiger { get; set; }
-        public RectTransform Cage_Bear { get; set; }
+        public CageController Cage_Tiger { get; set; }
+        public CageController Cage_Bear { get; set; }
         public GameTestAnimalConfig AnimConfig { get; set; }
-     }
+        public Canvas Canvas { get; set; }
+        public Transform ParentOrigin { get; set; }
+        public Transform BearParentSnapPoint { get; set; }
+        public Transform TigerParentSnapPoint { get; set; }
+    }
 }

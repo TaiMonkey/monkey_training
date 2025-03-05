@@ -1,3 +1,4 @@
+using DG.Tweening;
 using MonkeyBase.Observer;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,6 +11,10 @@ namespace Monkey.Game.GameTest
         private GameTestGamePlayStateDependency dependency;
         private AnimalButtonController animalButtonController;
         private GameTestAnimalConfig animConfig;
+        private float timer = 0f;
+        private int index_Cage_Tiger = 0;
+        private int index_Cage_Bear = 0;
+        private const string ANIM_STAR = "4.0 - Sao";
 
         public override void SetUp(object data)
         {
@@ -20,6 +25,9 @@ namespace Monkey.Game.GameTest
         {
             Debug.LogError("GamePlay");
             animConfig = dependency.AnimConfig;
+
+            //DoWorkButton(dependency.BearButtonControllers, true);
+            //DoWorkButton(dependency.TigerButtonControllers, true);
             this.ObserverStartListening<AnswerChanel>();
         }
 
@@ -32,14 +40,11 @@ namespace Monkey.Game.GameTest
             if (eventType.TypeEvent == AnswerChanel.Type.Pointer_Down)
             {
                 Debug.LogError("OnPointerDown");
-                //DoWorkButton(dependency.BearButtonControllers);
-                //DoWorkButton(dependency.TigerButtonControllers);
-
+                animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
                 animalButtonController.SetScaleSkeleton(dependency.AnimalButtonConfig.SizeIncrease, true);
+
                 SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxChoose);
                 ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
-
-                animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
             }
             else if (eventType.TypeEvent == AnswerChanel.Type.Pointer_Up)
             {
@@ -50,12 +55,32 @@ namespace Monkey.Game.GameTest
                 {
                     animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animNomal, true);
                 };
-                animalButtonController.IsEnable = true;
+
+                if(animalButtonController.IsCorrect)
+                {
+                    animalButtonController.SetScaleSkeleton(dependency.AnimalButtonConfig.SizeDecrease, true);
+                   
+                    if (animalButtonController.Cage_Type == (int)GameTestTypeCage.Cage_Bear)
+                    {
+                        animalButtonController.transform.DOMove(dependency.BearSnapPoints[index_Cage_Bear].transform.position, 0.2f);
+                        index_Cage_Bear++;
+                    } 
+                    else
+                    {
+                        animalButtonController.transform.DOMove(dependency.TigerSnapPoints[index_Cage_Tiger].transform.position, 0.2f);
+                        index_Cage_Tiger++;
+                    }
+                    animalButtonController.GetAnimStar().gameObject.SetActive(true);
+                    animalButtonController.GetAnimStar().AnimationState.SetAnimation(0, ANIM_STAR, false).Complete += (trackEntry) => {
+                        animalButtonController.GetAnimStar().gameObject.SetActive(false);
+                    };
+
+                    SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxCorrect);
+                    ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
+                }
             }
             else if (eventType.TypeEvent == AnswerChanel.Type.BeginDrag)
             {
-                //DoWorkButton(dependency.BearButtonControllers);
-                //DoWorkButton(dependency.TigerButtonControllers);
                 animalButtonController.transform.SetAsLastSibling();
                 animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
             }
@@ -67,19 +92,26 @@ namespace Monkey.Game.GameTest
                 var animationState = skeletonGraphic.AnimationState;
 
                 animationState.TimeScale = 1.2f;
-
-                // Chạy animation
-                //animationState.SetAnimation(0, animConfig.animkeo_loop, true);
+            }
+        }
+        public override void OnUpdate()
+        {
+            timer += Time.deltaTime;
+            if (timer >= 10)
+            {
+                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
+                ObserverManager.TriggerEvent(stateChanel);
+                timer = 0;
             }
         }
 
-        private void DoWorkButton(List<AnimalButtonController> animalButtonControllers)
+        private void DoWorkButton(List<AnimalButtonController> animalButtonControllers, bool isEnable)
         {
             foreach (var item in animalButtonControllers)
             {
                 if (item != animalButtonController)
                 {
-                    item.IsEnable = false;
+                    item.IsEnable = isEnable;
                 }
             }
         }
@@ -102,5 +134,7 @@ namespace Monkey.Game.GameTest
         public GameTestAnimalConfig AnimConfig { get; set; }
         public List<AnimalButtonController> TigerButtonControllers { get; set; }
         public List<AnimalButtonController> BearButtonControllers { get; set; }
+        public List<GameObject> BearSnapPoints { get; set; }
+        public List<GameObject> TigerSnapPoints { get; set; }
     }
 }

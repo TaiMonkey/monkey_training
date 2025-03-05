@@ -9,11 +9,13 @@ namespace Monkey.Game.GameTest
     {
         private GameTestInitState initState;
         private GameTestGamePlayState gamePlayState;
+        private GameTestGuidingState guidingState;
 
         private void Awake()
         {
             initState = new GameTestInitState();
             gamePlayState = new GameTestGamePlayState();
+            guidingState = new GameTestGuidingState();
         }
         public override void SetupStateData<T>(T data)
         {
@@ -24,6 +26,9 @@ namespace Monkey.Game.GameTest
 
                 GameTestGamePlayStateDependency gamePlayDependency = dependency.GetStateData<GameTestGamePlayStateDependency>();
                 gamePlayState.SetUp(gamePlayDependency);
+
+                GameTestGuidingStateDependency guidingDependency = dependency.GetStateData<GameTestGuidingStateDependency>();
+                guidingState.SetUp(guidingDependency);
             }
         }
 
@@ -37,6 +42,9 @@ namespace Monkey.Game.GameTest
                     break;
                 case StateName.Name.GamePlay:
                     GotoState(gamePlayState);
+                    break;
+                case StateName.Name.Guiding:
+                    GotoState(guidingState);
                     break;
             }
         }

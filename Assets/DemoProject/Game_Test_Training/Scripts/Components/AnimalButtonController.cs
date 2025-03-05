@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -12,15 +12,24 @@ namespace Monkey.Game.GameTest
     public class AnimalButtonController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IBeginDragHandler
     {
         [SerializeField] SkeletonGraphic skeletonGraphic;
+        [SerializeField] SkeletonGraphic AnimStart;
         [SerializeField] private RectTransform itemTransfrom;
+        [SerializeField] private CanvasGroup canvasGroup;
 
-        private RectTransform cageTranform;
+        public RectTransform cageTranform { get; private set; }
         private Vector3 originalScale;
         public Vector3 OriginPos { get; set; }
-        private int cage_type;
+        public Canvas ParentCanvas { get; set; }
+        public Transform ParentSnapPoint { get; set; }
+        public Transform OriginParent { get; set; }
+
         private bool isEnable = true;
         private bool isDragging = false;
         private bool isDraggable = false;
+        public int Cage_Type { get; set; }
+        public bool IsCorrect {get; set;} = false;
+        public CanvasGroup CanvasGroup { get => canvasGroup; }
+
 
 
         public bool IsEnable { get => isEnable; set { isEnable = value; } }
@@ -40,6 +49,11 @@ namespace Monkey.Game.GameTest
             return skeletonGraphic;
         }
 
+        public SkeletonGraphic GetAnimStar()
+        {
+            return AnimStart;
+        }
+
         public void SetScaleSkeleton(float scale, bool scaleUp)
         {
             if (scaleUp)
@@ -57,6 +71,7 @@ namespace Monkey.Game.GameTest
             if (!isEnable || isDraggable) return;
             isDraggable = true;
             originalScale = skeletonGraphic.transform.localScale;
+
             AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Down, this);
             ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
         }
@@ -67,15 +82,24 @@ namespace Monkey.Game.GameTest
 
             if (CheckTriggerOfTwoObject(itemTransfrom, cageTranform, 0.2f))
             {
-                Debug.Log("Success");
+                transform.SetParent(ParentSnapPoint.transform);
+                IsCorrect = true;
+                isEnable = false;
+
+                AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
+                ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
             }
             else
             {
+                transform.SetParent(OriginParent.transform);
                 Debug.Log("Fail");
-                OnBackButton(() => {});
+                OnBackButton(() => {
+                    isEnable = true;
+                });
+                AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
+                ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
             }
-            AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
-            ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
+
             isDraggable = false;
         }
 
@@ -93,6 +117,7 @@ namespace Monkey.Game.GameTest
         public void OnBeginDrag(PointerEventData eventData)
         {
             if (!isEnable || !isDraggable) return;
+
             AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.BeginDrag, this);
             ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
         }

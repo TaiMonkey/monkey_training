@@ -17,7 +17,9 @@ namespace Monkey.Game.GameTest
     public class AnimalButtonConfig
     {
         public AudioClip SfxChoose;
+        public AudioClip SfxCorrect;
         public float SizeIncrease;
+        public float SizeDecrease;
         public float SpeedIncrease;
     }
 

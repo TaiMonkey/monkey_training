@@ -28,6 +28,12 @@ namespace Monkey.Game.GameTest
                 case StateName.Status.InitFinish:
                     fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), null);
                     break;
+                case StateName.Status.GuidingStart:
+                    fSMSystem.GotoState(StateName.Name.Guiding.ToString(), null);
+                    break;
+                case StateName.Status.GuidingFinish:
+                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), eventType.Data);
+                    break;
             }
         }
 
