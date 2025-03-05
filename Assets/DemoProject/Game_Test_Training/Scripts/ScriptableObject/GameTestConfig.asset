@@ -27,3 +27,5 @@ MonoBehaviour:
     animkeo_loop: 1.1 - Keo - Loop
     tha: 2.0 - Tha
     vui_mung: 3.0 - Vui mung
+  EndGameConfig:
+    SfxCheer: {fileID: 8300000, guid: 054ae78399511144499d85b64aa7e252, type: 3}

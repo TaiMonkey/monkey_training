@@ -25,14 +25,12 @@ namespace Monkey.Game.GameTest
         {
             Debug.LogError("GamePlay");
             animConfig = dependency.AnimConfig;
-
-            //DoWorkButton(dependency.BearButtonControllers, true);
-            //DoWorkButton(dependency.TigerButtonControllers, true);
             this.ObserverStartListening<AnswerChanel>();
         }
 
         public void OnMMEvent(AnswerChanel eventType)
         {
+            timer = 0;
             if (eventType.Data is AnimalButtonController)
             {
                 animalButtonController = (AnimalButtonController)eventType.Data;
@@ -103,16 +101,18 @@ namespace Monkey.Game.GameTest
                 ObserverManager.TriggerEvent(stateChanel);
                 timer = 0;
             }
-        }
 
-        private void DoWorkButton(List<AnimalButtonController> animalButtonControllers, bool isEnable)
-        {
-            foreach (var item in animalButtonControllers)
+            if(StaticValue.CountWrong == 3)
             {
-                if (item != animalButtonController)
-                {
-                    item.IsEnable = isEnable;
-                }
+                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
+                ObserverManager.TriggerEvent(stateChanel);
+                StaticValue.CountWrong = 0;
+            }
+
+            if(index_Cage_Bear == 3 && index_Cage_Tiger ==3)
+            {
+                StateChanel stateChanel = new StateChanel(StateName.Status.PlayFinish);
+                ObserverManager.TriggerEvent(stateChanel);
             }
         }
 

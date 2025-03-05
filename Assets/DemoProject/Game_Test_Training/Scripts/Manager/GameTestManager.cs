@@ -34,6 +34,9 @@ namespace Monkey.Game.GameTest
                 case StateName.Status.GuidingFinish:
                     fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), eventType.Data);
                     break;
+                case StateName.Status.PlayFinish:
+                    fSMSystem.GotoState(StateName.Name.EndGame.ToString(), eventType.Data);
+                    break;
             }
         }
 

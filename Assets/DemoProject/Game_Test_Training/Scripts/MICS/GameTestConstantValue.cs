@@ -15,7 +15,8 @@ namespace Monkey.Game.GameTest
             GamePlay = 3,
             NextTurn = 4,
             Guiding = 5,
-            DelayRight = 6,
+            EndGame = 6,
+
         }
 
         public enum Status
@@ -26,8 +27,6 @@ namespace Monkey.Game.GameTest
             IntroFinish = 3,
             PlayStart = 4,
             PlayFinish = 5,
-            NexTurnStart = 6,
-            NextTurnFinish = 7,
             GuidingStart = 8,
             GuidingFinish = 9,
             OnClick = 10,
@@ -57,6 +56,11 @@ namespace Monkey.Game.GameTest
             throw new System.NotImplementedException();
         }
 
+    }
+
+    public class StaticValue
+    {
+        public static int CountWrong = 0;
     }
 
     public struct AnswerChanel : EventListener<AnswerChanel>

@@ -11,6 +11,7 @@ namespace Monkey.Game.GameTest
         public IntroConfig IntroConfig;
         public AnimalButtonConfig AnimalButton;
         public GameTestAnimalConfig AnimConfig;
+        public EndGameConfig EndGameConfig;
     }
 
     [Serializable]
@@ -38,5 +39,11 @@ namespace Monkey.Game.GameTest
         public string animkeo_loop;
         public string tha;
         public string vui_mung;
+    }
+
+    [Serializable]
+    public class EndGameConfig
+    {
+        public AudioClip SfxCheer;
     }
 }

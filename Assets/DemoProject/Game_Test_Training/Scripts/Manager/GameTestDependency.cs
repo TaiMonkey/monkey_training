@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Spine.Unity;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,6 +24,8 @@ namespace Monkey.Game.GameTest
         [SerializeField] private Image handLong;
         [SerializeField] private Transform animal;
         [SerializeField] private CanvasGroup canvasGroup;
+        // EndGame
+        [SerializeField] private SkeletonGraphic animStar;
 
 
         public override T GetStateData<T>()
@@ -69,6 +72,17 @@ namespace Monkey.Game.GameTest
                 guidingDependency.AnimalButtonConfig = gameTestConfig.AnimalButton;
 
                 data = ConvertToType<T>(guidingDependency);
+            }
+            else if (typeData == typeof(GameTestEndGameStateDependency))
+            {
+                GameTestEndGameStateDependency endGameDependency = new GameTestEndGameStateDependency();
+                endGameDependency.ButtonBearControllers = buttonBearControllers;
+                endGameDependency.ButtonTigerControllers = buttonTigerControllers;
+                endGameDependency.EndGameConfig = gameTestConfig.EndGameConfig;
+                endGameDependency.GameTestAnimalConfig = gameTestConfig.AnimConfig;
+                endGameDependency.AnimStart = animStar;
+
+                data = ConvertToType<T>(endGameDependency);
             }
             else
             {

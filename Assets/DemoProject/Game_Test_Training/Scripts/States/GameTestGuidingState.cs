@@ -10,13 +10,15 @@ using UnityEngine.UI;
 
 namespace Monkey.Game.GameTest
 {
-    public class GameTestGuidingState : FSMState, EventListener<AnswerChanel>
+    public class GameTestGuidingState : FSMState
     {
         private GameTestGuidingStateDependency dependency;
         private List<AnimalButtonController> listCurrentEnableActive;
         private AnimalButtonController guidingAnimal;
         private bool isGuiding = false;
         private CancellationTokenSource cts;
+        private const int TIME_DELAY = 500;
+
         public override void SetUp(object data)
         {
             dependency = (GameTestGuidingStateDependency)data;
@@ -25,7 +27,6 @@ namespace Monkey.Game.GameTest
         public override void OnEnter()
         {
             cts = new CancellationTokenSource();
-            this.ObserverStartListening<AnswerChanel>();
             listCurrentEnableActive = new List<AnimalButtonController>();
             listCurrentEnableActive = new List<AnimalButtonController>();
             base.OnEnter();
@@ -46,10 +47,10 @@ namespace Monkey.Game.GameTest
 
             int randomIndex = UnityEngine.Random.Range(0, listCurrentEnableActive.Count);
 
-            StartGuidingDrag(false, randomIndex);
+            StartGuidingDrag(randomIndex);
         }
 
-        public async void StartGuidingDrag(bool isDelay, int randomIndex)
+        public async void StartGuidingDrag(int randomIndex)
         {
             ResetGuidingDrag();
             isGuiding = true;
@@ -57,7 +58,7 @@ namespace Monkey.Game.GameTest
             try
             {
                 dependency.UiGuiding.transform.localScale = Vector3.one;
-                if (isDelay) await UniTask.Delay(5000, cancellationToken: cts.Token);
+                await UniTask.Delay(TIME_DELAY, cancellationToken: cts.Token);
                 if (guidingAnimal == null)
                 {
                     guidingAnimal = GameObject.Instantiate(listCurrentEnableActive[randomIndex], dependency.Animal, false);
@@ -76,8 +77,6 @@ namespace Monkey.Game.GameTest
                                 = listCurrentEnableActive[randomIndex].transform.position;
 
                     dependency.UiGuiding.DOFade(1, 0.2f).SetEase(Ease.Linear).onComplete += () => { tscFadeDone = true; };
-                    //soundData = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT,null);
-                    //ObserverManager.TriggerEvent<SoundChannel>(soundData);
 
                     if (guidingAnimal != null) guidingAnimal.CanvasGroup.DOFade(0.5f, 0.2f).SetEase(Ease.Linear);
                     await UniTask.WaitUntil(() => tscFadeDone, cancellationToken: cts.Token);
@@ -87,7 +86,7 @@ namespace Monkey.Game.GameTest
                     ObserverManager.TriggerEvent<SoundChannel>(soundData);
 
                     SetColorImage(dependency.HandLong, 1f);
-                    await UniTask.Delay(500, cancellationToken: cts.Token);
+                    await UniTask.Delay(TIME_DELAY, cancellationToken: cts.Token);
                     if (guidingAnimal != null) guidingAnimal.transform.DOMove(listCurrentEnableActive[randomIndex].cageTranform.position, 0.5f).SetEase(Ease.Linear);
 
                     dependency.UiGuiding.transform.DOMove(listCurrentEnableActive[randomIndex].cageTranform.position, 0.5f).SetEase(Ease.Linear).onComplete += () =>
@@ -96,14 +95,14 @@ namespace Monkey.Game.GameTest
                     };
                     await UniTask.WaitUntil(() => tscMoveDone, cancellationToken: cts.Token);
                     tscMoveDone = false;
-                    await UniTask.Delay(500, cancellationToken: cts.Token);
-                    //soundData = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, null);
-                    //ObserverManager.TriggerEvent<SoundChannel>(soundData);
+                    await UniTask.Delay(TIME_DELAY, cancellationToken: cts.Token);
 
                     dependency.UiGuiding.DOFade(0, 0.35f).SetEase(Ease.Linear).onComplete += () => { tscFadeDone = true; };
                     if (guidingAnimal != null) guidingAnimal.CanvasGroup.DOFade(0, 0.35f).SetEase(Ease.Linear);
                     await UniTask.WaitUntil(() => tscFadeDone, cancellationToken: cts.Token);
-                    await UniTask.Delay(10000, cancellationToken: cts.Token);
+
+                    StateChanel stateChanel = new StateChanel(StateName.Status.GuidingFinish);
+                    ObserverManager.TriggerEvent(stateChanel);
                 }
             }
             catch (OperationCanceledException ex)
@@ -135,7 +134,7 @@ namespace Monkey.Game.GameTest
         {
             foreach (Transform child in parent)
             {
-                if (child.name.Equals("TempFishCorrect")) GameObject.Destroy(child.gameObject);
+                if (child.name.Equals("AnimlGuiding")) GameObject.Destroy(child.gameObject);
             }
         }
 
@@ -150,23 +149,12 @@ namespace Monkey.Game.GameTest
             base.OnExit();
             ResetGuidingDrag();
             cts?.Cancel();
-            this.ObserverStopListening<AnswerChanel>();
         }
         public override void OnDestroy()
         {
             base.OnDestroy();
             cts?.Dispose();
             cts?.Cancel();
-            this.ObserverStopListening<AnswerChanel>();
-        }
-
-        public void OnMMEvent(AnswerChanel eventType)
-        {
-            if (eventType.TypeEvent == AnswerChanel.Type.Pointer_Down || eventType.TypeEvent == AnswerChanel.Type.BeginDrag)
-            {
-                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingFinish, eventType.Data);
-                ObserverManager.TriggerEvent(stateChanel);
-            }
         }
     }
 
