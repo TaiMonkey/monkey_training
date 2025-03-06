@@ -28,10 +28,9 @@ namespace Monkey.Game.GameTest
         public int Cage_Type { get; set; }
         public bool IsCorrect {get; set;} = false;
         public CanvasGroup CanvasGroup { get => canvasGroup; }
-
-
-
         public bool IsEnable { get => isEnable; set { isEnable = value; } }
+        public bool IsDraggable { get => isDraggable; set { isDraggable = value; } }
+
 
         public void InitDataCage(RectTransform initDataCage)
         {
@@ -79,27 +78,27 @@ namespace Monkey.Game.GameTest
         {
             if (!isEnable || !isDraggable) return;
             isDragging = false;
+            isEnable = false;
             if (CheckTriggerOfTwoObject(itemTransfrom, cageTranform, 0.2f))
             {
                 transform.SetParent(ParentSnapPoint.transform);
                 IsCorrect = true;
                 isEnable = false;
-
-                AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
-                ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
             }
-            else
+            AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
+            ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
+            /*else
             {
                 StaticValue.CountWrong++;
                 transform.SetParent(OriginParent.transform);
-                Debug.Log("Fail");
+                Debug.Log(StaticValue.CountWrong);
                 OnBackButton(() =>
                 {
                     isEnable = true;
                     AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
                     ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
                 });
-            }
+            }*/
 
             isDraggable = false;
         }
@@ -117,6 +116,7 @@ namespace Monkey.Game.GameTest
 
         public void OnBeginDrag(PointerEventData eventData)
         {
+           
             if (!isEnable || !isDraggable) return;
             isDragging = true;
 
@@ -155,7 +155,7 @@ namespace Monkey.Game.GameTest
 
         public void OnBackButton(Action callBack)
         {
-            transform.DOMove(OriginPos, 2f).SetEase(Ease.Linear).onComplete += () =>
+            transform.DOMove(OriginPos, 0.3f).SetEase(Ease.Linear).onComplete += () =>
             {
                 callBack.Invoke();
             };

@@ -46,6 +46,9 @@ namespace Monkey.Game.GameTest
             }
 
             int randomIndex = UnityEngine.Random.Range(0, listCurrentEnableActive.Count);
+            /*for(int i = 0; i < listCurrentEnableActive.Count; i++) {
+                listCurrentEnableActive[i].IsEnable = false;
+            }*/
 
             StartGuidingDrag(randomIndex);
         }
@@ -101,7 +104,7 @@ namespace Monkey.Game.GameTest
                     if (guidingAnimal != null) guidingAnimal.CanvasGroup.DOFade(0, 0.35f).SetEase(Ease.Linear);
                     await UniTask.WaitUntil(() => tscFadeDone, cancellationToken: cts.Token);
 
-                    StateChanel stateChanel = new StateChanel(StateName.Status.GuidingFinish);
+                    StateChanel stateChanel = new StateChanel(StateName.Status.GuidingFinish, listCurrentEnableActive);
                     ObserverManager.TriggerEvent(stateChanel);
                 }
             }

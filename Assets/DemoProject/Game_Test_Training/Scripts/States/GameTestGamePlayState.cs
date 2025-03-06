@@ -10,6 +10,7 @@ namespace Monkey.Game.GameTest
     {
         private GameTestGamePlayStateDependency dependency;
         private AnimalButtonController animalButtonController;
+        private List<AnimalButtonController> animalButtonControllers;
         private GameTestAnimalConfig animConfig;
         private float timer = 0f;
         private int index_Cage_Tiger = 0;
@@ -21,9 +22,17 @@ namespace Monkey.Game.GameTest
             dependency = (GameTestGamePlayStateDependency)data;
         }
 
-        public override void OnEnter()
+        public override void OnEnter(object data)
         {
             Debug.LogError("GamePlay");
+            /*if(data != null)
+            {
+                animalButtonControllers = (List<AnimalButtonController>)data;
+            }
+            for(int i = 0; i < animalButtonControllers.Count; i ++)
+            {
+                animalButtonControllers[i].IsEnable = true;
+            }*/
             animConfig = dependency.AnimConfig;
             this.ObserverStartListening<AnswerChanel>();
         }
@@ -75,18 +84,37 @@ namespace Monkey.Game.GameTest
 
                     SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxCorrect);
                     ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
+                    if (index_Cage_Bear == 3 && index_Cage_Tiger == 3)
+                    {
+                        StateChanel stateChanel = new StateChanel(StateName.Status.PlayFinish);
+                        ObserverManager.TriggerEvent(stateChanel);
+                    }
                 }
                 else
                 {
+                    StaticValue.CountWrong++;
+                    animalButtonController.transform.SetParent(animalButtonController.OriginParent.transform);
+                    animalButtonController.OnBackButton(() =>
+                    {
+                        animalButtonController.IsEnable = true;
+                    });
                     SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxWrong);
                     ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
+
+                    if (StaticValue.CountWrong == 3)
+                    {
+                        StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
+                        ObserverManager.TriggerEvent(stateChanel);
+                        StaticValue.CountWrong = 0;
+                    }
                 }
+
             }
-            else if (eventType.TypeEvent == AnswerChanel.Type.BeginDrag)
-            {
-                animalButtonController.transform.SetAsLastSibling();
-                animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
-            }
+            //else if (eventType.TypeEvent == AnswerChanel.Type.BeginDrag)
+            //{
+              //  animalButtonController.transform.SetAsLastSibling();
+                //animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
+            //}
 
             else if (eventType.TypeEvent == AnswerChanel.Type.OnDrag)
             {
@@ -105,19 +133,6 @@ namespace Monkey.Game.GameTest
                 StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
                 ObserverManager.TriggerEvent(stateChanel);
                 timer = 0;
-            }
-
-            if(StaticValue.CountWrong == 3)
-            {
-                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
-                ObserverManager.TriggerEvent(stateChanel);
-                StaticValue.CountWrong = 0;
-            }
-
-            if(index_Cage_Bear == 3 && index_Cage_Tiger ==3)
-            {
-                StateChanel stateChanel = new StateChanel(StateName.Status.PlayFinish);
-                ObserverManager.TriggerEvent(stateChanel);
             }
         }
 

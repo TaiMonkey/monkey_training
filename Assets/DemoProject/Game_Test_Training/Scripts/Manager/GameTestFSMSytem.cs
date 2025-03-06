@@ -46,7 +46,7 @@ namespace Monkey.Game.GameTest
                     GotoState(initState, data);
                     break;
                 case StateName.Name.GamePlay:
-                    GotoState(gamePlayState);
+                    GotoState(gamePlayState, data);
                     break;
                 case StateName.Name.Guiding:
                     GotoState(guidingState);
