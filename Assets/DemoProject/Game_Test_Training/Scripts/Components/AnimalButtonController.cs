@@ -22,8 +22,8 @@ namespace Monkey.Game.GameTest
         public Transform ParentSnapPoint { get; set; }
         public Transform OriginParent { get; set; }
 
-        private bool isEnable = true;
-        private bool isDragging = false;
+        private bool isEnable;
+        public bool IsSuccess { get; set; } = false; 
         private bool isDraggable = false;
         public int Cage_Type { get; set; }
         public bool IsCorrect {get; set;} = false;
@@ -66,6 +66,7 @@ namespace Monkey.Game.GameTest
 
         public void OnPointerDown(PointerEventData eventData)
         {
+            Debug.LogError(isEnable + "isEnable" + isDraggable + "isDraggable");
             if (!isEnable || isDraggable) return;
             isDraggable = true;
             originalScale = skeletonGraphic.transform.localScale;
@@ -77,30 +78,15 @@ namespace Monkey.Game.GameTest
         public void OnPointerUp(PointerEventData eventData)
         {
             if (!isEnable || !isDraggable) return;
-            isDragging = false;
             isEnable = false;
+            isDraggable = false;
             if (CheckTriggerOfTwoObject(itemTransfrom, cageTranform, 0.2f))
             {
                 transform.SetParent(ParentSnapPoint.transform);
                 IsCorrect = true;
-                isEnable = false;
             }
             AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
             ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
-            /*else
-            {
-                StaticValue.CountWrong++;
-                transform.SetParent(OriginParent.transform);
-                Debug.Log(StaticValue.CountWrong);
-                OnBackButton(() =>
-                {
-                    isEnable = true;
-                    AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
-                    ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
-                });
-            }*/
-
-            isDraggable = false;
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -117,7 +103,6 @@ namespace Monkey.Game.GameTest
         {
            
             if (!isEnable || !isDraggable) return;
-            isDragging = true;
 
             AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.BeginDrag, this);
             ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);

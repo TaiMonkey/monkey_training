@@ -16,7 +16,7 @@ namespace Monkey.Game.GameTest
             NextTurn = 4,
             Guiding = 5,
             EndGame = 6,
-
+            RestIsEnable = 7
         }
 
         public enum Status
@@ -29,8 +29,8 @@ namespace Monkey.Game.GameTest
             PlayFinish = 5,
             GuidingStart = 8,
             GuidingFinish = 9,
-            OnClick = 10,
-            OnClickWrong = 11,
+            RestIsEnableStart = 10,
+            RestIsEnableFinish = 11,
         }
     }
 

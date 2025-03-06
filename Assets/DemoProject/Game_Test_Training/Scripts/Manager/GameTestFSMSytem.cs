@@ -11,6 +11,7 @@ namespace Monkey.Game.GameTest
         private GameTestGamePlayState gamePlayState;
         private GameTestGuidingState guidingState;
         private GameTestEndGameState endGameState;
+        private GameTestResetIsEnableState resetIsEnableState;
 
         private void Awake()
         {
@@ -18,6 +19,7 @@ namespace Monkey.Game.GameTest
             gamePlayState = new GameTestGamePlayState();
             guidingState = new GameTestGuidingState();
             endGameState = new GameTestEndGameState();
+            resetIsEnableState = new GameTestResetIsEnableState();
         }
         public override void SetupStateData<T>(T data)
         {
@@ -34,6 +36,9 @@ namespace Monkey.Game.GameTest
 
                 GameTestEndGameStateDependency endGameDependency = dependency.GetStateData<GameTestEndGameStateDependency>();
                 endGameState.SetUp(endGameDependency);
+
+                GameTestResetIsEnableStateDependency resetIsEnableDependency = dependency.GetStateData<GameTestResetIsEnableStateDependency>();
+                resetIsEnableState.SetUp(resetIsEnableDependency);
             }
         }
 
@@ -53,6 +58,9 @@ namespace Monkey.Game.GameTest
                     break;
                 case StateName.Name.EndGame:
                     GotoState(endGameState);
+                    break;
+                case StateName.Name.RestIsEnable:
+                    GotoState(resetIsEnableState);
                     break;
             }
         }

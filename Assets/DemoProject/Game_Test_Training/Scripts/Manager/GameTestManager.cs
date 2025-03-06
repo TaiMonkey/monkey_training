@@ -26,7 +26,7 @@ namespace Monkey.Game.GameTest
             switch (eventType.StatusOfState)
             {
                 case StateName.Status.InitFinish:
-                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), null);
+                    fSMSystem.GotoState(StateName.Name.RestIsEnable.ToString(), null);
                     break;
                 case StateName.Status.GuidingStart:
                     fSMSystem.GotoState(StateName.Name.Guiding.ToString(), null);
@@ -36,6 +36,12 @@ namespace Monkey.Game.GameTest
                     break;
                 case StateName.Status.PlayFinish:
                     fSMSystem.GotoState(StateName.Name.EndGame.ToString(), eventType.Data);
+                    break;
+                case StateName.Status.RestIsEnableStart:
+                    fSMSystem.GotoState(StateName.Name.RestIsEnable.ToString(), null);
+                    break;
+                case StateName.Status.RestIsEnableFinish:
+                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), null);
                     break;
             }
         }

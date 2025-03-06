@@ -10,14 +10,16 @@ using UnityEngine.UI;
 
 namespace Monkey.Game.GameTest
 {
-    public class GameTestGuidingState : FSMState
+    public class GameTestGuidingState : FSMState, EventListener<AnswerChanel>
     {
         private GameTestGuidingStateDependency dependency;
         private List<AnimalButtonController> listCurrentEnableActive;
+        private AnimalButtonController animalButtonController;
         private AnimalButtonController guidingAnimal;
         private bool isGuiding = false;
         private CancellationTokenSource cts;
         private const int TIME_DELAY = 500;
+        private const int TIME_DELAY_START = 10000;
 
         public override void SetUp(object data)
         {
@@ -26,35 +28,31 @@ namespace Monkey.Game.GameTest
 
         public override void OnEnter()
         {
-            cts = new CancellationTokenSource();
+            this.ObserverStartListening<AnswerChanel>();
             listCurrentEnableActive = new List<AnimalButtonController>();
-            listCurrentEnableActive = new List<AnimalButtonController>();
-            base.OnEnter();
+
             for(int i = 0; i < dependency.ButtonBearControllers.Count; i ++)
             {
-                if(dependency.ButtonBearControllers[i].IsEnable)
+                if(!dependency.ButtonBearControllers[i].IsCorrect)
                 {
                     listCurrentEnableActive.Add(dependency.ButtonBearControllers[i]);
                 }
             }
             for (int i = 0; i < dependency.ButtonTigerControllers.Count; i++)
             {
-                if (dependency.ButtonTigerControllers[i].IsEnable)
+                if (!dependency.ButtonTigerControllers[i].IsCorrect)
                 {
                     listCurrentEnableActive.Add(dependency.ButtonTigerControllers[i]);
                 }
             }
 
             int randomIndex = UnityEngine.Random.Range(0, listCurrentEnableActive.Count);
-            /*for(int i = 0; i < listCurrentEnableActive.Count; i++) {
-                listCurrentEnableActive[i].IsEnable = false;
-            }*/
-
             StartGuidingDrag(randomIndex);
         }
 
         public async void StartGuidingDrag(int randomIndex)
         {
+            cts = new();
             ResetGuidingDrag();
             isGuiding = true;
             SoundChannel soundData;
@@ -104,8 +102,7 @@ namespace Monkey.Game.GameTest
                     if (guidingAnimal != null) guidingAnimal.CanvasGroup.DOFade(0, 0.35f).SetEase(Ease.Linear);
                     await UniTask.WaitUntil(() => tscFadeDone, cancellationToken: cts.Token);
 
-                    StateChanel stateChanel = new StateChanel(StateName.Status.GuidingFinish, listCurrentEnableActive);
-                    ObserverManager.TriggerEvent(stateChanel);
+                    await UniTask.Delay(TIME_DELAY_START, cancellationToken: cts.Token);
                 }
             }
             catch (OperationCanceledException ex)
@@ -147,17 +144,33 @@ namespace Monkey.Game.GameTest
             currentColor.a = indexColor;
             image.color = currentColor;
         }
+
         public override void OnExit()
         {
             base.OnExit();
             ResetGuidingDrag();
             cts?.Cancel();
+            this.ObserverStopListening<AnswerChanel>();
         }
+
         public override void OnDestroy()
         {
             base.OnDestroy();
             cts?.Dispose();
             cts?.Cancel();
+            this.ObserverStopListening<AnswerChanel>();
+        }
+
+        public void OnMMEvent(AnswerChanel eventType)
+        {
+            if (eventType.Data is AnimalButtonController)
+            {
+                animalButtonController = (AnimalButtonController)eventType.Data;
+            }
+
+            StateChanel stateChanel = new StateChanel(StateName.Status.GuidingFinish, animalButtonController);
+            ObserverManager.TriggerEvent(stateChanel);
+
         }
     }
 

@@ -10,7 +10,6 @@ namespace Monkey.Game.GameTest
     {
         private GameTestGamePlayStateDependency dependency;
         private AnimalButtonController animalButtonController;
-        private List<AnimalButtonController> animalButtonControllers;
         private GameTestAnimalConfig animConfig;
         private float timer = 0f;
         private int index_Cage_Tiger = 0;
@@ -25,14 +24,20 @@ namespace Monkey.Game.GameTest
         public override void OnEnter(object data)
         {
             Debug.LogError("GamePlay");
-            /*if(data != null)
+            if(data != null)
             {
-                animalButtonControllers = (List<AnimalButtonController>)data;
+                animalButtonController = (AnimalButtonController)data;
+
+                animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
+                animalButtonController.SetScaleSkeleton(dependency.AnimalButtonConfig.SizeIncrease, true);
+
+                SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxChoose);
+                ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
             }
-            for(int i = 0; i < animalButtonControllers.Count; i ++)
+            else
             {
-                animalButtonControllers[i].IsEnable = true;
-            }*/
+
+            }
             animConfig = dependency.AnimConfig;
             this.ObserverStartListening<AnswerChanel>();
         }
@@ -40,10 +45,14 @@ namespace Monkey.Game.GameTest
         public void OnMMEvent(AnswerChanel eventType)
         {
             timer = 0;
+
             if (eventType.Data is AnimalButtonController)
             {
                 animalButtonController = (AnimalButtonController)eventType.Data;
             }
+            SetIsEnable(dependency.BearButtonControllers);
+            SetIsEnable(dependency.TigerButtonControllers);
+
             if (eventType.TypeEvent == AnswerChanel.Type.Pointer_Down)
             {
                 Debug.LogError("OnPointerDown");
@@ -100,39 +109,36 @@ namespace Monkey.Game.GameTest
                     });
                     SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxWrong);
                     ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
-
-                    if (StaticValue.CountWrong == 3)
-                    {
-                        StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
-                        ObserverManager.TriggerEvent(stateChanel);
-                        StaticValue.CountWrong = 0;
-                    }
                 }
-
             }
-            //else if (eventType.TypeEvent == AnswerChanel.Type.BeginDrag)
-            //{
-              //  animalButtonController.transform.SetAsLastSibling();
-                //animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
-            //}
-
-            //else if (eventType.TypeEvent == AnswerChanel.Type.OnDrag)
-            //{
-            //    Debug.LogError("OnDrag");
-            //    var skeletonGraphic = animalButtonController.GetSkeletonGraphic();
-            //    var animationState = skeletonGraphic.AnimationState;
-
-            //    animationState.TimeScale = 1.2f;
-            //}
+            StateChanel state = new StateChanel(StateName.Status.RestIsEnableStart);
+            ObserverManager.TriggerEvent(state);
         }
         public override void OnUpdate()
         {
             timer += Time.deltaTime;
             if (timer >= 10)
             {
+                timer = 0;
                 StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
                 ObserverManager.TriggerEvent(stateChanel);
-                timer = 0;
+            }
+            if (StaticValue.CountWrong == 3)
+            {
+                StaticValue.CountWrong = 0;
+                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
+                ObserverManager.TriggerEvent(stateChanel);
+            }
+        }
+
+        private void SetIsEnable(List<AnimalButtonController> list)
+        {
+            foreach (var item in list)
+            {
+                if (item != animalButtonController)
+                {
+                    item.IsEnable = false;
+                }
             }
         }
 

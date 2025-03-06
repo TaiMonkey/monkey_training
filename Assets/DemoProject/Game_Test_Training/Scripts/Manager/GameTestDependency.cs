@@ -82,6 +82,14 @@ namespace Monkey.Game.GameTest
 
                 data = ConvertToType<T>(endGameDependency);
             }
+            else if (typeData == typeof(GameTestResetIsEnableStateDependency))
+            {
+                GameTestResetIsEnableStateDependency resetIsEnableDependency = new GameTestResetIsEnableStateDependency();
+                resetIsEnableDependency.BearButtonControllers = buttonBearControllers;
+                resetIsEnableDependency.TigerButtonControllers = buttonTigerControllers;
+
+                data = ConvertToType<T>(resetIsEnableDependency);
+            }
             else
             {
                 data = ConvertToType<T>(null);
