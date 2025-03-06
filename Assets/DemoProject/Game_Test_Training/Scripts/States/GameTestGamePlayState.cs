@@ -76,6 +76,11 @@ namespace Monkey.Game.GameTest
                     SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxCorrect);
                     ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
                 }
+                else
+                {
+                    SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxWrong);
+                    ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
+                }
             }
             else if (eventType.TypeEvent == AnswerChanel.Type.BeginDrag)
             {

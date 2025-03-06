@@ -19,14 +19,12 @@ namespace Monkey.Game.GameTest
         public RectTransform cageTranform { get; private set; }
         private Vector3 originalScale;
         public Vector3 OriginPos { get; set; }
-        public Canvas ParentCanvas { get; set; }
         public Transform ParentSnapPoint { get; set; }
         public Transform OriginParent { get; set; }
 
         private bool isEnable = true;
         private bool isDragging = false;
         private bool isDraggable = false;
-        private const string KEO_LOOP = "1.1 - Keo - Loop";
         public int Cage_Type { get; set; }
         public bool IsCorrect {get; set;} = false;
         public CanvasGroup CanvasGroup { get => canvasGroup; }
@@ -80,6 +78,7 @@ namespace Monkey.Game.GameTest
         public void OnPointerUp(PointerEventData eventData)
         {
             if (!isEnable || !isDraggable) return;
+            isDragging = false;
             if (CheckTriggerOfTwoObject(itemTransfrom, cageTranform, 0.2f))
             {
                 transform.SetParent(ParentSnapPoint.transform);
@@ -97,9 +96,9 @@ namespace Monkey.Game.GameTest
                 OnBackButton(() =>
                 {
                     isEnable = true;
+                    AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
+                    ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
                 });
-                AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Up, this);
-                ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
             }
 
             isDraggable = false;
@@ -156,7 +155,7 @@ namespace Monkey.Game.GameTest
 
         public void OnBackButton(Action callBack)
         {
-            transform.DOMove(OriginPos, 0.2f).SetEase(Ease.Linear).onComplete += () =>
+            transform.DOMove(OriginPos, 2f).SetEase(Ease.Linear).onComplete += () =>
             {
                 callBack.Invoke();
             };

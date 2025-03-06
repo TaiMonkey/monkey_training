@@ -29,7 +29,6 @@ namespace Monkey.Game.GameTest
                 buttonBearController.SetAnimStart(dependency.AnimConfig.animNomal);
                 buttonBearController.InitDataCage(dependency.Cage_Bear.GetComponent<RectTransform>());
                 buttonBearController.OriginPos = buttonBearController.transform.position;
-                buttonBearController.ParentCanvas = dependency.Canvas;
                 buttonBearController.OriginParent = dependency.ParentOrigin;
                 buttonBearController.ParentSnapPoint = dependency.BearParentSnapPoint;
                 buttonBearController.Cage_Type = (int)GameTestTypeCage.Cage_Bear;
@@ -40,7 +39,6 @@ namespace Monkey.Game.GameTest
                 buttonTigerController.SetAnimStart(dependency.AnimConfig.animNomal);
                 buttonTigerController.InitDataCage(dependency.Cage_Tiger.GetComponent<RectTransform>());
                 buttonTigerController.OriginPos = buttonTigerController.transform.position;
-                buttonTigerController.ParentCanvas = dependency.Canvas;
                 buttonTigerController.OriginParent = dependency.ParentOrigin;
                 buttonTigerController.ParentSnapPoint = dependency.TigerParentSnapPoint;
                 buttonTigerController.Cage_Type = (int)GameTestTypeCage.Cage_Tiger;
@@ -66,7 +64,6 @@ namespace Monkey.Game.GameTest
         public CageController Cage_Tiger { get; set; }
         public CageController Cage_Bear { get; set; }
         public GameTestAnimalConfig AnimConfig { get; set; }
-        public Canvas Canvas { get; set; }
         public Transform ParentOrigin { get; set; }
         public Transform BearParentSnapPoint { get; set; }
         public Transform TigerParentSnapPoint { get; set; }

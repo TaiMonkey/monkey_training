@@ -16,7 +16,6 @@ namespace Monkey.Game.GameTest
         [SerializeField] private CageController cageTiger;
         [SerializeField] private CageController cageBear;
         [SerializeField] private GameTestConfig gameTestConfig;
-        [SerializeField] private Canvas canvas;
         [SerializeField] private Transform parentOrigin;
         [SerializeField] private Transform bearParentSnapPoint;
         [SerializeField] private Transform tigerParentSnapPoint;
@@ -42,7 +41,6 @@ namespace Monkey.Game.GameTest
                 initStateDependency.AnimConfig = gameTestConfig.AnimConfig;
                 initStateDependency.Cage_Bear = cageBear;
                 initStateDependency.Cage_Tiger = cageTiger;
-                initStateDependency.Canvas = canvas;
                 initStateDependency.ParentOrigin = parentOrigin;
                 initStateDependency.BearParentSnapPoint = bearParentSnapPoint;
                 initStateDependency.TigerParentSnapPoint = tigerParentSnapPoint;

@@ -19,6 +19,7 @@ namespace Monkey.Game.GameTest
     {
         public AudioClip SfxChoose;
         public AudioClip SfxCorrect;
+        public AudioClip SfxWrong;
         public float SizeIncrease;
         public float SizeDecrease;
         public float SpeedIncrease;
