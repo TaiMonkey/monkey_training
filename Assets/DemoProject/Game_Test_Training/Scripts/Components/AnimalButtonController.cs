@@ -106,8 +106,7 @@ namespace Monkey.Game.GameTest
         public void OnDrag(PointerEventData eventData)
         {
             if (!isEnable || !isDraggable) return;
-            AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.OnDrag, this);
-            ObserverManager.TriggerEvent<AnswerChanel>(answerChanel);
+            skeletonGraphic.AnimationState.TimeScale = 1.2f;
 
             RectTransformUtility.ScreenPointToLocalPointInRectangle(itemTransfrom.parent as RectTransform,
             eventData.position, eventData.pressEventCamera, out Vector2 localPoint);

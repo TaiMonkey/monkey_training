@@ -116,14 +116,14 @@ namespace Monkey.Game.GameTest
                 //animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
             //}
 
-            else if (eventType.TypeEvent == AnswerChanel.Type.OnDrag)
-            {
-                Debug.LogError("OnDrag");
-                var skeletonGraphic = animalButtonController.GetSkeletonGraphic();
-                var animationState = skeletonGraphic.AnimationState;
+            //else if (eventType.TypeEvent == AnswerChanel.Type.OnDrag)
+            //{
+            //    Debug.LogError("OnDrag");
+            //    var skeletonGraphic = animalButtonController.GetSkeletonGraphic();
+            //    var animationState = skeletonGraphic.AnimationState;
 
-                animationState.TimeScale = 1.2f;
-            }
+            //    animationState.TimeScale = 1.2f;
+            //}
         }
         public override void OnUpdate()
         {
