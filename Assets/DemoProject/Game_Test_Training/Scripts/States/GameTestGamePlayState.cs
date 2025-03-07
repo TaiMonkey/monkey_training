@@ -15,6 +15,7 @@ namespace Monkey.Game.GameTest
         private int index_Cage_Tiger = 0;
         private int index_Cage_Bear = 0;
         private const string ANIM_STAR = "4.0 - Sao";
+        private bool isPlay;
 
         public override void SetUp(object data)
         {
@@ -23,9 +24,9 @@ namespace Monkey.Game.GameTest
 
         public override void OnEnter(object data)
         {
-            Debug.LogError("GamePlay");
             if(data != null)
             {
+                isPlay = true;
                 animalButtonController = (AnimalButtonController)data;
 
                 animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
@@ -34,10 +35,6 @@ namespace Monkey.Game.GameTest
                 SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxChoose);
                 ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
             }
-            else
-            {
-
-            }
             animConfig = dependency.AnimConfig;
             this.ObserverStartListening<AnswerChanel>();
         }
@@ -45,7 +42,6 @@ namespace Monkey.Game.GameTest
         public void OnMMEvent(AnswerChanel eventType)
         {
             timer = 0;
-
             if (eventType.Data is AnimalButtonController)
             {
                 animalButtonController = (AnimalButtonController)eventType.Data;
@@ -55,7 +51,7 @@ namespace Monkey.Game.GameTest
 
             if (eventType.TypeEvent == AnswerChanel.Type.Pointer_Down)
             {
-                Debug.LogError("OnPointerDown");
+                isPlay = true;
                 animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animkeo_loop, true);
                 animalButtonController.SetScaleSkeleton(dependency.AnimalButtonConfig.SizeIncrease, true);
 
@@ -64,7 +60,7 @@ namespace Monkey.Game.GameTest
             }
             else if (eventType.TypeEvent == AnswerChanel.Type.Pointer_Up)
             {
-                Debug.LogError("OnPointerUp");
+                isPlay = false;
                 animalButtonController.GetSkeletonGraphic().AnimationState.TimeScale = 1f;
                 animalButtonController.SetScaleSkeleton(dependency.AnimalButtonConfig.SizeIncrease, false);
                 animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.tha, false).Complete += (trackEntry) =>
@@ -114,15 +110,20 @@ namespace Monkey.Game.GameTest
             StateChanel state = new StateChanel(StateName.Status.RestIsEnableStart);
             ObserverManager.TriggerEvent(state);
         }
+
         public override void OnUpdate()
         {
-            timer += Time.deltaTime;
-            if (timer >= 10)
+            if (!isPlay)
             {
-                timer = 0;
-                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
-                ObserverManager.TriggerEvent(stateChanel);
+                timer += Time.deltaTime;
+                if (timer >= 10)
+                {
+                    timer = 0;
+                    StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
+                    ObserverManager.TriggerEvent(stateChanel);
+                }
             }
+
             if (StaticValue.CountWrong == 3)
             {
                 StaticValue.CountWrong = 0;
@@ -154,6 +155,7 @@ namespace Monkey.Game.GameTest
             this.ObserverStopListening<AnswerChanel>();
         }
     }
+
     public class GameTestGamePlayStateDependency
     {
         public AnimalButtonConfig AnimalButtonConfig { get; set; }

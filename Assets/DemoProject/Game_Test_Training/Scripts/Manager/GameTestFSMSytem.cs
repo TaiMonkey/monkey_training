@@ -21,6 +21,7 @@ namespace Monkey.Game.GameTest
             endGameState = new GameTestEndGameState();
             resetIsEnableState = new GameTestResetIsEnableState();
         }
+
         public override void SetupStateData<T>(T data)
         {
             if (data is Dependency dependency)

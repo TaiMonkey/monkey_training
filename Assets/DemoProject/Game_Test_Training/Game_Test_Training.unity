@@ -6140,7 +6140,6 @@ MonoBehaviour:
   cageTiger: {fileID: 2032573574}
   cageBear: {fileID: 420646919}
   gameTestConfig: {fileID: 11400000, guid: 897dfcc92355bd24cb0872a1c4539ac5, type: 2}
-  canvas: {fileID: 2068822878}
   parentOrigin: {fileID: 141972189}
   bearParentSnapPoint: {fileID: 688510401}
   tigerParentSnapPoint: {fileID: 1022944803}
