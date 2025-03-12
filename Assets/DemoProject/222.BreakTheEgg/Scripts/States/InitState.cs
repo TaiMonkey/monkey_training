@@ -40,8 +40,12 @@ namespace Monkey.Game.BreakTheEgg
                 ButtonEggController buttonEgg = dependency.buttonEggControllers[i];
                 int index = RandomAnimation();
                 buttonEgg.SetAnimation(listAnimation[index], false);
+                string text = listAnimation[index].Split(" ")[1];
+                buttonEgg.TypeEgg = text;
                 buttonEgg.SetAlphabet(stateData.ListButtonEggData[i].AlphaBetAnser);
                 buttonEgg.SetTextAnswer(stateData.ListButtonEggData[i].TextAnswer);
+                buttonEgg.OriginPos = buttonEgg.transform.position;
+                Debug.LogError(buttonEgg.OriginPos);
                 buttonEgg.gameObject.SetActive(false);
             }
             InActiveObject(dependency.ListImageBack);

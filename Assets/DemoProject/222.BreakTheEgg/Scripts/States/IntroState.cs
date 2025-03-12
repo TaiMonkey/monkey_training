@@ -38,7 +38,8 @@ namespace Monkey.Game.BreakTheEgg
             int index = Random.Range(0, dependency.ButtonEggControllers.Count);
             buttonEggController = dependency.ButtonEggControllers[index];
             buttonEggController.transform.SetAsLastSibling();
-
+            buttonEggController.SetAlphaBackgroundText(true);
+            buttonEggController.GetAlphabetAnswer().transform.localScale = Vector3.zero;
             buttonEggController.transform.DOMove(dependency.TargetPoint.position, 1f).SetEase(Ease.InOutQuad);
             buttonEggController.transform.DOScale(1.3f, 0.5f).SetEase(Ease.Linear);
 

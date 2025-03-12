@@ -40,7 +40,7 @@ MonoBehaviour:
       Tap7Normal: Egg A - tap7 -nomal
       Tap8: Egg A - tap 8
       Tap8Normal: Egg A - tap8 -nomal
-      Tap9: 'Egg A - tap 9 '
+      Tap9: Egg A - tap 9
       Tap9Normal: Egg A - tap9 -nomal
       Tap10: Egg A - tap 10
     EggB:
@@ -85,3 +85,8 @@ MonoBehaviour:
       Tap9: Egg C - tap 9
       Tap9Normal: Egg C - tap9 - nomal
       Tap10: Egg C - tap 10
+  gameplayConfig:
+    SfxTextShow: {fileID: 8300000, guid: ec936fb5892ec49c9bb57f533ffe01b2, type: 3}
+    Delay300: 300
+    Delay350: 350
+    Delay3000: 3000

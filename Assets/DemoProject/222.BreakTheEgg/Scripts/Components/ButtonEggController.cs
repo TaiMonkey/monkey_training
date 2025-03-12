@@ -3,6 +3,7 @@ using Spine.Unity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Monkey.Game.BreakTheEgg
 {
@@ -11,21 +12,42 @@ namespace Monkey.Game.BreakTheEgg
         [SerializeField] private SkeletonGraphic spineEgg;
         [SerializeField] private TextMeshProUGUI alphabetAnswer;
         [SerializeField] private TextMeshProUGUI textAnswer;
+        [SerializeField] private Image backgroundAlphabet;
+        [SerializeField] private CanvasGroup canvasGroup;
         private UnityEngine.UI.Button button;
-        public RectTransform OriginPos { get; set; }
+        public Vector3 OriginPos { get; set; }
+        public Vector3 OriginalScale { get; private set; }
         public bool Isclicked { get; set; }
+        public string TypeEgg { get; set; }
 
         void Start()
         {
             button = GetComponent<UnityEngine.UI.Button>();
             textAnswer.transform.localScale = Vector3.zero;
-            OriginPos = GetComponent<RectTransform>();
             button.onClick.AddListener(OnClick);
+            OriginalScale = transform.localPosition;
         }
 
         public void SetAnimation(string skinName, bool loop)
         {
             spineEgg.AnimationState.SetAnimation(0, skinName, loop);
+        }
+
+        public TextMeshProUGUI GetAlphabetAnswer()
+        {
+            return alphabetAnswer;
+        }
+
+        public void SetAlphaBackgroundText(bool isHidden)
+        {
+            if (isHidden)
+            {
+                canvasGroup.alpha = 0;
+            }
+            else
+            {
+                canvasGroup.alpha = 1;
+            }
         }
 
         public void SetAlphabet(string text)
@@ -42,6 +64,12 @@ namespace Monkey.Game.BreakTheEgg
         {
             return spineEgg;
         }
+
+        public void SetScaleTextAnswer()
+        {
+            textAnswer.transform.localScale = Vector3.one;
+        }
+
         private void OnClick()
         {
             AnswerChanel answerChanel = new AnswerChanel(AnswerChanel.Type.Pointer_Down, this);

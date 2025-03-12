@@ -43,6 +43,15 @@ namespace Monkey.Game.BreakTheEgg
 
                 data = ConvertToType<T>(introStateDependency);
             }
+            else if (typeData == typeof(GameplayStateDependency))
+            {
+                GameplayStateDependency gameplayStateDependency = new GameplayStateDependency();
+                gameplayStateDependency.TargetPoint = targetPoint;
+                gameplayStateDependency.SkinConfig = configDataState.skinConfig;
+                gameplayStateDependency.GameplayConfig = configDataState.gameplayConfig;
+
+                data = ConvertToType<T>(gameplayStateDependency);
+            }
             else
             {
                 data = ConvertToType<T>(null);
