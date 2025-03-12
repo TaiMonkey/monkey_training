@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da3418bdfee02a84e953cfb056078daa, type: 3}
+  m_Name: BreakTheEgg
+  m_EditorClassIdentifier: 
+  initConfig:
+    Bg_audio: {fileID: 8300000, guid: 0993053f0b0e10b4cb6eb8efe55095f4, type: 3}
+    AudioCTA: {fileID: 8300000, guid: e87f8f3002a497c4fab04455fa2c72dc, type: 3}
+    Delay500: 500
+    Delay3000: 3000
+  introConfig:
+    InstructionCTA: {fileID: 8300000, guid: 9f0a66e91c55cfc4ab754e10143ce18e, type: 3}
+    TimeDelay: 250
+    SfxJump: {fileID: 8300000, guid: 27a97b626d6f43348ade2a73e17fea37, type: 3}
+  skinConfig:
+    EggA:
+      EggNormal: Egg A - nomal
+      Tap1: Egg A - tap 1
+      Tap1Normal: Egg A - tap 1- nomal
+      Tap2: Egg A - tap 2
+      Tap2Normal: Egg A -tap2 -nomal
+      Tap3: Egg A - tap 3
+      Tap3Normal: Egg A - tap3 - nomal
+      Tap4: Egg A - tap 4
+      Tap4Normal: Egg A - tap4 -nomal
+      Tap5: Egg A - tap 5
+      Tap5Normal: Egg A - tap5 -nomal
+      Tap6: Egg A - tap 6
+      Tap6Normal: Egg A - tap6 - nomal
+      Tap7: Egg A - tap 7
+      Tap7Normal: Egg A - tap7 -nomal
+      Tap8: Egg A - tap 8
+      Tap8Normal: Egg A - tap8 -nomal
+      Tap9: 'Egg A - tap 9 '
+      Tap9Normal: Egg A - tap9 -nomal
+      Tap10: Egg A - tap 10
+    EggB:
+      EggNormal: Egg B - nomal
+      Tap1: Egg B - tap 1
+      Tap1Normal: Egg B - tap 1 - nomal
+      Tap2: Egg B - tap 2
+      Tap2Normal: Egg B - tap 2 - nomal
+      Tap3: Egg B - tap 3
+      Tap3Normal: Egg B - tap 3 - nomal
+      Tap4: Egg B - tap 4
+      Tap4Normal: Egg B - tap 4 - nomal
+      Tap5: Egg B - tap 5
+      Tap5Normal: Egg B - tap 5 - nomal
+      Tap6: Egg B - tap 6
+      Tap6Normal: Egg B - tap 6 - nomal
+      Tap7: Egg B - tap 7
+      Tap7Normal: Egg B - tap 7 - nomal
+      Tap8: Egg B - tap 8
+      Tap8Normal: Egg B - tap 8 - nomal
+      Tap9: Egg B - tap 9
+      Tap9Normal: Egg B - tap9 - nomal
+      Tap10: Egg B - tap 10
+    EggC:
+      EggNormal: Egg C - nomal
+      Tap1: Egg C - tap 1
+      Tap1Normal: Egg C - tap 1 - nomal
+      Tap2: Egg C - tap 2
+      Tap2Normal: Egg C - tap 2 - nomal
+      Tap3: Egg C - tap 3
+      Tap3Normal: Egg C - tap 3 - nomal
+      Tap4: Egg C - tap 4
+      Tap4Normal: Egg C - tap 4 - nomal
+      Tap5: Egg C - tap 5
+      Tap5Normal: Egg C - tap 5 - nomal
+      Tap6: Egg C - tap 6
+      Tap6Normal: Egg C - tap 6 - nomal
+      Tap7: Egg C - tap 7
+      Tap7Normal: Egg C - tap 7 - nomal
+      Tap8: Egg C - tap 8
+      Tap8Normal: Egg C - tap 8 - nomal
+      Tap9: Egg C - tap 9
+      Tap9Normal: Egg C - tap9 - nomal
+      Tap10: Egg C - tap 10

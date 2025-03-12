@@ -28,6 +28,8 @@ namespace Monkey.Game.GameTest
 
         public override void OnEnter()
         {
+            Debug.LogError("Hungbv OnEnter");
+            
             this.ObserverStartListening<AnswerChanel>();
             listCurrentEnableActive = new List<AnimalButtonController>();
 
@@ -74,8 +76,8 @@ namespace Monkey.Game.GameTest
                 while (isGuiding)
                 {
                     dependency.UiGuiding.transform.position = listCurrentEnableActive[randomIndex].transform.position;
-                    if (guidingAnimal != null) guidingAnimal.transform.position
-                                = listCurrentEnableActive[randomIndex].transform.position;
+                    if (guidingAnimal != null) 
+                        guidingAnimal.transform.position = listCurrentEnableActive[randomIndex].transform.position;
 
                     dependency.UiGuiding.DOFade(1, 0.2f).SetEase(Ease.Linear).onComplete += () => { tscFadeDone = true; };
 
@@ -119,9 +121,9 @@ namespace Monkey.Game.GameTest
 
                 guidingAnimal.CanvasGroup.DOFade(0, 0.1f).onComplete += () =>
                 {
+                    GameObject.Destroy(guidingAnimal.gameObject);
                     guidingAnimal = null;
-                    GameObject.Destroy(guidingAnimal);
-                    DestroyItem(dependency.Animal.transform);
+                                      
                 };
             }
             isGuiding = false;
@@ -130,13 +132,7 @@ namespace Monkey.Game.GameTest
             dependency.UiGuiding.DOFade(0f, 0.1f);
         }
 
-        private void DestroyItem(Transform parent)
-        {
-            foreach (Transform child in parent)
-            {
-                if (child.name.Equals("AnimlGuiding")) GameObject.Destroy(child.gameObject);
-            }
-        }
+       
 
         private void SetColorImage(Image image, float indexColor)
         {
@@ -151,6 +147,7 @@ namespace Monkey.Game.GameTest
             ResetGuidingDrag();
             cts?.Cancel();
             this.ObserverStopListening<AnswerChanel>();
+            Debug.LogError("Hungbv OnExit");
         }
 
         public override void OnDestroy()

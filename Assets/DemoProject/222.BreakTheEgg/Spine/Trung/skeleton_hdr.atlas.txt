@@ -1,0 +1,132 @@
+
+skeleton_hdr.png
+size: 1954,983
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1x/crack 1
+  rotate: true
+  xy: 1633, 63
+  size: 44, 182
+  orig: 44, 182
+  offset: 0, 0
+  index: -1
+1x/crack 2
+  rotate: true
+  xy: 1517, 58
+  size: 49, 56
+  orig: 49, 56
+  offset: 0, 0
+  index: -1
+1x/crack 3
+  rotate: true
+  xy: 1373, 38
+  size: 69, 142
+  orig: 69, 142
+  offset: 0, 0
+  index: -1
+1x/crack 4
+  rotate: true
+  xy: 1226, 32
+  size: 75, 145
+  orig: 75, 145
+  offset: 0, 0
+  index: -1
+1x/crack 5
+  rotate: true
+  xy: 1914, 54
+  size: 74, 38
+  orig: 74, 38
+  offset: 0, 0
+  index: -1
+1x/crack 6
+  rotate: false
+  xy: 1840, 130
+  size: 95, 238
+  orig: 95, 238
+  offset: 0, 0
+  index: -1
+1x/crack 7
+  rotate: true
+  xy: 1633, 14
+  size: 47, 79
+  orig: 47, 79
+  offset: 0, 0
+  index: -1
+1x/crack 8
+  rotate: true
+  xy: 1575, 58
+  size: 49, 56
+  orig: 49, 56
+  offset: 0, 0
+  index: -1
+1x/crack 9
+  rotate: false
+  xy: 1840, 9
+  size: 72, 119
+  orig: 72, 119
+  offset: 0, 0
+  index: -1
+1x/manh do 1
+  rotate: true
+  xy: 1228, 109
+  size: 259, 610
+  orig: 259, 610
+  offset: 0, 0
+  index: -1
+1x/manh do 1.2
+  rotate: false
+  xy: 1684, 370
+  size: 262, 611
+  orig: 262, 611
+  offset: 0, 0
+  index: -1
+1x/manh vang 1
+  rotate: true
+  xy: 2, 2
+  size: 259, 610
+  orig: 259, 610
+  offset: 0, 0
+  index: -1
+1x/manh vang 1.2
+  rotate: true
+  xy: 2, 263
+  size: 262, 611
+  orig: 262, 611
+  offset: 0, 0
+  index: -1
+1x/manh xanh 1.1
+  rotate: true
+  xy: 614, 2
+  size: 259, 610
+  orig: 259, 610
+  offset: 0, 0
+  index: -1
+1x/manh xanh 2
+  rotate: true
+  xy: 615, 263
+  size: 262, 611
+  orig: 262, 611
+  offset: 0, 0
+  index: -1
+1x/trung do
+  rotate: true
+  xy: 2, 527
+  size: 454, 611
+  orig: 454, 611
+  offset: 0, 0
+  index: -1
+1x/trung vang
+  rotate: true
+  xy: 615, 527
+  size: 454, 611
+  orig: 454, 611
+  offset: 0, 0
+  index: -1
+1x/trung xanh
+  rotate: false
+  xy: 1228, 370
+  size: 454, 611
+  orig: 454, 611
+  offset: 0, 0
+  index: -1

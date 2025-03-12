@@ -137,11 +137,11 @@ namespace Monkey.Game.GameTest
             return overlapPercentageA >= percent * 100f && overlapPercentageB >= percent * 100f;
         }
 
-        public void OnBackButton(Action callBack)
+        public void OnBackButton(Action<int> callBack)
         {
             transform.DOMove(OriginPos, 0.3f).SetEase(Ease.Linear).onComplete += () =>
             {
-                callBack.Invoke();
+                callBack.Invoke(1);
             };
         }
     }

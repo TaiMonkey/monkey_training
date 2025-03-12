@@ -24,7 +24,7 @@ namespace Monkey.Game.GameTest
 
         public override void OnEnter(object data)
         {
-            if(data != null)
+            if (data != null)
             {
                 isPlay = true;
                 animalButtonController = (AnimalButtonController)data;
@@ -68,22 +68,23 @@ namespace Monkey.Game.GameTest
                     animalButtonController.GetSkeletonGraphic().AnimationState.SetAnimation(0, animConfig.animNomal, true);
                 };
 
-                if(animalButtonController.IsCorrect)
+                if (animalButtonController.IsCorrect)
                 {
                     animalButtonController.SetScaleSkeleton(dependency.AnimalButtonConfig.SizeDecrease, true);
-                   
+
                     if (animalButtonController.Cage_Type == (int)GameTestTypeCage.Cage_Bear)
                     {
-                        animalButtonController.transform.DOMove(dependency.BearSnapPoints[index_Cage_Bear].transform.position, 0.2f);
+                        animalButtonController.transform.DOMove(dependency.BearSnapPoints[index_Cage_Bear].transform.position, 0.2f).OnComplete(GobackToResetIsEnableState);
                         index_Cage_Bear++;
-                    } 
+                    }
                     else
                     {
-                        animalButtonController.transform.DOMove(dependency.TigerSnapPoints[index_Cage_Tiger].transform.position, 0.2f);
+                        animalButtonController.transform.DOMove(dependency.TigerSnapPoints[index_Cage_Tiger].transform.position, 0.2f).OnComplete(GobackToResetIsEnableState);
                         index_Cage_Tiger++;
                     }
                     animalButtonController.GetAnimStar().gameObject.SetActive(true);
-                    animalButtonController.GetAnimStar().AnimationState.SetAnimation(0, ANIM_STAR, false).Complete += (trackEntry) => {
+                    animalButtonController.GetAnimStar().AnimationState.SetAnimation(0, ANIM_STAR, false).Complete += (trackEntry) =>
+                    {
                         animalButtonController.GetAnimStar().gameObject.SetActive(false);
                     };
 
@@ -99,14 +100,33 @@ namespace Monkey.Game.GameTest
                 {
                     StaticValue.CountWrong++;
                     animalButtonController.transform.SetParent(animalButtonController.OriginParent.transform);
-                    animalButtonController.OnBackButton(() =>
-                    {
-                        animalButtonController.IsEnable = true;
-                    });
+                    animalButtonController.OnBackButton(CallBack);
+
                     SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.AnimalButtonConfig.SfxWrong);
                     ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
                 }
+
+
             }
+
+
+        }
+
+        private void CallBack(int number)
+        {
+            animalButtonController.IsEnable = true;
+            if (StaticValue.CountWrong < 3)
+                GobackToResetIsEnableState();
+            else
+            {
+                StaticValue.CountWrong = 0;
+                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
+                ObserverManager.TriggerEvent(stateChanel);
+            }
+        }
+
+        private void GobackToResetIsEnableState()
+        {
             StateChanel state = new StateChanel(StateName.Status.RestIsEnableStart);
             ObserverManager.TriggerEvent(state);
         }
@@ -124,12 +144,7 @@ namespace Monkey.Game.GameTest
                 }
             }
 
-            if (StaticValue.CountWrong == 3)
-            {
-                StaticValue.CountWrong = 0;
-                StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
-                ObserverManager.TriggerEvent(stateChanel);
-            }
+
         }
 
         private void SetIsEnable(List<AnimalButtonController> list)

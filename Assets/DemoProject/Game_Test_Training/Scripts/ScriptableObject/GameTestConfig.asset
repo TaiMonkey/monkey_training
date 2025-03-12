@@ -18,6 +18,7 @@ MonoBehaviour:
   AnimalButton:
     SfxChoose: {fileID: 8300000, guid: 2e11fc09e24562444acd31e89ff5a8cc, type: 3}
     SfxCorrect: {fileID: 8300000, guid: f5d22444164143747b454d028205b6c2, type: 3}
+    SfxWrong: {fileID: 8300000, guid: f1148376cf829e5438ec3d07605f41ac, type: 3}
     SizeIncrease: 1.2
     SizeDecrease: 0.9
     SpeedIncrease: 20
