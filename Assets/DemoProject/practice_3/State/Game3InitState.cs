@@ -15,7 +15,6 @@ namespace Monkey.Game.Game3Demo
 
         public override void OnEnter()
         {
-            base.OnEnter();
         }
     }
     public class Game3InitStateDependency

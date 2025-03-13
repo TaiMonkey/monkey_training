@@ -16,7 +16,6 @@ public class DemoFSMStateInit : FSMState
 
     public override void OnEnter(object data)
     {
-        base.OnEnter();
         //DemoGamePlayData1 demoGamePlayData = (DemoGamePlayData1)data;
         foreach(var answer in dependency.buttonAnswers)
         {

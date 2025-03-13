@@ -12,6 +12,8 @@ namespace Monkey.Game.BreakTheEgg
         public IntroConfig introConfig;
         public SkinConfig skinConfig;
         public GameplayConfig gameplayConfig;
+        public ResultKnockEggConfig resultKnockEggConfig;
+        public GuidingConfig guidingConfig;
     }
 
     [Serializable]
@@ -38,7 +40,8 @@ namespace Monkey.Game.BreakTheEgg
         public int Delay300;
         public int Delay350;
         public int Delay3000;
-
+        public AudioClip SfxJump;
+        public AudioClip SfxBreak;
     }
 
     [Serializable]
@@ -47,6 +50,19 @@ namespace Monkey.Game.BreakTheEgg
         public SkinName EggA;
         public SkinName EggB;
         public SkinName EggC;
+    }
+
+    [Serializable]
+    public class ResultKnockEggConfig
+    {
+        public AudioClip SfxBoardIn;
+        public AudioClip SfxBoardOut;
+    }
+
+    [Serializable]
+    public class GuidingConfig
+    {
+        public AudioClip SfxGuiding;
     }
 
     [Serializable]

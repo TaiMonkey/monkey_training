@@ -17,7 +17,6 @@ namespace Monkey.Game.GameOneDemo
         public override void OnEnter()
         {
             Debug.LogError("GameOneNextTurnState");
-            base.OnEnter();
             dependency.QuestionController.SetScale(Vector3.zero);
             dependency.ButtonSpeakerController.SetScale(Vector3.zero);
             List<ButtonAnswerController> listButtonAnswerControllers = dependency.ButtonAnswerControllers;

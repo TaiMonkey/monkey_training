@@ -26,7 +26,6 @@ namespace Monkey.Game.Game2Demo
 
         public override void OnEnter()
         {
-            base.OnEnter();
             this.ObserverStartListening<AnswerChanel>();
 
             cts = new CancellationTokenSource();

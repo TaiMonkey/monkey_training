@@ -20,5 +20,6 @@ namespace Monkey.Game.BreakTheEgg
         public SkeletonData Egg;
         public string TextAnswer;
         public Sprite ImageAnswer;
+        public AudioClip AudioWord;
     }
 }

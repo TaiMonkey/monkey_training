@@ -24,7 +24,7 @@ public class LogoMovement : MonoBehaviour
     {
         Vector2 offScreenPosition = new Vector2(-logoRectTransform.rect.width, logoRectTransform.anchoredPosition.y);
 
-        logoRectTransform.DOAnchorPos(targetPoint.position, moveIn).SetEase(Ease.InOutQuad);
+        logoRectTransform.DOAnchorPos(targetPoint.position, moveIn).SetEase(Ease.OutBounce);
     }
 }
 

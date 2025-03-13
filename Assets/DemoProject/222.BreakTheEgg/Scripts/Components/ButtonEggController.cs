@@ -21,6 +21,7 @@ namespace Monkey.Game.BreakTheEgg
         public Vector3 OriginalScale { get; private set; }
         public bool Isclicked { get; set; }
         public string TypeEgg { get; set; }
+        public int Index { get; set; }
 
         void Start()
         {
@@ -33,7 +34,6 @@ namespace Monkey.Game.BreakTheEgg
 
         public void SetLastSiblingImageFront()
         {
-            Debug.LogError($"SetLastSiblingImageFront {transform.parent.name}");
             imageFront.transform.SetAsLastSibling();
         }
 

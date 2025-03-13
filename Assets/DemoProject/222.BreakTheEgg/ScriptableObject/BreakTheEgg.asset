@@ -90,3 +90,10 @@ MonoBehaviour:
     Delay300: 300
     Delay350: 350
     Delay3000: 3000
+    SfxJump: {fileID: 8300000, guid: 27a97b626d6f43348ade2a73e17fea37, type: 3}
+    SfxBreak: {fileID: 8300000, guid: b9d52dab1468c4d2296ffd8165e32baa, type: 3}
+  resultKnockEggConfig:
+    SfxBoardIn: {fileID: 8300000, guid: 774fc90fe3bf9d8419f547050791acd0, type: 3}
+    SfxBoardOut: {fileID: 8300000, guid: ad48f4c549b119c49b53513e0a2f7915, type: 3}
+  guidingConfig:
+    SfxGuiding: {fileID: 8300000, guid: aa8ac09ef8c55694a9148d755bde9d86, type: 3}

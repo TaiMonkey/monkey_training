@@ -26,7 +26,6 @@ namespace Monkey.Game.GameOneDemo
 
         public override void OnEnter()
         {
-            base.OnEnter();
             this.ObserverStartListening<AnswerChanel>();
             DoWork();
         }

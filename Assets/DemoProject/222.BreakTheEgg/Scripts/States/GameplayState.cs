@@ -1,7 +1,9 @@
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using MonkeyBase.Observer;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 namespace Monkey.Game.BreakTheEgg
@@ -11,8 +13,11 @@ namespace Monkey.Game.BreakTheEgg
         private GameplayStateDependency dependency;
         private ButtonEggController buttonEggController;
         private ButtonEggController currentButtonEggController;
+        private CancellationTokenSource cts;
         private int numberClick = 0;
         private const int MAX_CLICK = 10;
+        private bool isMove = false;
+        private float timer = 0f;
 
         public override void SetUp(object data)
         {
@@ -22,16 +27,25 @@ namespace Monkey.Game.BreakTheEgg
         public override void OnEnter(object data)
         {
             Debug.LogError("Gameplay");
-            currentButtonEggController = (ButtonEggController)data;
+            if (currentButtonEggController == (ButtonEggController)data)
+            {
+                timer = 0;
+                currentButtonEggController.Isclicked = true;
+                numberClick++;
+                SkinName skinName = GetSkinName(currentButtonEggController.TypeEgg);
+                currentButtonEggController.SetAnimation(SetAnim(numberClick, skinName), false);
+            }
 
+            currentButtonEggController = (ButtonEggController)data;
             this.ObserverStartListening<AnswerChanel>();
         }
 
-        public void OnMMEvent(AnswerChanel eventType)
+        public async void OnMMEvent(AnswerChanel eventType)
         {
-            if (eventType.TypeEvent == AnswerChanel.Type.Pointer_Down)
+            if (eventType.TypeEvent == AnswerChanel.Type.Pointer_Down && !isMove)
             {
-                Debug.LogError("Pointer_Down");
+                timer = 0;
+                cts = new();
                 buttonEggController = (ButtonEggController)eventType.Data;
 
                 if (currentButtonEggController == buttonEggController)
@@ -41,10 +55,14 @@ namespace Monkey.Game.BreakTheEgg
                     numberClick++;
                     SkinName skinName = GetSkinName(currentButtonEggController.TypeEgg);
                     currentButtonEggController.SetAnimation(SetAnim(numberClick, skinName), false);
+
+                    SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND, dependency.GameplayConfig.SfxBreak);
+                    ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
                 }
 
-                if (!currentButtonEggController.Isclicked)
+                if (!currentButtonEggController.Isclicked && !buttonEggController.Isclicked)
                 {
+                    isMove = true;
                     currentButtonEggController.transform.DOScale(1, 0.5f).SetEase(Ease.InOutQuad);
                     currentButtonEggController.transform.DOMove(currentButtonEggController.OriginPos, 0.5f)
                         .SetEase(Ease.InOutQuad)
@@ -53,6 +71,8 @@ namespace Monkey.Game.BreakTheEgg
                             currentButtonEggController.SetLastSiblingImageFront();
                             currentButtonEggController = null;
                         });
+                    SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.GameplayConfig.SfxJump);
+                    ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
 
                     buttonEggController.transform.SetAsLastSibling();
                     buttonEggController.transform.DOScale(1.3f, 0.5f).SetEase(Ease.InOutQuad);
@@ -60,13 +80,29 @@ namespace Monkey.Game.BreakTheEgg
                         .OnComplete(() =>
                         {
                             currentButtonEggController = buttonEggController;
-                        }); 
+                            isMove = false;
+                        });
                 }
 
-                if(numberClick == MAX_CLICK)
+                if (numberClick == MAX_CLICK)
                 {
                     numberClick = 0;
                     StateChanel stateChanel = new StateChanel(StateName.Status.PlayFinish, buttonEggController);
+                    ObserverManager.TriggerEvent(stateChanel);
+                }
+            }
+            Debug.LogError(timer);
+        }
+
+        public override void OnUpdate()
+        {
+            timer += Time.deltaTime;
+            if (!isMove)
+            {
+                if (timer >= 7)
+                {
+                    timer = 0;
+                    StateChanel stateChanel = new StateChanel(StateName.Status.GuidingStart);
                     ObserverManager.TriggerEvent(stateChanel);
                 }
             }

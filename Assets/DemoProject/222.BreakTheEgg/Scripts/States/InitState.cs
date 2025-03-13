@@ -26,7 +26,6 @@ namespace Monkey.Game.BreakTheEgg
             SoundChannel soundChannel;
             stateData = (InitStateData)data;
             cts = new();
-            Debug.LogError("InitState");
 
             SetUpListAnimation();
             listIndex = new List<int>();
@@ -44,8 +43,9 @@ namespace Monkey.Game.BreakTheEgg
 
                 buttonEgg.SetAlphabet(stateData.ListButtonEggData[i].AlphaBetAnser);
                 buttonEgg.SetTextAnswer(stateData.ListButtonEggData[i].TextAnswer);
+                buttonEgg.Index = i;
                 buttonEgg.OriginPos = buttonEgg.transform.position;
-               // dependency.ListImageAnswer[i].sprite = stateData.ListButtonEggData[i].ImageAnswer;
+                dependency.ListImageAnswer[i].sprite = stateData.ListButtonEggData[i].ImageAnswer;
                 buttonEgg.gameObject.SetActive(false);
             }
             InActiveObject(dependency.ListImageBack);
