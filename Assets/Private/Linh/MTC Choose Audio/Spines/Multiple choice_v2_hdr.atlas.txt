@@ -1,0 +1,440 @@
+
+Multiple choice_v2_hdr.png
+size: 1731,777
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ban_chan
+  rotate: true
+  xy: 1244, 59
+  size: 92, 50
+  orig: 92, 50
+  offset: 0, 0
+  index: -1
+Banh xe 1
+  rotate: false
+  xy: 1384, 176
+  size: 122, 122
+  orig: 135, 135
+  offset: 7, 6
+  index: -1
+Banh xe 2
+  rotate: false
+  xy: 1524, 239
+  size: 122, 122
+  orig: 135, 135
+  offset: 7, 6
+  index: -1
+Bong_mat
+  rotate: false
+  xy: 1655, 28
+  size: 26, 26
+  orig: 26, 26
+  offset: 0, 0
+  index: -1
+Canh nho
+  rotate: false
+  xy: 1403, 421
+  size: 153, 186
+  orig: 165, 200
+  offset: 6, 7
+  index: -1
+Canh quat chua quay
+  rotate: true
+  xy: 1100, 609
+  size: 80, 446
+  orig: 115, 490
+  offset: 18, 22
+  index: -1
+Canh quat quay
+  rotate: true
+  xy: 1100, 691
+  size: 84, 453
+  orig: 115, 490
+  offset: 18, 19
+  index: -1
+Canh to
+  rotate: true
+  xy: 2, 64
+  size: 322, 389
+  orig: 350, 420
+  offset: 14, 15
+  index: -1
+Canh_tay
+  rotate: true
+  xy: 1648, 248
+  size: 113, 49
+  orig: 113, 49
+  offset: 0, 0
+  index: -1
+Con_nguoi_a
+  rotate: false
+  xy: 1596, 68
+  size: 57, 68
+  orig: 57, 68
+  offset: 0, 0
+  index: -1
+Con_nguoi_b
+  rotate: true
+  xy: 1706, 498
+  size: 48, 23
+  orig: 48, 23
+  offset: 0, 0
+  index: -1
+Con_nguoi_c
+  rotate: true
+  xy: 1496, 2
+  size: 63, 40
+  orig: 63, 40
+  offset: 0, 0
+  index: -1
+Con_nguoi_d
+  rotate: true
+  xy: 1538, 2
+  size: 63, 40
+  orig: 63, 40
+  offset: 0, 0
+  index: -1
+Con_nguoi_e
+  rotate: false
+  xy: 252, 2
+  size: 51, 60
+  orig: 51, 60
+  offset: 0, 0
+  index: -1
+Con_nguoi_f
+  rotate: false
+  xy: 1074, 450
+  size: 24, 28
+  orig: 24, 28
+  offset: 0, 0
+  index: -1
+Dau
+  rotate: false
+  xy: 808, 480
+  size: 290, 295
+  orig: 290, 295
+  offset: 0, 0
+  index: -1
+Dau may bay
+  rotate: true
+  xy: 2, 3
+  size: 59, 248
+  orig: 75, 265
+  offset: 8, 8
+  index: -1
+Dui
+  rotate: true
+  xy: 1140, 2
+  size: 55, 105
+  orig: 55, 105
+  offset: 0, 0
+  index: -1
+Duoi
+  rotate: false
+  xy: 778, 18
+  size: 250, 21
+  orig: 250, 21
+  offset: 0, 0
+  index: -1
+Duoi may bay
+  rotate: false
+  xy: 393, 2
+  size: 177, 215
+  orig: 190, 230
+  offset: 7, 7
+  index: -1
+Duoi_1
+  rotate: false
+  xy: 1098, 153
+  size: 210, 77
+  orig: 210, 77
+  offset: 0, 0
+  index: -1
+Duoi_2
+  rotate: false
+  xy: 1074, 360
+  size: 231, 75
+  orig: 231, 75
+  offset: 0, 0
+  index: -1
+Duoi_3
+  rotate: true
+  xy: 1044, 125
+  size: 224, 52
+  orig: 224, 52
+  offset: 0, 0
+  index: -1
+Khoang_bung
+  rotate: false
+  xy: 1296, 53
+  size: 79, 98
+  orig: 79, 98
+  offset: 0, 0
+  index: -1
+Khung kinh
+  rotate: false
+  xy: 808, 351
+  size: 264, 127
+  orig: 280, 140
+  offset: 8, 6
+  index: -1
+Khuon_mat
+  rotate: false
+  xy: 793, 128
+  size: 249, 221
+  orig: 249, 221
+  offset: 0, 0
+  index: -1
+Khuyu_chan
+  rotate: true
+  xy: 1030, 2
+  size: 55, 108
+  orig: 55, 108
+  offset: 0, 0
+  index: -1
+Khuyu_tay
+  rotate: false
+  xy: 1247, 2
+  size: 110, 49
+  orig: 110, 49
+  offset: 0, 0
+  index: -1
+Long_may
+  rotate: true
+  xy: 1548, 647
+  size: 42, 5
+  orig: 42, 5
+  offset: 0, 0
+  index: -1
+Ma_a
+  rotate: false
+  xy: 1655, 94
+  size: 57, 42
+  orig: 57, 42
+  offset: 0, 0
+  index: -1
+Ma_b
+  rotate: true
+  xy: 350, 4
+  size: 58, 41
+  orig: 58, 41
+  offset: 0, 0
+  index: -1
+Mat
+  rotate: false
+  xy: 1304, 233
+  size: 78, 78
+  orig: 78, 78
+  offset: 0, 0
+  index: -1
+Mat kinh
+  rotate: false
+  xy: 778, 41
+  size: 222, 85
+  orig: 280, 140
+  offset: 29, 27
+  index: -1
+Mi_mat
+  rotate: false
+  xy: 1630, 138
+  size: 99, 99
+  orig: 99, 99
+  offset: 0, 0
+  index: -1
+Mieng_1
+  rotate: true
+  xy: 1706, 449
+  size: 47, 17
+  orig: 47, 17
+  offset: 0, 0
+  index: -1
+Mieng_10
+  rotate: true
+  xy: 1628, 31
+  size: 35, 25
+  orig: 35, 25
+  offset: 0, 0
+  index: -1
+Mieng_11
+  rotate: true
+  xy: 1067, 77
+  size: 46, 27
+  orig: 46, 27
+  offset: 0, 0
+  index: -1
+Mieng_12
+  rotate: true
+  xy: 1706, 419
+  size: 28, 17
+  orig: 28, 17
+  offset: 0, 0
+  index: -1
+Mieng_2
+  rotate: true
+  xy: 1524, 373
+  size: 46, 27
+  orig: 46, 27
+  offset: 0, 0
+  index: -1
+Mieng_3
+  rotate: false
+  xy: 1655, 56
+  size: 50, 36
+  orig: 50, 36
+  offset: 0, 0
+  index: -1
+Mieng_4
+  rotate: true
+  xy: 305, 2
+  size: 60, 43
+  orig: 60, 43
+  offset: 0, 0
+  index: -1
+Mieng_5
+  rotate: false
+  xy: 1496, 67
+  size: 98, 70
+  orig: 98, 70
+  offset: 0, 0
+  index: -1
+Mieng_6
+  rotate: true
+  xy: 1002, 59
+  size: 64, 63
+  orig: 64, 63
+  offset: 0, 0
+  index: -1
+Mieng_7
+  rotate: false
+  xy: 1400, 25
+  size: 89, 28
+  orig: 89, 28
+  offset: 0, 0
+  index: -1
+Mieng_8
+  rotate: false
+  xy: 1359, 2
+  size: 39, 49
+  orig: 39, 49
+  offset: 0, 0
+  index: -1
+Mieng_9
+  rotate: false
+  xy: 1310, 188
+  size: 72, 43
+  orig: 72, 43
+  offset: 0, 0
+  index: -1
+Mo_hoi
+  rotate: true
+  xy: 1400, 4
+  size: 19, 29
+  orig: 19, 29
+  offset: 0, 0
+  index: -1
+Mui
+  rotate: false
+  xy: 1648, 239
+  size: 27, 7
+  orig: 27, 7
+  offset: 0, 0
+  index: -1
+Nuoc_mat
+  rotate: false
+  xy: 1310, 169
+  size: 43, 17
+  orig: 43, 17
+  offset: 0, 0
+  index: -1
+Set 1.1
+  rotate: false
+  xy: 1098, 59
+  size: 144, 92
+  orig: 163, 105
+  offset: 10, 6
+  index: -1
+Set 1.2
+  rotate: false
+  xy: 393, 219
+  size: 398, 167
+  orig: 442, 206
+  offset: 22, 19
+  index: -1
+Set 1.3
+  rotate: false
+  xy: 1100, 437
+  size: 301, 170
+  orig: 332, 196
+  offset: 16, 13
+  index: -1
+Set 1.4
+  rotate: false
+  xy: 572, 10
+  size: 204, 207
+  orig: 223, 216
+  offset: 10, 4
+  index: -1
+Set 2.1
+  rotate: true
+  xy: 1307, 313
+  size: 122, 87
+  orig: 140, 100
+  offset: 9, 6
+  index: -1
+Set 2.2
+  rotate: true
+  xy: 1558, 548
+  size: 227, 171
+  orig: 250, 190
+  offset: 12, 9
+  index: -1
+Set 2.3
+  rotate: false
+  xy: 1098, 232
+  size: 204, 126
+  orig: 230, 145
+  offset: 13, 9
+  index: -1
+Set 2.4
+  rotate: false
+  xy: 1508, 139
+  size: 120, 98
+  orig: 140, 115
+  offset: 10, 8
+  index: -1
+Tai_a
+  rotate: false
+  xy: 1396, 300
+  size: 126, 119
+  orig: 126, 119
+  offset: 0, 0
+  index: -1
+Tai_b
+  rotate: false
+  xy: 1377, 55
+  size: 117, 119
+  orig: 117, 119
+  offset: 0, 0
+  index: -1
+Than
+  rotate: false
+  xy: 1558, 363
+  size: 146, 183
+  orig: 146, 183
+  offset: 0, 0
+  index: -1
+Than may bay
+  rotate: false
+  xy: 2, 388
+  size: 804, 387
+  orig: 835, 410
+  offset: 16, 11
+  index: -1
+Toc
+  rotate: false
+  xy: 1580, 17
+  size: 46, 48
+  orig: 46, 48
+  offset: 0, 0
+  index: -1

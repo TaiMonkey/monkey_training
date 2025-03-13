@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BELT01MCPManager : GameManager, EventListener<BELT01MCPDataChanner>
 {
+    private int currentTurn;
     protected override void Awake()
     {
         base.Awake();
@@ -18,7 +19,10 @@ public class BELT01MCPManager : GameManager, EventListener<BELT01MCPDataChanner>
     void MyMethod()
     {
         fSMSystem.SetupStateData(dependency);
-        fSMSystem.GotoState(BELT01MCPState.InitData.ToString(), adapter.GetData<BELT01MCPInitStateData>(0));
+        BELT01MCPInitStateData bELT01MCPInitStateData = new BELT01MCPInitStateData();
+        bELT01MCPInitStateData.CurrentTurn = adapter.GetData<BELT01Turn>(currentTurn);
+        bELT01MCPInitStateData.DataEvent = "";
+        fSMSystem.GotoState(BELT01MCPState.InitData.ToString(), bELT01MCPInitStateData);
     }
     public override void SetData<T>(T data)
     {
@@ -55,15 +59,20 @@ public class BELT01MCPManager : GameManager, EventListener<BELT01MCPDataChanner>
                 break;
             case BELT01MCPStatusOfStateState.IntroStateEnd:
             case BELT01MCPStatusOfStateState.GuidingStateStart:
+            case BELT01MCPStatusOfStateState.DragResualEnd:
+            case BELT01MCPStatusOfStateState.ClickEnd:
                 fSMSystem.GotoState(BELT01MCPState.Guiding.ToString(), null);
+                break;
+            case BELT01MCPStatusOfStateState.DraggingStateStart:
+                fSMSystem.GotoState(BELT01MCPState.Dragging.ToString(), null);
+                break;
+            case BELT01MCPStatusOfStateState.DraggingStateEnd:
+            case BELT01MCPStatusOfStateState.DragResualStart:
+                ButtonDemo1 dataDrag = (ButtonDemo1)eventType.Data;
+                fSMSystem.GotoState(BELT01MCPState.DragResult.ToString(), dataDrag);
                 break;
             default:
                 return;
-
-
-
-
-
         }
     }
 }

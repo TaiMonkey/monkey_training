@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc1f7da1d2963d459934d3e508d49a3, type: 3}
+  m_Name: GameOneConfigSO
+  m_EditorClassIdentifier: 
+  gameOneGuidingConfig:
+    sfxAppear: {fileID: 8300000, guid: 4db13d83f52069a489887474ba5ec4ea, type: 3}
+    sfxClick: {fileID: 8300000, guid: c7aed9e415b238d46be4fd6351d37a72, type: 3}
+    sfxUnClick: {fileID: 8300000, guid: c7aed9e415b238d46be4fd6351d37a72, type: 3}
+    timeDelayStart: 5000
+    timeDelay: 300

@@ -8,6 +8,7 @@ public class BELT01MCPInitState : FSMState
 {
     
     private BELT01MCPInitStateObjectDependency dependency;
+   
 
     public override void SetUp(object data)
     {
@@ -35,7 +36,8 @@ public class BELT01MCPInitState : FSMState
         for(int i = 0; i < bELT01GamePlayData.CurrentTurn.listButton.Count; i++)
         {
             BELT01ButtonData dataButton = bELT01GamePlayData.CurrentTurn.listButton[i];
-            dependency.Buttons[i].InitData(dataButton);   
+
+            dependency.Buttons[i].InitData(dataButton, dependency.ButtonSpeaker.GetComponent<RectTransform>());   
         }
         foreach(var buttonans in dependency.Buttons)
         {
@@ -53,6 +55,7 @@ public class BELT01MCPInitState : FSMState
         base.OnExit();
     }
 }
+
 
 public class BELT01MCPInitStateData
 {

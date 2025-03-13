@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class ItemManager : MonoBehaviour
+/*public class ItemManager : MonoBehaviour
 {
     [SerializeField] private GameObject buttonAns;
     private HorizontalLayoutGroup horizontal;
@@ -14,8 +14,8 @@ public class ItemManager : MonoBehaviour
 
     void Start()
     {
-     listButton = new List<ButtonDemo1>();
-     for(int i = 0; i<3; i++)
+        listButton = new List<ButtonDemo1>();
+        for (int i = 0; i < 3; i++)
         {
             GameObject obj = Instantiate(buttonAns, transform, false);
             obj.transform.localScale = Vector3.one;
@@ -24,8 +24,8 @@ public class ItemManager : MonoBehaviour
         }
         horizontal = GetComponent<HorizontalLayoutGroup>();
         coroutine = StartCoroutine(DisableLayout());
-        
-        
+
+
     }
     private IEnumerator DisableLayout()
     {
@@ -39,3 +39,4 @@ public class ItemManager : MonoBehaviour
     }
 
 }
+*/

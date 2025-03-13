@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName ="ButtonConfig", menuName = "Game/Demo4/Setting")]
-public class ButtonConfig : ScriptableObject
+public class DemoButtonConfig : ScriptableObject
 {
     public ButtonColor buttonNomal;
     public ButtonColor buttonFalse;

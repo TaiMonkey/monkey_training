@@ -42,11 +42,18 @@ public class BELT01MCPIntroState : FSMState
                 {
                     isScaleButton = true;
                 };
-                await UniTask.Delay(dependency.IntroConfig.timeDelay, cancellationToken: cts.Token);
-                BELT01MCPDataChanner bELT01MCPDataChanner = new BELT01MCPDataChanner(BELT01MCPStatusOfStateState.IntroStateEnd, "dhudhau");
-                ObserverManager.TriggerEvent(bELT01MCPDataChanner);
+                await UniTask.WaitUntil(() => isPlaySound, cancellationToken: cts.Token);
+                isScaleButton = false;
             }
-
+            await UniTask.Delay(dependency.IntroConfig.timeDelay, cancellationToken: cts.Token);
+            for(int i= 0; i< dependency.listButtonans.Count; i++)
+            {
+                ButtonDemo1 buttonDemo1 = dependency.listButtonans[i];
+                buttonDemo1.OriginPos = buttonDemo1.transform.position;
+                buttonDemo1.IsEnable = true;
+            }
+            BELT01MCPDataChanner bELT01MCPDataChanner = new BELT01MCPDataChanner(BELT01MCPStatusOfStateState.IntroStateEnd, "dhudhau");
+            ObserverManager.TriggerEvent(bELT01MCPDataChanner);
 
         }
         catch(OperationCanceledException e)

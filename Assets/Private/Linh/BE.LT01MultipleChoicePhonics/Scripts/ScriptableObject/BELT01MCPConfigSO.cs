@@ -9,8 +9,9 @@ public class BELT01MCPConfigSO : ScriptableObject
     public AudioClip audioBackground;
     public BELT01MCPIntroConfig introConfig;
     public BELT01MCPClickConfig clickconfig;
-    public BERLT01MCPGuidingConfig guidingConfig;
+   
     public AnmationPhaohoa anmationPhaohoa;
+    public BELT01GuidingConfig bELT01GuidingConfig;
 
 }
 [Serializable]
@@ -33,19 +34,21 @@ public class BELT01MCPClickConfig
    
 }
 [Serializable]
-public class BERLT01MCPGuidingConfig
+public class BELT01GuidingConfig
 {
+    public AudioClip sfxAppear;
     public AudioClip sfxClick;
-    public AudioClip sfxguiding;
-    public int timeWaitStartGuiding;
-    public float timeFadein;
-    public float timeFadeout;
+    public AudioClip sfxUnClick;
+    public int timeDelayStart;
+    public int timeDelay;
 }
 [Serializable]
 public class AnmationPhaohoa
 {
     public List<string> animPhaohoa;
 }
+
+
 
 
 

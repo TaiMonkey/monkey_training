@@ -17,7 +17,7 @@ MonoBehaviour:
     - listButton:
       - text: hello
         audioClip: {fileID: 0}
-        iscorrect: 0
+        iscorrect: 1
       - text: hi
         audioClip: {fileID: 0}
         iscorrect: 0

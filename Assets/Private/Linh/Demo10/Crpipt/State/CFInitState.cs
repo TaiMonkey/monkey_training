@@ -1,41 +1,46 @@
+using MonkeyBase.Observer;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CFInitState : FSMState
+namespace Monkey.Game.CF
 {
-    private CFInitStateObjectDependency dependency;
-    public override void SetUp(object data)
+    public class CFInitState : FSMState
     {
-        dependency = (CFInitStateObjectDependency)data;
-    }
-    public override void OnEnter(object data)
-    {
-        base.OnEnter();
-        CFInitStateData cFGamePlayData = (CFInitStateData)data;
-
-        for (int i = 0; i < cFGamePlayData.CurrentTurn.listButtonDomdom.Count; i++)
+        private CFInitStateObjectDependency dependency;
+        public override void SetUp(object data)
         {
-            CFButtonDomDomData dataButtonDomdom = cFGamePlayData.CurrentTurn.listButtonDomdom[i];
-            dependency.ButtonsDomdom[i].InitData(dataButtonDomdom);
-          
+            dependency = (CFInitStateObjectDependency)data;
         }
-        for (int i = 0; i < cFGamePlayData.CurrentTurn.listButtonJar.Count; i++)
+        public override void OnEnter(object data)
         {
-            CFButtonJarData dataButtonJar = cFGamePlayData.CurrentTurn.listButtonJar[i];
-            dependency.ButtonsJar[i].InitData(dataButtonJar);
+            base.OnEnter();
+            CFInitStateData cFGamePlayData = (CFInitStateData)data;
 
+            for (int i = 0; i < cFGamePlayData.CurrentTurn.listButtonDomdom.Count; i++)
+            {
+                CFButtonDomDomData dataButtonDomdom = cFGamePlayData.CurrentTurn.listButtonDomdom[i];
+                dependency.ButtonsDomdom[i].InitData(dataButtonDomdom);
+
+            }
+            for (int i = 0; i < cFGamePlayData.CurrentTurn.listButtonJar.Count; i++)
+            {
+                CFButtonJarData dataButtonJar = cFGamePlayData.CurrentTurn.listButtonJar[i];
+                dependency.ButtonsJar[i].InitData(dataButtonJar);
+
+            }
+            StateChanel stateChanel = new StateChanel(StateName.Status.InitFinish);
+            ObserverManager.TriggerEvent(stateChanel);
         }
-    }
 
-}
+    }
     public class CFInitStateData
-{
-    public CFTurn CurrentTurn { get; set; }
-}
-public class CFInitStateObjectDependency
-{
-    public List<ButtonJarController> ButtonsJar { get; set; }
-    public List<ButtonDomdomCotroller> ButtonsDomdom { get; set; }
+    {
+        public CFTurn CurrentTurn { get; set; }
+    }
+    public class CFInitStateObjectDependency
+    {
+        public List<ButtonJarController> ButtonsJar { get; set; }
+        public List<ButtonDomdomCotroller> ButtonsDomdom { get; set; }
+    }
 }
 

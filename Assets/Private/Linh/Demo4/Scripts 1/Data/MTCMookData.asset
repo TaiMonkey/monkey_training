@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c9c0a1f4c10d4449d5f0dd8b537c0c, type: 3}
+  m_Name: MTCMookData
+  m_EditorClassIdentifier: 
+  mtcDataConfig:
+    ListTurn:
+    - Question: Choose the box where the word belongs
+      QuestionAudio: {fileID: 8300000, guid: 70929f6419209764cba92a522b9853d7, type: 3}
+      ListAnsButton:
+      - imageAns: {fileID: 21300000, guid: 4883662e1f613b947adf78dd0a6c8e17, type: 3}
+        AnswerAudio: {fileID: 8300000, guid: 207190e5b333e1943b2418d731d4c16b, type: 3}
+        IsCorrect: 0
+      - imageAns: {fileID: 21300000, guid: 0267dfa819505674689ced56b779e6bb, type: 3}
+        AnswerAudio: {fileID: 8300000, guid: 8e0c8801869ad1e478ad57cc4391245c, type: 3}
+        IsCorrect: 1
+      - imageAns: {fileID: 21300000, guid: bcf8116849396434fa90a0048654693f, type: 3}
+        AnswerAudio: {fileID: 8300000, guid: 116fbe179a0be3343a4b4f5993b7ef97, type: 3}
+        IsCorrect: 0
+    - Question: This is Meow
+      QuestionAudio: {fileID: 8300000, guid: 34a7b2fee880921429035a12ddae4b60, type: 3}
+      ListAnsButton:
+      - imageAns: {fileID: 21300000, guid: 0267dfa819505674689ced56b779e6bb, type: 3}
+        AnswerAudio: {fileID: 8300000, guid: 19c70e5419f1fe34a83b9e37b0ce6a78, type: 3}
+        IsCorrect: 0
+      - imageAns: {fileID: 21300000, guid: 4883662e1f613b947adf78dd0a6c8e17, type: 3}
+        AnswerAudio: {fileID: 8300000, guid: 116fbe179a0be3343a4b4f5993b7ef97, type: 3}
+        IsCorrect: 0
+      - imageAns: {fileID: 21300000, guid: bcf8116849396434fa90a0048654693f, type: 3}
+        AnswerAudio: {fileID: 8300000, guid: af3ec2f0f0364114dba1ea4c3aeaaa84, type: 3}
+        IsCorrect: 1
+    AudioClipIntro: {fileID: 8300000, guid: 70929f6419209764cba92a522b9853d7, type: 3}

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a19b99663991894595678c916715696, type: 3}
+  m_Name: GameOneDemo
+  m_EditorClassIdentifier: 
+  Game1DataConfig:
+    ListTurn:
+    - Question: Lorem Ipsum has been the industry's standard dummy text ever since
+        the 1500s
+      QuestionAudio: {fileID: 8300000, guid: bb840fb7483268f4e93493e49eed5a3c, type: 3}
+      ListAnswerButton:
+      - Text: Contrary
+        AnswerAudio: {fileID: 8300000, guid: 50d0401d70f6daa4fb6e7386b0590de9, type: 3}
+        IsCorrect: 1
+      - Text: Treatise
+        AnswerAudio: {fileID: 8300000, guid: 63b4dc76272b2134c8b03ee7fddcbcc4, type: 3}
+        IsCorrect: 0
+      - Text: Donate
+        AnswerAudio: {fileID: 8300000, guid: 1c8e866dc0bdf0e40849680a16272267, type: 3}
+        IsCorrect: 0
+    - Question: It is a long established fact that a reader will be distracted by
+        the readable content of a page when looking at its layout
+      QuestionAudio: {fileID: 8300000, guid: 479463de7c245064ba54a9118e522e12, type: 3}
+      ListAnswerButton:
+      - Text: 'Lorem '
+        AnswerAudio: {fileID: 8300000, guid: 5dd9c4a942bd4804db7e767331abb88d, type: 3}
+        IsCorrect: 0
+      - Text: Section
+        AnswerAudio: {fileID: 8300000, guid: 56b264346edb4ee4b8e12826281809c9, type: 3}
+        IsCorrect: 0
+      - Text: Rackham
+        AnswerAudio: {fileID: 8300000, guid: 9372c9ea01869064385cc44301336e0e, type: 3}
+        IsCorrect: 1
+    AudioClipIntro: {fileID: 8300000, guid: bb840fb7483268f4e93493e49eed5a3c, type: 3}

@@ -23,6 +23,11 @@ public class BELT01MCPAdapter : Adapter
             bELT01MCPInitStateData.CurrentTurn = gamePlayData.listTurn[turn];
             data = ConvertToType<T>(bELT01MCPInitStateData);
         }
+        else if(listType == typeof(BELT01Turn))
+        {
+            BELT01Turn bELT01Turn = gamePlayData.listTurn[turn];
+            data = ConvertToType<T>(bELT01Turn);
+        }    
         else
             data = ConvertToType<T>(null);
         return data; 
@@ -57,7 +62,7 @@ public class BELT01MCPAdapter : Adapter
 
     public override int GetMaxTurn()
     {
-        throw new System.NotImplementedException();
+        return gamePlayData.listTurn.Count;
     }
 
     public override void SetData<T>(T data)

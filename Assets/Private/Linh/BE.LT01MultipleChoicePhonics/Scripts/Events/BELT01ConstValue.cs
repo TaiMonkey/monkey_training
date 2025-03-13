@@ -7,9 +7,11 @@ public enum BELT01MCPState
     None = 0,
     InitData,
     Intro,
+    Click,
     Guiding,
     Dragging,
     DragResult,
+    Nextturn,
     Outtro
 }
 public enum BELT01MCPStatusOfStateState
@@ -23,6 +25,17 @@ public enum BELT01MCPStatusOfStateState
     GuidingStateEnd,
     DraggingStateStart,
     DraggingStateEnd,
-
-
+    DragResualStart,
+    DragResualEnd,
+    ClickStart,
+    ClickEnd,
+    NextTurnStart,
+    NextTurnEnd,
+    Outrotart,
+    OutroEnd,
+}
+public class BELT01ValueStatic
+{
+    public static int DragWrongCount { get; set; } = 0;
+    public static int DragCorrectCount { get; set; } = 0;
 }

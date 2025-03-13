@@ -2,29 +2,39 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class CFDependency : Dependency
+namespace Monkey.Game.CF
 {
-    [SerializeField] private List<ButtonJarController> listButtonJar;
-    [SerializeField] private List<ButtonDomdomCotroller> listButtonDomDom;
-    public override T GetStateData<T>()
+    public class CFDependency : Dependency
     {
-        T data;
-        Type typeData = typeof(T);
-        if (typeData == typeof(CFInitStateObjectDependency))
+        [SerializeField] private List<ButtonJarController> listButtonJar;
+        [SerializeField] private List<ButtonDomdomCotroller> listButtonDomDom;
+       
+        public override T GetStateData<T>()
         {
-            CFInitStateObjectDependency cFInitStateObjectDependency = new CFInitStateObjectDependency();
-            cFInitStateObjectDependency.ButtonsDomdom = listButtonDomDom;
-            cFInitStateObjectDependency.ButtonsJar = listButtonJar;
-            data = ConvertToType<T>(cFInitStateObjectDependency);
+            T data;
+            Type typeData = typeof(T);
+            if (typeData == typeof(CFInitStateObjectDependency))
+            {
+                CFInitStateObjectDependency cFInitStateObjectDependency = new CFInitStateObjectDependency();
+                cFInitStateObjectDependency.ButtonsDomdom = listButtonDomDom;
+                cFInitStateObjectDependency.ButtonsJar = listButtonJar;
+                data = ConvertToType<T>(cFInitStateObjectDependency);
+            }
+            else if (typeData == typeof(CFIntroStateDependency))
+            {
+                CFIntroStateDependency cFIntroStateDependency = new CFIntroStateDependency();
+                cFIntroStateDependency.ButtonDomdomCotrollers = listButtonDomDom;
+                cFIntroStateDependency.ButtonJarControllers = listButtonJar;
+                data = ConvertToType<T>(cFIntroStateDependency);
+            }
+            else
+            {
+                data = ConvertToType<T>(null);
+            }
+            return data;
         }
-        else
-        {
-            data = ConvertToType<T>(null);
-        }
-        return data;
-    }
 
+    }
 }
     
    

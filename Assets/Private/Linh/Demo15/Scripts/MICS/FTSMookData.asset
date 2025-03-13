@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28b336c88ace44449d84ac5c5d88b5b, type: 3}
+  m_Name: FTSMookData
+  m_EditorClassIdentifier: 
+  fTSDataConfig:
+    ListTurn:
+    - ListAnswerButton:
+      - Text: Car
+        AnswerAudio: {fileID: 0}
+        IsCorrect: 0
+      - Text: Truck
+        AnswerAudio: {fileID: 0}
+        IsCorrect: 1
+      - Text: Train
+        AnswerAudio: {fileID: 0}
+        IsCorrect: 0
+    - ListAnswerButton:
+      - Text: Bear
+        AnswerAudio: {fileID: 0}
+        IsCorrect: 1
+      - Text: Lion
+        AnswerAudio: {fileID: 0}
+        IsCorrect: 0
+      - Text: Monkey
+        AnswerAudio: {fileID: 0}
+        IsCorrect: 0
+    AudioClipIntro: {fileID: 8300000, guid: 290de09e93179c043b469f01f7390593, type: 3}
