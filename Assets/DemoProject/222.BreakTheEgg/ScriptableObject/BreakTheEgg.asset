@@ -30,10 +30,10 @@ MonoBehaviour:
       Tap2Normal: Egg A -tap2 -nomal
       Tap3: Egg A - tap 3
       Tap3Normal: Egg A - tap3 - nomal
-      Tap4: Egg A - tap 4
-      Tap4Normal: Egg A - tap4 -nomal
-      Tap5: Egg A - tap 5
-      Tap5Normal: Egg A - tap5 -nomal
+      Tap4: Egg A - tap 5
+      Tap4Normal: Egg A - tap5 -nomal
+      Tap5: Egg A - tap 4
+      Tap5Normal: Egg A - tap4 -nomal
       Tap6: Egg A - tap 6
       Tap6Normal: Egg A - tap6 - nomal
       Tap7: Egg A - tap 7
@@ -51,10 +51,10 @@ MonoBehaviour:
       Tap2Normal: Egg B - tap 2 - nomal
       Tap3: Egg B - tap 3
       Tap3Normal: Egg B - tap 3 - nomal
-      Tap4: Egg B - tap 4
-      Tap4Normal: Egg B - tap 4 - nomal
-      Tap5: Egg B - tap 5
-      Tap5Normal: Egg B - tap 5 - nomal
+      Tap4: Egg B - tap 5
+      Tap4Normal: Egg B - tap 5 - nomal
+      Tap5: Egg B - tap 4
+      Tap5Normal: Egg B - tap 4 - nomal
       Tap6: Egg B - tap 6
       Tap6Normal: Egg B - tap 6 - nomal
       Tap7: Egg B - tap 7
@@ -72,10 +72,10 @@ MonoBehaviour:
       Tap2Normal: Egg C - tap 2 - nomal
       Tap3: Egg C - tap 3
       Tap3Normal: Egg C - tap 3 - nomal
-      Tap4: Egg C - tap 4
-      Tap4Normal: Egg C - tap 4 - nomal
-      Tap5: Egg C - tap 5
-      Tap5Normal: Egg C - tap 5 - nomal
+      Tap4: Egg C - tap 5
+      Tap4Normal: Egg C - tap 5 - nomal
+      Tap5: Egg C - tap 4
+      Tap5Normal: Egg C - tap 4 - nomal
       Tap6: Egg C - tap 6
       Tap6Normal: Egg C - tap 6 - nomal
       Tap7: Egg C - tap 7

@@ -14,6 +14,8 @@ namespace Monkey.Game.BreakTheEgg
         [SerializeField] private Transform targetPoint;
         [SerializeField] private List<Image> imageBack;
         [SerializeField] private List<Image> imageFront;
+        [SerializeField] private List<Image> ImageAnswerEggs;
+        [SerializeField] private Transform targetPointImage;
 
         public override T GetStateData<T>()
         {
@@ -29,6 +31,7 @@ namespace Monkey.Game.BreakTheEgg
                 initStateDependency.LogoMovement = logoMovement;
                 initStateDependency.ListImageBack = imageBack;
                 initStateDependency.ListImageFront = imageFront;
+                initStateDependency.ListImageAnswer = ImageAnswerEggs;
 
                 data = ConvertToType<T>(initStateDependency);
             }
@@ -51,6 +54,15 @@ namespace Monkey.Game.BreakTheEgg
                 gameplayStateDependency.GameplayConfig = configDataState.gameplayConfig;
 
                 data = ConvertToType<T>(gameplayStateDependency);
+            }
+            else if (typeData == typeof(ResultKnockEggStateDependency))
+            {
+                ResultKnockEggStateDependency knockEggStateDependency = new ResultKnockEggStateDependency();
+                knockEggStateDependency.TargetPoint = targetPoint;
+                knockEggStateDependency.ButtonEggControllers = buttonEggController;
+                knockEggStateDependency.GameplayConfig = configDataState.gameplayConfig;
+
+                data = ConvertToType<T>(knockEggStateDependency);
             }
             else
             {

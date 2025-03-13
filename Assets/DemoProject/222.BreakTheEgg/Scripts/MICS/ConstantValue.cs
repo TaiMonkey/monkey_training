@@ -13,7 +13,7 @@ namespace Monkey.Game.BreakTheEgg
             Init = 1,
             Intro = 2,
             GamePlay = 3,
-            NextTurn = 4,
+            ResultKnockEgg = 4,
             Guiding = 5,
             EndGame = 6,
         }
@@ -27,6 +27,8 @@ namespace Monkey.Game.BreakTheEgg
             PlayFinish = 5,
             GuidingStart = 6,
             GuidingFinish = 7,
+            ResultKnockEggFinish = 8,
+            EndGameStart = 9
         }
     }
     public struct StateChanel : EventListener<StateChanel>

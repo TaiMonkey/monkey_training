@@ -10,12 +10,14 @@ namespace Monkey.Game.BreakTheEgg
         private InitState initState;
         private IntroState introState;
         private GameplayState gameplayState;
+        private ResultKnockEggState resultKnockEggState;
 
         private void Awake()
         {
             initState = new InitState();
             introState = new IntroState();
             gameplayState = new GameplayState();
+            resultKnockEggState = new ResultKnockEggState();
         }
 
         public override void SetupStateData<T>(T data)
@@ -30,6 +32,9 @@ namespace Monkey.Game.BreakTheEgg
 
                 GameplayStateDependency gameplayStateDependency = dependency.GetStateData<GameplayStateDependency>();
                 gameplayState.SetUp(gameplayStateDependency);
+
+                ResultKnockEggStateDependency resultKnockEggStateDependency = dependency.GetStateData<ResultKnockEggStateDependency>();
+                resultKnockEggState.SetUp(resultKnockEggStateDependency);
             }
         }
 
@@ -46,6 +51,9 @@ namespace Monkey.Game.BreakTheEgg
                     break;
                 case StateName.Name.GamePlay:
                     GotoState(gameplayState, data);
+                    break;
+                case StateName.Name.ResultKnockEgg:
+                    GotoState(resultKnockEggState, data);
                     break;
             }
         }

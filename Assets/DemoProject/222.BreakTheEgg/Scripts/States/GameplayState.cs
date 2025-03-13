@@ -45,24 +45,29 @@ namespace Monkey.Game.BreakTheEgg
 
                 if (!currentButtonEggController.Isclicked)
                 {
-                    currentButtonEggController.transform.DOMove(currentButtonEggController.OriginPos, 0.5f).SetEase(Ease.InOutQuad);
                     currentButtonEggController.transform.DOScale(1, 0.5f).SetEase(Ease.InOutQuad);
-                    currentButtonEggController.transform.SetSiblingIndex(1);
-                    currentButtonEggController.GetAlphabetAnswer().transform.localScale = Vector3.one;
-                    currentButtonEggController.SetAlphaBackgroundText(false);
+                    currentButtonEggController.transform.DOMove(currentButtonEggController.OriginPos, 0.5f)
+                        .SetEase(Ease.InOutQuad)
+                        .OnComplete(() =>
+                        {
+                            currentButtonEggController.SetLastSiblingImageFront();
+                            currentButtonEggController = null;
+                        });
 
                     buttonEggController.transform.SetAsLastSibling();
-                    buttonEggController.SetAlphaBackgroundText(true);
-                    buttonEggController.GetAlphabetAnswer().transform.localScale = Vector3.zero;
-                    buttonEggController.transform.DOMove(dependency.TargetPoint.position, 0.5f).SetEase(Ease.InOutQuad);
-                    buttonEggController.transform.DOScale(1.3f, 0.5f).SetEase(Ease.Linear);
-                    currentButtonEggController = buttonEggController;
+                    buttonEggController.transform.DOScale(1.3f, 0.5f).SetEase(Ease.InOutQuad);
+                    buttonEggController.transform.DOMove(dependency.TargetPoint.position, 0.5f).SetEase(Ease.InOutQuad)
+                        .OnComplete(() =>
+                        {
+                            currentButtonEggController = buttonEggController;
+                        }); 
                 }
+
                 if(numberClick == MAX_CLICK)
                 {
-                    currentButtonEggController.SetScaleTextAnswer();
-                    SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.GameplayConfig.SfxTextShow);
-                    ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
+                    numberClick = 0;
+                    StateChanel stateChanel = new StateChanel(StateName.Status.PlayFinish, buttonEggController);
+                    ObserverManager.TriggerEvent(stateChanel);
                 }
             }
         }
@@ -88,7 +93,6 @@ namespace Monkey.Game.BreakTheEgg
             {
                 case 1:
                     return skinName.Tap1;
-
                 case 2:
                     return skinName.Tap2;
                 case 3:

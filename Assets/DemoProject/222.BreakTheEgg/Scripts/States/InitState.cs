@@ -40,12 +40,12 @@ namespace Monkey.Game.BreakTheEgg
                 ButtonEggController buttonEgg = dependency.buttonEggControllers[i];
                 int index = RandomAnimation();
                 buttonEgg.SetAnimation(listAnimation[index], false);
-                string text = listAnimation[index].Split(" ")[1];
-                buttonEgg.TypeEgg = text;
+                buttonEgg.TypeEgg = listAnimation[index].Split(" ")[1];
+
                 buttonEgg.SetAlphabet(stateData.ListButtonEggData[i].AlphaBetAnser);
                 buttonEgg.SetTextAnswer(stateData.ListButtonEggData[i].TextAnswer);
                 buttonEgg.OriginPos = buttonEgg.transform.position;
-                Debug.LogError(buttonEgg.OriginPos);
+               // dependency.ListImageAnswer[i].sprite = stateData.ListButtonEggData[i].ImageAnswer;
                 buttonEgg.gameObject.SetActive(false);
             }
             InActiveObject(dependency.ListImageBack);
@@ -103,9 +103,10 @@ namespace Monkey.Game.BreakTheEgg
         public LogoMovement LogoMovement { get; set; }
         public InitConfig InitConfig { get; set; }
         public SkinConfig SkinConfig { get; set; }
-
         public List<Image> ListImageBack { get; set; }
         public List<Image> ListImageFront { get; set; }
+        public List<Image> ListImageAnswer { get; set; }
+
     }
 
     public class InitStateData

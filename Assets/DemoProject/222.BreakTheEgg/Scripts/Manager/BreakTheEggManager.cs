@@ -45,6 +45,12 @@ namespace Monkey.Game.BreakTheEgg
                 case StateName.Status.IntroFinish:
                     fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), eventType.Data);
                     break;
+                case StateName.Status.PlayFinish:
+                    fSMSystem.GotoState(StateName.Name.ResultKnockEgg.ToString(), eventType.Data);
+                    break;
+                case StateName.Status.ResultKnockEggFinish:
+                    fSMSystem.GotoState(StateName.Name.GamePlay.ToString(), eventType.Data);
+                    break;
             }
         }
     }

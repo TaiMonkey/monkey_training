@@ -16,10 +16,10 @@ MonoBehaviour:
     ConfigEgg:
     - Alphabet: x
       TextAnswer: Box
-      ImageAnswer: {fileID: 0}
+      ImageAnswer: {fileID: 21300000, guid: 789b9299f9bb6a44184f773fe47e6ab4, type: 3}
     - Alphabet: a
       TextAnswer: Apple
-      ImageAnswer: {fileID: 0}
+      ImageAnswer: {fileID: 21300000, guid: 789b9299f9bb6a44184f773fe47e6ab4, type: 3}
     - Alphabet: c
       TextAnswer: Cute
-      ImageAnswer: {fileID: 0}
+      ImageAnswer: {fileID: 21300000, guid: 789b9299f9bb6a44184f773fe47e6ab4, type: 3}
