@@ -1,68 +1,75 @@
 
 skeleton_hdr.png
-size: 1954,983
+size: 2026,983
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
+1x/Asset 1
+  rotate: false
+  xy: 1840, 4
+  size: 184, 184
+  orig: 184, 194
+  offset: 0, 4
+  index: -1
 1x/crack 1
-  rotate: true
-  xy: 1633, 63
+  rotate: false
+  xy: 1948, 190
   size: 44, 182
   orig: 44, 182
   offset: 0, 0
   index: -1
 1x/crack 2
-  rotate: true
-  xy: 1517, 58
+  rotate: false
+  xy: 1948, 513
   size: 49, 56
   orig: 49, 56
   offset: 0, 0
   index: -1
 1x/crack 3
-  rotate: true
-  xy: 1373, 38
+  rotate: false
+  xy: 1948, 571
   size: 69, 142
   orig: 69, 142
   offset: 0, 0
   index: -1
 1x/crack 4
-  rotate: true
-  xy: 1226, 32
+  rotate: false
+  xy: 1948, 836
   size: 75, 145
   orig: 75, 145
   offset: 0, 0
   index: -1
 1x/crack 5
   rotate: true
-  xy: 1914, 54
+  xy: 1840, 294
   size: 74, 38
   orig: 74, 38
   offset: 0, 0
   index: -1
 1x/crack 6
-  rotate: false
-  xy: 1840, 130
+  rotate: true
+  xy: 1226, 12
   size: 95, 238
   orig: 95, 238
   offset: 0, 0
   index: -1
 1x/crack 7
-  rotate: true
-  xy: 1633, 14
+  rotate: false
+  xy: 1948, 374
   size: 47, 79
   orig: 47, 79
   offset: 0, 0
   index: -1
 1x/crack 8
-  rotate: true
-  xy: 1575, 58
+  rotate: false
+  xy: 1948, 455
   size: 49, 56
   orig: 49, 56
   offset: 0, 0
   index: -1
 1x/crack 9
   rotate: false
-  xy: 1840, 9
+  xy: 1948, 715
   size: 72, 119
   orig: 72, 119
   offset: 0, 0

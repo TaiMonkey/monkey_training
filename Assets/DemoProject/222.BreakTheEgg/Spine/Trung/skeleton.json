@@ -1,14 +1,5 @@
 {
-"skeleton": {
-	"hash": "8voWwQ5oyZS801DUSQbDxx0u7J4",
-	"spine": "3.8.99",
-	"x": -221.58,
-	"y": 0.78,
-	"width": 454,
-	"height": 611.86,
-	"images": "../image/",
-	"audio": ""
-},
+"skeleton": { "hash": "Z5ntA1zTiaBPt0lRqOoxLDzfO+Q", "spine": "3.8.99", "images": "D:/Game/APP MS/GAME/New folder (3)/New folder/image", "audio": "" },
 "bones": [
 	{ "name": "root" },
 	{ "name": "dieu khien", "parent": "root" },
@@ -18,7 +9,8 @@
 	{ "name": "manh 1", "parent": "manh trung", "x": 72.05, "y": 13.59 },
 	{ "name": "manh 2", "parent": "manh trung", "x": -73, "y": 12.94 },
 	{ "name": "crack", "parent": "Rotation", "y": -295.73 },
-	{ "name": "bone", "parent": "root" }
+	{ "name": "bone", "parent": "root" },
+	{ "name": "text", "parent": "dieu khien", "x": -0.8, "y": 179.5 }
 ],
 "slots": [
 	{ "name": "1x-trung do", "bone": "trung lanh", "attachment": "1x/trung do" },
@@ -30,6 +22,7 @@
 	{ "name": "1x-manh vang 2", "bone": "manh 2", "attachment": "1x/manh vang 2" },
 	{ "name": "1x-manh xanh 1", "bone": "manh 1", "attachment": "1x/manh xanh 1" },
 	{ "name": "1x-manh xanh 2", "bone": "manh 2", "attachment": "1x/manh xanh 2" },
+	{ "name": "text", "bone": "Rotation", "attachment": "1x/Asset 1" },
 	{ "name": "1x-crack 1", "bone": "crack", "attachment": "1x/crack 1" },
 	{ "name": "1x-crack 2", "bone": "crack", "attachment": "1x/crack 2" },
 	{ "name": "1x-crack 3", "bone": "crack", "attachment": "1x/crack 3" },
@@ -45,31 +38,31 @@
 		"name": "default",
 		"attachments": {
 			"1x-crack 1": {
-				"1x/crack 1": { "x": 8.04, "y": 521.64, "width": 44, "height": 182 }
+				"1x/crack 1": { "color": "fff9e1ff", "x": 8.04, "y": 521.64, "width": 44, "height": 182 }
 			},
 			"1x-crack 2": {
-				"1x/crack 2": { "x": -21.82, "y": 550.71, "width": 49, "height": 56 }
+				"1x/crack 2": { "color": "fff9e1ff", "x": -21.82, "y": 550.71, "width": 49, "height": 56 }
 			},
 			"1x-crack 3": {
-				"1x/crack 3": { "x": 1.16, "y": 427.06, "width": 69, "height": 142 }
+				"1x/crack 3": { "color": "fff9e1ff", "x": 1.16, "y": 427.06, "width": 69, "height": 142 }
 			},
 			"1x-crack 4": {
-				"1x/crack 4": { "x": 11.5, "y": 336.47, "width": 75, "height": 145 }
+				"1x/crack 4": { "color": "fff9e1ff", "x": 11.5, "y": 336.47, "width": 75, "height": 145 }
 			},
 			"1x-crack 5": {
-				"1x/crack 5": { "x": -2.07, "y": 358.06, "width": 74, "height": 38 }
+				"1x/crack 5": { "color": "fff9e1ff", "x": -2.07, "y": 358.06, "width": 74, "height": 38 }
 			},
 			"1x-crack 6": {
-				"1x/crack 6": { "x": 46.06, "y": 248.85, "width": 95, "height": 238 }
+				"1x/crack 6": { "color": "fff9e1ff", "x": 46.06, "y": 248.85, "width": 95, "height": 238 }
 			},
 			"1x-crack 7": {
-				"1x/crack 7": { "x": 27.55, "y": 139.64, "width": 47, "height": 79 }
+				"1x/crack 7": { "color": "fff9e1ff", "x": 27.55, "y": 139.64, "width": 47, "height": 79 }
 			},
 			"1x-crack 8": {
-				"1x/crack 8": { "x": 39.27, "y": 84.73, "width": 49, "height": 56 }
+				"1x/crack 8": { "color": "fff9e1ff", "x": 39.27, "y": 84.73, "width": 49, "height": 56 }
 			},
 			"1x-crack 9": {
-				"1x/crack 9": { "x": 54.69, "y": 62.21, "width": 72, "height": 119 }
+				"1x/crack 9": { "color": "fff9e1ff", "x": 54.69, "y": 62.21, "width": 72, "height": 119 }
 			},
 			"1x-manh do 1": {
 				"1x/manh do 1": { "x": 29.69, "y": 292.79, "width": 259, "height": 610 }
@@ -97,6 +90,9 @@
 			},
 			"1x-trung xanh": {
 				"1x/trung xanh": { "x": 5.42, "y": 306.38, "width": 454, "height": 611 }
+			},
+			"text": {
+				"1x/Asset 1": { "x": 2.16, "y": -62.8, "width": 184, "height": 194 }
 			}
 		}
 	}
@@ -177,16 +173,6 @@
 			"1x-manh xanh 2": {
 				"attachment": [
 					{ "name": null }
-				]
-			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
 				]
 			}
 		}
@@ -274,14 +260,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -289,11 +281,6 @@
 	},
 	"Egg A - tap 1- nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
 			"1x-crack 2": {
 				"attachment": [
 					{ "name": null }
@@ -364,25 +351,10 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg A - tap 2": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
 			"1x-crack 2": {
 				"attachment": [
 					{ "name": null },
@@ -459,14 +431,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.2 }
 				]
 			}
@@ -474,16 +452,6 @@
 	},
 	"Egg A - tap2 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
 			"1x-crack 3": {
 				"attachment": [
 					{ "name": null }
@@ -549,30 +517,10 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg A - tap 3": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
 			"1x-crack 3": {
 				"attachment": [
 					{ "name": null },
@@ -644,14 +592,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.2 }
 				]
 			}
@@ -659,21 +613,6 @@
 	},
 	"Egg A - tap3 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
@@ -734,35 +673,10 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg A - tap 4": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null },
@@ -829,14 +743,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.2 }
 				]
 			}
@@ -844,26 +764,6 @@
 	},
 	"Egg A - tap4 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
-			"1x-crack 4": {
-				"attachment": [
-					{ "name": "1x/crack 4" }
-				]
-			},
 			"1x-crack 5": {
 				"attachment": [
 					{ "name": null }
@@ -919,38 +819,12 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg A - tap 5": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
-					{ "name": "1x/crack 4" },
 					{ "time": 0.0333, "name": null }
 				]
 			},
@@ -1015,14 +889,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.2 }
 				]
 			}
@@ -1030,29 +910,9 @@
 	},
 	"Egg A - tap5 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
 				]
 			},
 			"1x-crack 6": {
@@ -1105,43 +965,13 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg A - tap 6": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
 				]
 			},
 			"1x-crack 6": {
@@ -1200,14 +1030,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.2 }
 				]
 			}
@@ -1215,34 +1051,9 @@
 	},
 	"Egg A - tap6 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
 				]
 			},
 			"1x-crack 7": {
@@ -1290,48 +1101,13 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg A - tap 7": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
 				]
 			},
 			"1x-crack 7": {
@@ -1385,14 +1161,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.2 }
 				]
 			}
@@ -1400,39 +1182,9 @@
 	},
 	"Egg A - tap7 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
 				]
 			},
 			"1x-crack 8": {
@@ -1475,53 +1227,13 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg A - tap 8": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
 				]
 			},
 			"1x-crack 8": {
@@ -1570,14 +1282,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.2 }
 				]
 			}
@@ -1585,44 +1303,9 @@
 	},
 	"Egg A - tap8 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
-				]
-			},
-			"1x-crack 8": {
-				"attachment": [
-					{ "name": "1x/crack 8" }
 				]
 			},
 			"1x-crack 9": {
@@ -1660,58 +1343,13 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg A - tap 9": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
-				]
-			},
-			"1x-crack 8": {
-				"attachment": [
-					{ "name": "1x/crack 8" }
 				]
 			},
 			"1x-crack 9": {
@@ -1755,14 +1393,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.024, "y": 0.976 },
 					{ "time": 0.2 }
 				]
 			}
@@ -1770,49 +1414,9 @@
 	},
 	"Egg A - tap9 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
-				]
-			},
-			"1x-crack 8": {
-				"attachment": [
-					{ "name": "1x/crack 8" }
-				]
-			},
-			"1x-crack 9": {
-				"attachment": [
-					{ "name": "1x/crack 9" }
 				]
 			},
 			"1x-manh do 1": {
@@ -1845,35 +1449,22 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg A - tap 10": {
 		"slots": {
 			"1x-crack 1": {
 				"attachment": [
-					{ "name": "1x/crack 1" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 2": {
 				"attachment": [
-					{ "name": "1x/crack 2" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 3": {
 				"attachment": [
-					{ "name": "1x/crack 3" },
 					{ "time": 0.2, "name": null }
 				]
 			},
@@ -1884,31 +1475,26 @@
 			},
 			"1x-crack 5": {
 				"attachment": [
-					{ "name": "1x/crack 5" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 6": {
 				"attachment": [
-					{ "name": "1x/crack 6" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 7": {
 				"attachment": [
-					{ "name": "1x/crack 7" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 8": {
 				"attachment": [
-					{ "name": "1x/crack 8" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 9": {
 				"attachment": [
-					{ "name": "1x/crack 9" },
 					{ "time": 0.2, "name": null }
 				]
 			},
@@ -1934,7 +1520,21 @@
 			},
 			"1x-manh xanh 1": {
 				"color": [
+					{ "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffffc1" },
+					{ "time": 0.4333, "color": "ffffff9d" },
+					{ "time": 0.4667, "color": "ffffff72" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
@@ -1945,6 +1545,9 @@
 			"1x-manh xanh 2": {
 				"color": [
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffffdf" },
+					{ "time": 0.4333, "color": "ffffffa8" },
+					{ "time": 0.4667, "color": "ffffff65" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
@@ -1966,81 +1569,152 @@
 				"attachment": [
 					{ "time": 0.2, "name": null }
 				]
+			},
+			"text": {
+				"attachment": [
+					{ "time": 0.2, "name": null }
+				]
 			}
 		},
 		"bones": {
 			"crack": {
 				"translate": [
 					{ "time": 0.0667 },
-					{ "time": 0.1667, "y": 20.19 }
+					{ "time": 0.1, "y": 3.79 },
+					{ "time": 0.1333, "y": 10.29 },
+					{ "time": 0.1667, "y": 20.19, "curve": "stepped" },
+					{ "time": 0.2, "y": 20.19 }
 				]
 			},
 			"manh 1": {
 				"rotate": [
+					{},
+					{ "time": 0.0333, "angle": -0.24 },
+					{ "time": 0.0667, "angle": -0.8 },
+					{ "time": 0.1, "angle": -1.53 },
+					{ "time": 0.1333, "angle": -2.26 },
+					{ "time": 0.1667, "angle": -2.83 },
 					{ "time": 0.2, "angle": -3.06 },
+					{ "time": 0.2333, "angle": -6.03 },
+					{ "time": 0.2667, "angle": -11.21 },
+					{ "time": 0.3, "angle": -17.57 },
 					{ "time": 0.3333, "angle": -27.07 },
+					{ "time": 0.3667, "angle": -26.91 },
+					{ "time": 0.4, "angle": -26.62 },
+					{ "time": 0.4333, "angle": -26.27 },
+					{ "time": 0.4667, "angle": -25.86 },
 					{ "time": 0.5, "angle": -25.25 }
 				],
 				"translate": [
 					{},
+					{ "time": 0.0333, "y": 1.76 },
+					{ "time": 0.0667, "y": 4.98 },
+					{ "time": 0.1, "y": 8.88 },
+					{ "time": 0.1333, "y": 13.32 },
+					{ "time": 0.1667, "y": 18.42 },
 					{ "time": 0.2, "y": 26.1 },
+					{ "time": 0.2333, "x": 7.55, "y": 21.24 },
+					{ "time": 0.2667, "x": 20.68, "y": 12.81 },
+					{ "time": 0.3, "x": 36.81, "y": 2.44 },
 					{ "time": 0.3333, "x": 60.9, "y": -13.05 },
+					{ "time": 0.3667, "x": 73.38, "y": -5.78 },
 					{ "time": 0.4, "x": 97.73, "y": 8.41 },
+					{ "time": 0.4333, "x": 106.6, "y": 4.66 },
+					{ "time": 0.4667, "x": 121.82, "y": -1.79 },
 					{ "time": 0.5, "x": 145, "y": -11.6 }
 				],
 				"scale": [
-					{ "time": 0.2, "x": 0.95, "y": 1.05, "curve": "stepped" },
-					{ "time": 0.3333, "x": 0.95, "y": 1.05 }
+					{},
+					{ "time": 0.0333, "x": 0.996, "y": 1.004 },
+					{ "time": 0.0667, "x": 0.987, "y": 1.013 },
+					{ "time": 0.1, "x": 0.975, "y": 1.025 },
+					{ "time": 0.1333, "x": 0.963, "y": 1.037 },
+					{ "time": 0.1667, "x": 0.954, "y": 1.046 },
+					{ "time": 0.2, "x": 0.95, "y": 1.05 }
 				]
 			},
 			"manh 2": {
 				"rotate": [
+					{},
+					{ "time": 0.0333, "angle": 0.48 },
+					{ "time": 0.0667, "angle": 1.61 },
+					{ "time": 0.1, "angle": 3.07 },
+					{ "time": 0.1333, "angle": 4.53 },
+					{ "time": 0.1667, "angle": 5.66 },
 					{ "time": 0.2, "angle": 6.11 },
+					{ "time": 0.2333, "angle": 10.1 },
+					{ "time": 0.2667, "angle": 17.03 },
+					{ "time": 0.3, "angle": 25.55 },
 					{ "time": 0.3333, "angle": 38.26 },
+					{ "time": 0.3667, "angle": 38.03 },
+					{ "time": 0.4, "angle": 37.59 },
+					{ "time": 0.4333, "angle": 37.07 },
+					{ "time": 0.4667, "angle": 36.46 },
 					{ "time": 0.5, "angle": 35.54 }
 				],
 				"translate": [
 					{},
+					{ "time": 0.0333, "x": -1.56, "y": 1.56 },
+					{ "time": 0.0667, "x": -4.43, "y": 4.43 },
+					{ "time": 0.1, "x": -7.89, "y": 7.89 },
+					{ "time": 0.1333, "x": -11.84, "y": 11.84 },
+					{ "time": 0.1667, "x": -16.38, "y": 16.38 },
 					{ "time": 0.2, "x": -23.2, "y": 23.2 },
+					{ "time": 0.2333, "x": -24.46, "y": 19.96 },
+					{ "time": 0.2667, "x": -26.65, "y": 14.34 },
+					{ "time": 0.3, "x": -29.34, "y": 7.42 },
 					{ "time": 0.3333, "x": -33.35, "y": -2.9 },
+					{ "time": 0.3667, "x": -51.62, "y": 0.54 },
 					{ "time": 0.4, "x": -87.29, "y": 7.25 },
+					{ "time": 0.4333, "x": -103.29, "y": 4.94 },
+					{ "time": 0.4667, "x": -130.74, "y": 0.99 },
 					{ "time": 0.5, "x": -172.55, "y": -5.04 }
 				],
 				"scale": [
+					{},
+					{ "time": 0.0333, "x": 0.996, "y": 1.004 },
+					{ "time": 0.0667, "x": 0.987, "y": 1.013 },
+					{ "time": 0.1, "x": 0.975, "y": 1.025 },
+					{ "time": 0.1333, "x": 0.963, "y": 1.037 },
+					{ "time": 0.1667, "x": 0.954, "y": 1.046 },
 					{ "time": 0.2, "x": 0.95, "y": 1.05 },
-					{ "time": 0.3333, "x": 1.05, "y": 0.95 }
+					{ "time": 0.2333, "x": 0.962, "y": 1.038 },
+					{ "time": 0.2667, "x": 0.984, "y": 1.016 },
+					{ "time": 0.3, "x": 1.01, "y": 0.99 },
+					{ "time": 0.3333, "x": 1.05, "y": 0.95, "curve": "stepped" },
+					{ "time": 0.3667, "x": 1.05, "y": 0.95 }
 				]
 			},
 			"trung lanh": {
 				"translate": [
 					{ "time": 0.0667 },
-					{ "time": 0.2, "y": 30 }
+					{ "time": 0.1, "y": 3.72 },
+					{ "time": 0.1333, "y": 10.19 },
+					{ "time": 0.1667, "y": 18.13 },
+					{ "time": 0.2, "y": 30, "curve": "stepped" },
+					{ "time": 0.2333, "y": 30 }
 				]
 			},
 			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"translate": [
-					{ "time": 0.0667 }
-				],
 				"scale": [
 					{ "x": 1.041, "y": 0.959 },
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.045, "y": 0.955 },
+					{ "time": 0.1, "x": 1.03, "y": 0.97 },
 					{ "time": 0.1333, "curve": "stepped" },
 					{ "time": 0.4333 },
+					{ "time": 0.4667, "x": 1.008, "y": 0.992 },
 					{ "time": 0.5, "x": 1.041, "y": 0.959 }
 				]
 			},
 			"root": {
 				"translate": [
 					{ "time": 0.0667 },
-					{ "time": 0.2, "y": 13.05 }
-				]
-			},
-			"manh trung": {
-				"translate": [
-					{ "time": 0.2 }
+					{ "time": 0.1, "y": 1.62 },
+					{ "time": 0.1333, "y": 4.43 },
+					{ "time": 0.1667, "y": 7.89 },
+					{ "time": 0.2, "y": 13.05, "curve": "stepped" },
+					{ "time": 0.2333, "y": 13.05 }
 				]
 			}
 		}
@@ -2122,24 +1796,9 @@
 					{ "name": null }
 				]
 			},
-			"1x-trung do": {
-				"attachment": [
-					{ "name": "1x/trung do" }
-				]
-			},
 			"1x-trung xanh": {
 				"attachment": [
 					{ "name": null }
-				]
-			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
 				]
 			}
 		}
@@ -2232,22 +1891,18 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
-				],
-				"scale": [
-					{}
 				]
 			}
 		}
 	},
 	"Egg B - tap 1 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
 			"1x-crack 2": {
 				"attachment": [
 					{ "name": null }
@@ -2323,25 +1978,10 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg B - tap 2": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
 			"1x-crack 2": {
 				"attachment": [
 					{ "name": null },
@@ -2423,14 +2063,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -2438,16 +2084,6 @@
 	},
 	"Egg B - tap 2 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
 			"1x-crack 3": {
 				"attachment": [
 					{ "name": null }
@@ -2518,30 +2154,10 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg B - tap 3": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
 			"1x-crack 3": {
 				"attachment": [
 					{ "name": null },
@@ -2618,14 +2234,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -2633,16 +2255,6 @@
 	},
 	"Egg B - tap 3 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
 			"1x-crack 3": {
 				"attachment": [
 					{ "name": null },
@@ -2734,21 +2346,6 @@
 	},
 	"Egg B - tap 4": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null },
@@ -2820,14 +2417,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -2835,26 +2438,6 @@
 	},
 	"Egg B - tap 4 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
-			"1x-crack 4": {
-				"attachment": [
-					{ "name": "1x/crack 4" }
-				]
-			},
 			"1x-crack 5": {
 				"attachment": [
 					{ "name": null }
@@ -2915,35 +2498,10 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg B - tap 5": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
@@ -3015,14 +2573,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -3030,29 +2594,9 @@
 	},
 	"Egg B - tap 5 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
 				]
 			},
 			"1x-crack 6": {
@@ -3110,43 +2654,13 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg B - tap 6": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
 				]
 			},
 			"1x-crack 6": {
@@ -3210,14 +2724,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -3225,29 +2745,9 @@
 	},
 	"Egg B - tap 6 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
 				]
 			},
 			"1x-crack 6": {
@@ -3326,34 +2826,9 @@
 	},
 	"Egg B - tap 7": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
 				]
 			},
 			"1x-crack 7": {
@@ -3412,14 +2887,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -3427,34 +2908,9 @@
 	},
 	"Egg B - tap 7 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
 				]
 			},
 			"1x-crack 7": {
@@ -3528,39 +2984,9 @@
 	},
 	"Egg B - tap 8": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
 				]
 			},
 			"1x-crack 8": {
@@ -3614,14 +3040,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -3629,39 +3061,9 @@
 	},
 	"Egg B - tap 8 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
 				]
 			},
 			"1x-crack 8": {
@@ -3730,44 +3132,9 @@
 	},
 	"Egg B - tap 9": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
-				]
-			},
-			"1x-crack 8": {
-				"attachment": [
-					{ "name": "1x/crack 8" }
 				]
 			},
 			"1x-crack 9": {
@@ -3816,14 +3183,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -3831,44 +3204,9 @@
 	},
 	"Egg B - tap9 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
-				]
-			},
-			"1x-crack 8": {
-				"attachment": [
-					{ "name": "1x/crack 8" }
 				]
 			},
 			"1x-crack 9": {
@@ -3934,19 +3272,16 @@
 		"slots": {
 			"1x-crack 1": {
 				"attachment": [
-					{ "name": "1x/crack 1" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 2": {
 				"attachment": [
-					{ "name": "1x/crack 2" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 3": {
 				"attachment": [
-					{ "name": "1x/crack 3" },
 					{ "time": 0.2, "name": null }
 				]
 			},
@@ -3957,31 +3292,26 @@
 			},
 			"1x-crack 5": {
 				"attachment": [
-					{ "name": "1x/crack 5" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 6": {
 				"attachment": [
-					{ "name": "1x/crack 6" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 7": {
 				"attachment": [
-					{ "name": "1x/crack 7" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 8": {
 				"attachment": [
-					{ "name": "1x/crack 8" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 9": {
 				"attachment": [
-					{ "name": "1x/crack 9" },
 					{ "time": 0.2, "name": null }
 				]
 			},
@@ -3998,6 +3328,9 @@
 			"1x-manh vang 1": {
 				"color": [
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffffe2" },
+					{ "time": 0.4333, "color": "ffffffad" },
+					{ "time": 0.4667, "color": "ffffff69" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
@@ -4008,6 +3341,9 @@
 			"1x-manh vang 2": {
 				"color": [
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffffe3" },
+					{ "time": 0.4333, "color": "ffffffab" },
+					{ "time": 0.4667, "color": "ffffff64" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
@@ -4017,22 +3353,37 @@
 			},
 			"1x-manh xanh 1": {
 				"color": [
+					{ "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "fffffff0" },
+					{ "time": 0.4333, "color": "ffffffdd" },
+					{ "time": 0.4667, "color": "ffffffb9" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
-					{ "name": null },
-					{ "time": 0.2, "name": null }
+					{ "name": null }
 				]
 			},
 			"1x-manh xanh 2": {
 				"color": [
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffffdf" },
+					{ "time": 0.4333, "color": "ffffffa8" },
+					{ "time": 0.4667, "color": "ffffff65" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
-					{ "name": null },
-					{ "time": 0.2, "name": null }
+					{ "name": null }
 				]
 			},
 			"1x-trung do": {
@@ -4047,7 +3398,11 @@
 			},
 			"1x-trung xanh": {
 				"attachment": [
-					{ "name": null },
+					{ "name": null }
+				]
+			},
+			"text": {
+				"attachment": [
 					{ "time": 0.2, "name": null }
 				]
 			}
@@ -4056,81 +3411,151 @@
 			"crack": {
 				"translate": [
 					{ "time": 0.0667 },
-					{ "time": 0.1667, "y": 20.19 }
+					{ "time": 0.1, "y": 3.79 },
+					{ "time": 0.1333, "y": 10.29 },
+					{ "time": 0.1667, "y": 20.19, "curve": "stepped" },
+					{ "time": 0.2, "y": 20.19 }
 				]
 			},
 			"manh 1": {
 				"rotate": [
+					{},
+					{ "time": 0.0333, "angle": -0.24 },
+					{ "time": 0.0667, "angle": -0.8 },
+					{ "time": 0.1, "angle": -1.53 },
+					{ "time": 0.1333, "angle": -2.26 },
+					{ "time": 0.1667, "angle": -2.83 },
 					{ "time": 0.2, "angle": -3.06 },
+					{ "time": 0.2333, "angle": -6.03 },
+					{ "time": 0.2667, "angle": -11.21 },
+					{ "time": 0.3, "angle": -17.57 },
 					{ "time": 0.3333, "angle": -27.07 },
+					{ "time": 0.3667, "angle": -26.91 },
+					{ "time": 0.4, "angle": -26.62 },
+					{ "time": 0.4333, "angle": -26.27 },
+					{ "time": 0.4667, "angle": -25.86 },
 					{ "time": 0.5, "angle": -25.25 }
 				],
 				"translate": [
 					{},
+					{ "time": 0.0333, "y": 1.76 },
+					{ "time": 0.0667, "y": 4.98 },
+					{ "time": 0.1, "y": 8.88 },
+					{ "time": 0.1333, "y": 13.32 },
+					{ "time": 0.1667, "y": 18.42 },
 					{ "time": 0.2, "y": 26.1 },
+					{ "time": 0.2333, "x": 7.55, "y": 21.24 },
+					{ "time": 0.2667, "x": 20.68, "y": 12.81 },
+					{ "time": 0.3, "x": 36.81, "y": 2.44 },
 					{ "time": 0.3333, "x": 60.9, "y": -13.05 },
+					{ "time": 0.3667, "x": 73.38, "y": -5.78 },
 					{ "time": 0.4, "x": 97.73, "y": 8.41 },
+					{ "time": 0.4333, "x": 106.6, "y": 4.66 },
+					{ "time": 0.4667, "x": 121.82, "y": -1.79 },
 					{ "time": 0.5, "x": 145, "y": -11.6 }
 				],
 				"scale": [
 					{ "x": 0.993, "y": 1.007 },
 					{ "time": 0.0333 },
+					{ "time": 0.0667, "x": 0.992, "y": 1.008 },
+					{ "time": 0.1, "x": 0.983, "y": 1.017 },
+					{ "time": 0.1333, "x": 0.975, "y": 1.025 },
+					{ "time": 0.1667, "x": 0.967, "y": 1.033 },
+					{ "time": 0.2, "x": 0.958, "y": 1.042 },
 					{ "time": 0.2333, "x": 0.95, "y": 1.05, "curve": "stepped" },
 					{ "time": 0.3667, "x": 0.95, "y": 1.05 },
+					{ "time": 0.4, "x": 0.957, "y": 1.043 },
+					{ "time": 0.4333, "x": 0.969, "y": 1.031 },
+					{ "time": 0.4667, "x": 0.982, "y": 1.018 },
 					{ "time": 0.5, "x": 0.993, "y": 1.007 }
 				]
 			},
 			"manh 2": {
 				"rotate": [
+					{},
+					{ "time": 0.0333, "angle": 0.48 },
+					{ "time": 0.0667, "angle": 1.61 },
+					{ "time": 0.1, "angle": 3.07 },
+					{ "time": 0.1333, "angle": 4.53 },
+					{ "time": 0.1667, "angle": 5.66 },
 					{ "time": 0.2, "angle": 6.11 },
+					{ "time": 0.2333, "angle": 10.1 },
+					{ "time": 0.2667, "angle": 17.03 },
+					{ "time": 0.3, "angle": 25.55 },
 					{ "time": 0.3333, "angle": 38.26 },
+					{ "time": 0.3667, "angle": 38.03 },
+					{ "time": 0.4, "angle": 37.59 },
+					{ "time": 0.4333, "angle": 37.07 },
+					{ "time": 0.4667, "angle": 36.46 },
 					{ "time": 0.5, "angle": 35.54 }
 				],
 				"translate": [
 					{},
+					{ "time": 0.0333, "x": -1.56, "y": 1.56 },
+					{ "time": 0.0667, "x": -4.43, "y": 4.43 },
+					{ "time": 0.1, "x": -7.89, "y": 7.89 },
+					{ "time": 0.1333, "x": -11.84, "y": 11.84 },
+					{ "time": 0.1667, "x": -16.38, "y": 16.38 },
 					{ "time": 0.2, "x": -23.2, "y": 23.2 },
+					{ "time": 0.2333, "x": -24.46, "y": 19.96 },
+					{ "time": 0.2667, "x": -26.65, "y": 14.34 },
+					{ "time": 0.3, "x": -29.34, "y": 7.42 },
 					{ "time": 0.3333, "x": -33.35, "y": -2.9 },
+					{ "time": 0.3667, "x": -51.62, "y": 0.54 },
 					{ "time": 0.4, "x": -87.29, "y": 7.25 },
+					{ "time": 0.4333, "x": -103.29, "y": 4.94 },
+					{ "time": 0.4667, "x": -130.74, "y": 0.99 },
 					{ "time": 0.5, "x": -172.55, "y": -5.04 }
 				],
 				"scale": [
 					{ "x": 1.01, "y": 0.99 },
 					{ "time": 0.0333 },
+					{ "time": 0.0667, "x": 0.992, "y": 1.008 },
+					{ "time": 0.1, "x": 0.983, "y": 1.017 },
+					{ "time": 0.1333, "x": 0.975, "y": 1.025 },
+					{ "time": 0.1667, "x": 0.967, "y": 1.033 },
+					{ "time": 0.2, "x": 0.958, "y": 1.042 },
 					{ "time": 0.2333, "x": 0.95, "y": 1.05 },
+					{ "time": 0.2667, "x": 0.962, "y": 1.038 },
+					{ "time": 0.3, "x": 0.984, "y": 1.016 },
+					{ "time": 0.3333, "x": 1.01, "y": 0.99 },
 					{ "time": 0.3667, "x": 1.05, "y": 0.95 },
+					{ "time": 0.4, "x": 1.04, "y": 0.96 },
+					{ "time": 0.4333, "x": 1.03, "y": 0.97 },
+					{ "time": 0.4667, "x": 1.02, "y": 0.98 },
 					{ "time": 0.5, "x": 1.01, "y": 0.99 }
 				]
 			},
 			"trung lanh": {
 				"translate": [
 					{ "time": 0.0667 },
-					{ "time": 0.2, "y": 30 }
+					{ "time": 0.1, "y": 3.72 },
+					{ "time": 0.1333, "y": 10.19 },
+					{ "time": 0.1667, "y": 18.13 },
+					{ "time": 0.2, "y": 30, "curve": "stepped" },
+					{ "time": 0.2333, "y": 30 }
 				]
 			},
 			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"translate": [
-					{ "time": 0.0667 }
-				],
 				"scale": [
 					{ "x": 1.041, "y": 0.959 },
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.045, "y": 0.955 },
+					{ "time": 0.1, "x": 1.03, "y": 0.97 },
 					{ "time": 0.1333, "curve": "stepped" },
 					{ "time": 0.4333 },
+					{ "time": 0.4667, "x": 1.008, "y": 0.992 },
 					{ "time": 0.5, "x": 1.041, "y": 0.959 }
 				]
 			},
 			"root": {
 				"translate": [
 					{ "time": 0.0667 },
-					{ "time": 0.2, "y": 13.05 }
-				]
-			},
-			"manh trung": {
-				"translate": [
-					{ "time": 0.2 }
+					{ "time": 0.1, "y": 1.62 },
+					{ "time": 0.1333, "y": 4.43 },
+					{ "time": 0.1667, "y": 7.89 },
+					{ "time": 0.2, "y": 13.05, "curve": "stepped" },
+					{ "time": 0.2333, "y": 13.05 }
 				]
 			}
 		}
@@ -4212,11 +3637,6 @@
 					{ "name": null }
 				]
 			},
-			"1x-trung do": {
-				"attachment": [
-					{ "name": "1x/trung do" }
-				]
-			},
 			"1x-trung vang": {
 				"attachment": [
 					{ "name": null }
@@ -4225,16 +3645,6 @@
 			"1x-trung xanh": {
 				"attachment": [
 					{ "name": null }
-				]
-			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
 				]
 			}
 		}
@@ -4317,11 +3727,6 @@
 					{ "name": null }
 				]
 			},
-			"1x-trung do": {
-				"attachment": [
-					{ "name": "1x/trung do" }
-				]
-			},
 			"1x-trung vang": {
 				"attachment": [
 					{ "name": null }
@@ -4337,22 +3742,18 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
-				],
-				"scale": [
-					{}
 				]
 			}
 		}
 	},
 	"Egg C - tap 1 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
 			"1x-crack 2": {
 				"attachment": [
 					{ "name": null }
@@ -4433,25 +3834,10 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg C - tap 2": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
 			"1x-crack 2": {
 				"attachment": [
 					{ "name": null },
@@ -4538,14 +3924,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -4553,16 +3945,6 @@
 	},
 	"Egg C - tap 2 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
 			"1x-crack 3": {
 				"attachment": [
 					{ "name": null }
@@ -4638,30 +4020,10 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg C - tap 3": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
 			"1x-crack 3": {
 				"attachment": [
 					{ "name": null },
@@ -4743,14 +4105,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -4758,16 +4126,6 @@
 	},
 	"Egg C - tap 3 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
 			"1x-crack 3": {
 				"attachment": [
 					{ "name": null },
@@ -4864,21 +4222,6 @@
 	},
 	"Egg C - tap 4": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null },
@@ -4955,14 +4298,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -4970,26 +4319,6 @@
 	},
 	"Egg C - tap 4 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
-			"1x-crack 4": {
-				"attachment": [
-					{ "name": "1x/crack 4" }
-				]
-			},
 			"1x-crack 5": {
 				"attachment": [
 					{ "name": null }
@@ -5055,35 +4384,10 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg C - tap 5": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
@@ -5160,14 +4464,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -5175,29 +4485,9 @@
 	},
 	"Egg C - tap 5 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
 				]
 			},
 			"1x-crack 6": {
@@ -5260,43 +4550,13 @@
 					{ "name": null }
 				]
 			}
-		},
-		"bones": {
-			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"scale": [
-					{}
-				]
-			}
 		}
 	},
 	"Egg C - tap 6": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
 				]
 			},
 			"1x-crack 6": {
@@ -5365,14 +4625,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -5380,29 +4646,9 @@
 	},
 	"Egg C - tap 6 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
 				]
 			},
 			"1x-crack 6": {
@@ -5486,34 +4732,9 @@
 	},
 	"Egg C - tap 7": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
 				]
 			},
 			"1x-crack 7": {
@@ -5577,14 +4798,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -5592,34 +4819,9 @@
 	},
 	"Egg C - tap 7 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
 				]
 			},
 			"1x-crack 7": {
@@ -5698,39 +4900,9 @@
 	},
 	"Egg C - tap 8": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
 				]
 			},
 			"1x-crack 8": {
@@ -5789,14 +4961,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -5804,39 +4982,9 @@
 	},
 	"Egg C - tap 8 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
 				]
 			},
 			"1x-crack 8": {
@@ -5910,44 +5058,9 @@
 	},
 	"Egg C - tap 9": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
-				]
-			},
-			"1x-crack 8": {
-				"attachment": [
-					{ "name": "1x/crack 8" }
 				]
 			},
 			"1x-crack 9": {
@@ -6001,14 +5114,20 @@
 			"dieu khien": {
 				"rotate": [
 					{},
+					{ "time": 0.0333, "angle": -2.19 },
 					{ "time": 0.0667, "angle": -6.73 },
+					{ "time": 0.1, "angle": -6.18 },
+					{ "time": 0.1333, "angle": -4.44 },
+					{ "time": 0.1667, "angle": -1.61 },
 					{ "time": 0.2, "angle": 0.21 }
 				],
 				"scale": [
 					{},
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.1 },
 					{ "time": 0.1333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.1667, "x": 1.031, "y": 0.969 },
 					{ "time": 0.2 }
 				]
 			}
@@ -6016,44 +5135,9 @@
 	},
 	"Egg C - tap9 - nomal": {
 		"slots": {
-			"1x-crack 1": {
-				"attachment": [
-					{ "name": "1x/crack 1" }
-				]
-			},
-			"1x-crack 2": {
-				"attachment": [
-					{ "name": "1x/crack 2" }
-				]
-			},
-			"1x-crack 3": {
-				"attachment": [
-					{ "name": "1x/crack 3" }
-				]
-			},
 			"1x-crack 4": {
 				"attachment": [
 					{ "name": null }
-				]
-			},
-			"1x-crack 5": {
-				"attachment": [
-					{ "name": "1x/crack 5" }
-				]
-			},
-			"1x-crack 6": {
-				"attachment": [
-					{ "name": "1x/crack 6" }
-				]
-			},
-			"1x-crack 7": {
-				"attachment": [
-					{ "name": "1x/crack 7" }
-				]
-			},
-			"1x-crack 8": {
-				"attachment": [
-					{ "name": "1x/crack 8" }
 				]
 			},
 			"1x-crack 9": {
@@ -6124,19 +5208,16 @@
 		"slots": {
 			"1x-crack 1": {
 				"attachment": [
-					{ "name": "1x/crack 1" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 2": {
 				"attachment": [
-					{ "name": "1x/crack 2" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 3": {
 				"attachment": [
-					{ "name": "1x/crack 3" },
 					{ "time": 0.2, "name": null }
 				]
 			},
@@ -6147,37 +5228,35 @@
 			},
 			"1x-crack 5": {
 				"attachment": [
-					{ "name": "1x/crack 5" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 6": {
 				"attachment": [
-					{ "name": "1x/crack 6" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 7": {
 				"attachment": [
-					{ "name": "1x/crack 7" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 8": {
 				"attachment": [
-					{ "name": "1x/crack 8" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-crack 9": {
 				"attachment": [
-					{ "name": "1x/crack 9" },
 					{ "time": 0.2, "name": null }
 				]
 			},
 			"1x-manh do 1": {
 				"color": [
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffffee" },
+					{ "time": 0.4333, "color": "ffffff8e" },
+					{ "time": 0.4667, "color": "ffffff0d" },
 					{ "time": 0.5, "color": "ffffff01" }
 				],
 				"attachment": [
@@ -6188,6 +5267,9 @@
 			"1x-manh do 2": {
 				"color": [
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "fffffff3" },
+					{ "time": 0.4333, "color": "ffffffae" },
+					{ "time": 0.4667, "color": "ffffff13" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
@@ -6198,41 +5280,60 @@
 			"1x-manh vang 1": {
 				"color": [
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffffe2" },
+					{ "time": 0.4333, "color": "ffffffad" },
+					{ "time": 0.4667, "color": "ffffff69" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
-					{ "name": null },
-					{ "time": 0.2, "name": null }
+					{ "name": null }
 				]
 			},
 			"1x-manh vang 2": {
 				"color": [
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffffe3" },
+					{ "time": 0.4333, "color": "ffffffab" },
+					{ "time": 0.4667, "color": "ffffff64" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
-					{ "name": null },
-					{ "time": 0.2, "name": null }
+					{ "name": null }
 				]
 			},
 			"1x-manh xanh 1": {
 				"color": [
+					{ "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.0333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.0667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2333, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.2667, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "fffffff0" },
+					{ "time": 0.4333, "color": "ffffffdd" },
+					{ "time": 0.4667, "color": "ffffffb9" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
-					{ "name": null },
-					{ "time": 0.2, "name": null }
+					{ "name": null }
 				]
 			},
 			"1x-manh xanh 2": {
 				"color": [
 					{ "time": 0.3667, "color": "ffffffff" },
+					{ "time": 0.4, "color": "ffffffdf" },
+					{ "time": 0.4333, "color": "ffffffa8" },
+					{ "time": 0.4667, "color": "ffffff65" },
 					{ "time": 0.5, "color": "ffffff00" }
 				],
 				"attachment": [
-					{ "name": null },
-					{ "time": 0.2, "name": null }
+					{ "name": null }
 				]
 			},
 			"1x-trung do": {
@@ -6242,13 +5343,16 @@
 			},
 			"1x-trung vang": {
 				"attachment": [
-					{ "name": null },
-					{ "time": 0.2, "name": null }
+					{ "name": null }
 				]
 			},
 			"1x-trung xanh": {
 				"attachment": [
-					{ "name": null },
+					{ "name": null }
+				]
+			},
+			"text": {
+				"attachment": [
 					{ "time": 0.2, "name": null }
 				]
 			}
@@ -6257,81 +5361,151 @@
 			"crack": {
 				"translate": [
 					{ "time": 0.0667 },
-					{ "time": 0.1667, "y": 20.19 }
+					{ "time": 0.1, "y": 3.79 },
+					{ "time": 0.1333, "y": 10.29 },
+					{ "time": 0.1667, "y": 20.19, "curve": "stepped" },
+					{ "time": 0.2, "y": 20.19 }
 				]
 			},
 			"manh 1": {
 				"rotate": [
+					{},
+					{ "time": 0.0333, "angle": -0.24 },
+					{ "time": 0.0667, "angle": -0.8 },
+					{ "time": 0.1, "angle": -1.53 },
+					{ "time": 0.1333, "angle": -2.26 },
+					{ "time": 0.1667, "angle": -2.83 },
 					{ "time": 0.2, "angle": -3.06 },
+					{ "time": 0.2333, "angle": -6.03 },
+					{ "time": 0.2667, "angle": -11.21 },
+					{ "time": 0.3, "angle": -17.57 },
 					{ "time": 0.3333, "angle": -27.07 },
+					{ "time": 0.3667, "angle": -26.91 },
+					{ "time": 0.4, "angle": -26.62 },
+					{ "time": 0.4333, "angle": -26.27 },
+					{ "time": 0.4667, "angle": -25.86 },
 					{ "time": 0.5, "angle": -25.25 }
 				],
 				"translate": [
 					{},
+					{ "time": 0.0333, "y": 1.76 },
+					{ "time": 0.0667, "y": 4.98 },
+					{ "time": 0.1, "y": 8.88 },
+					{ "time": 0.1333, "y": 13.32 },
+					{ "time": 0.1667, "y": 18.42 },
 					{ "time": 0.2, "y": 26.1 },
+					{ "time": 0.2333, "x": 7.55, "y": 21.24 },
+					{ "time": 0.2667, "x": 20.68, "y": 12.81 },
+					{ "time": 0.3, "x": 36.81, "y": 2.44 },
 					{ "time": 0.3333, "x": 60.9, "y": -13.05 },
+					{ "time": 0.3667, "x": 67.81, "y": -9.02 },
+					{ "time": 0.4, "x": 79.67, "y": -2.11 },
 					{ "time": 0.4333, "x": 97.73, "y": 8.41 },
+					{ "time": 0.4667, "x": 113.74, "y": 1.63 },
 					{ "time": 0.5, "x": 145, "y": -11.6 }
 				],
 				"scale": [
 					{ "x": 0.993, "y": 1.007 },
 					{ "time": 0.0333 },
+					{ "time": 0.0667, "x": 0.992, "y": 1.008 },
+					{ "time": 0.1, "x": 0.983, "y": 1.017 },
+					{ "time": 0.1333, "x": 0.975, "y": 1.025 },
+					{ "time": 0.1667, "x": 0.967, "y": 1.033 },
+					{ "time": 0.2, "x": 0.958, "y": 1.042 },
 					{ "time": 0.2333, "x": 0.95, "y": 1.05, "curve": "stepped" },
 					{ "time": 0.3667, "x": 0.95, "y": 1.05 },
+					{ "time": 0.4, "x": 0.957, "y": 1.043 },
+					{ "time": 0.4333, "x": 0.969, "y": 1.031 },
+					{ "time": 0.4667, "x": 0.982, "y": 1.018 },
 					{ "time": 0.5, "x": 0.993, "y": 1.007 }
 				]
 			},
 			"manh 2": {
 				"rotate": [
+					{},
+					{ "time": 0.0333, "angle": 0.48 },
+					{ "time": 0.0667, "angle": 1.61 },
+					{ "time": 0.1, "angle": 3.07 },
+					{ "time": 0.1333, "angle": 4.53 },
+					{ "time": 0.1667, "angle": 5.66 },
 					{ "time": 0.2, "angle": 6.11 },
+					{ "time": 0.2333, "angle": 10.1 },
+					{ "time": 0.2667, "angle": 17.03 },
+					{ "time": 0.3, "angle": 25.55 },
 					{ "time": 0.3333, "angle": 38.26 },
+					{ "time": 0.3667, "angle": 38.03 },
+					{ "time": 0.4, "angle": 37.59 },
+					{ "time": 0.4333, "angle": 37.07 },
+					{ "time": 0.4667, "angle": 36.46 },
 					{ "time": 0.5, "angle": 35.54 }
 				],
 				"translate": [
 					{},
+					{ "time": 0.0333, "x": -1.56, "y": 1.56 },
+					{ "time": 0.0667, "x": -4.43, "y": 4.43 },
+					{ "time": 0.1, "x": -7.89, "y": 7.89 },
+					{ "time": 0.1333, "x": -11.84, "y": 11.84 },
+					{ "time": 0.1667, "x": -16.38, "y": 16.38 },
 					{ "time": 0.2, "x": -23.2, "y": 23.2 },
+					{ "time": 0.2333, "x": -24.46, "y": 19.96 },
+					{ "time": 0.2667, "x": -26.65, "y": 14.34 },
+					{ "time": 0.3, "x": -29.34, "y": 7.42 },
 					{ "time": 0.3333, "x": -33.35, "y": -2.9 },
+					{ "time": 0.3667, "x": -43.47, "y": -1 },
+					{ "time": 0.4, "x": -60.84, "y": 2.27 },
 					{ "time": 0.4333, "x": -87.29, "y": 7.25 },
+					{ "time": 0.4667, "x": -116.17, "y": 3.09 },
 					{ "time": 0.5, "x": -172.55, "y": -5.04 }
 				],
 				"scale": [
 					{ "x": 1.01, "y": 0.99 },
 					{ "time": 0.0333 },
+					{ "time": 0.0667, "x": 0.992, "y": 1.008 },
+					{ "time": 0.1, "x": 0.983, "y": 1.017 },
+					{ "time": 0.1333, "x": 0.975, "y": 1.025 },
+					{ "time": 0.1667, "x": 0.967, "y": 1.033 },
+					{ "time": 0.2, "x": 0.958, "y": 1.042 },
 					{ "time": 0.2333, "x": 0.95, "y": 1.05 },
+					{ "time": 0.2667, "x": 0.962, "y": 1.038 },
+					{ "time": 0.3, "x": 0.984, "y": 1.016 },
+					{ "time": 0.3333, "x": 1.01, "y": 0.99 },
 					{ "time": 0.3667, "x": 1.05, "y": 0.95 },
+					{ "time": 0.4, "x": 1.04, "y": 0.96 },
+					{ "time": 0.4333, "x": 1.03, "y": 0.97 },
+					{ "time": 0.4667, "x": 1.02, "y": 0.98 },
 					{ "time": 0.5, "x": 1.01, "y": 0.99 }
 				]
 			},
 			"trung lanh": {
 				"translate": [
 					{ "time": 0.0667 },
-					{ "time": 0.2, "y": 30 }
+					{ "time": 0.1, "y": 3.72 },
+					{ "time": 0.1333, "y": 10.19 },
+					{ "time": 0.1667, "y": 18.13 },
+					{ "time": 0.2, "y": 30, "curve": "stepped" },
+					{ "time": 0.2333, "y": 30 }
 				]
 			},
 			"dieu khien": {
-				"rotate": [
-					{}
-				],
-				"translate": [
-					{ "time": 0.0667 }
-				],
 				"scale": [
 					{ "x": 1.041, "y": 0.959 },
 					{ "time": 0.0333, "x": 1.05, "y": 0.95 },
+					{ "time": 0.0667, "x": 1.045, "y": 0.955 },
+					{ "time": 0.1, "x": 1.03, "y": 0.97 },
 					{ "time": 0.1333, "curve": "stepped" },
 					{ "time": 0.4333 },
+					{ "time": 0.4667, "x": 1.008, "y": 0.992 },
 					{ "time": 0.5, "x": 1.041, "y": 0.959 }
 				]
 			},
 			"root": {
 				"translate": [
 					{ "time": 0.0667 },
-					{ "time": 0.2, "y": 13.05 }
-				]
-			},
-			"manh trung": {
-				"translate": [
-					{ "time": 0.2 }
+					{ "time": 0.1, "y": 1.62 },
+					{ "time": 0.1333, "y": 4.43 },
+					{ "time": 0.1667, "y": 7.89 },
+					{ "time": 0.2, "y": 13.05, "curve": "stepped" },
+					{ "time": 0.2333, "y": 13.05 }
 				]
 			}
 		}
