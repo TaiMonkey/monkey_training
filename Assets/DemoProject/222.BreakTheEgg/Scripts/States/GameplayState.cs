@@ -35,7 +35,7 @@ namespace Monkey.Game.BreakTheEgg
                 SkinName skinName = GetSkinName(currentButtonEggController.TypeEgg);
                 currentButtonEggController.SetAnimation(SetAnim(numberClick, skinName), false);
             }
-            else
+            if(currentButtonEggController == null)
             {
                 currentButtonEggController = (ButtonEggController)data;
             }
@@ -62,7 +62,7 @@ namespace Monkey.Game.BreakTheEgg
                     ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
                 }
 
-                if (!currentButtonEggController.Isclicked && !buttonEggController.Isclicked)
+                if (!currentButtonEggController.Isclicked)
                 {
                     isMove = true;
                     currentButtonEggController.transform.DOScale(1, 0.5f).SetEase(Ease.InOutQuad);
@@ -89,6 +89,7 @@ namespace Monkey.Game.BreakTheEgg
                 if (numberClick == MAX_CLICK)
                 {
                     numberClick = 0;
+                    currentButtonEggController = null;
                     StateChanel stateChanel = new StateChanel(StateName.Status.PlayFinish, buttonEggController);
                     ObserverManager.TriggerEvent(stateChanel);
                 }
