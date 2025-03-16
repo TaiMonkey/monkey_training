@@ -26,18 +26,40 @@ namespace Monkey.Game.BreakTheEgg
             Debug.LogError("ResultKnockEggState");
             cts = new();
             buttonEggController = (ButtonEggController)data;
+            buttonEggController.ChangeColorOfCharacter(buttonEggController.GetTextAnswer().text, buttonEggController.GetAlphabetAnswer().text[0], "red");
 
-            SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.GameplayConfig.SfxTextShow);
+            bool isFinishAudio = false;
+            SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.GameplayConfig.SfxTextShow, () => { isFinishAudio = true; });
             ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
 
             buttonEggController.SetActiveFirework(true);
-            buttonEggController.SetAnimationFirework();
-            buttonEggController.GetTextAnswer().transform.DOScale(1.5f, 0.5f).SetEase(Ease.OutBounce)
-                .OnComplete(() =>
-                {
-                    buttonEggController.GetTextAnswer().transform.DOScale(1f, 1f).SetEase(Ease.InOutQuad);
-                });
-            dependency.ListImageAnswer[buttonEggController.Index].transform.parent.transform.DOMove(dependency.TargetPointImageAnswer.position, 1f).SetEase(Ease.OutBounce);
+            buttonEggController.SetAnimationFirework(true);
+            while (!isFinishAudio)
+            {
+                bool isScaleDone = false;
+                buttonEggController.GetTextAnswer().transform.DOScale(1.5f, 0.2f).SetEase(Ease.InOutSine).onComplete += () =>
+                    {
+                        isScaleDone = true;
+                    };
+                await UniTask.WaitUntil(() => isScaleDone, cancellationToken: cts.Token);
+                isScaleDone = false;
+                buttonEggController.GetTextAnswer().transform.DOScale(1f, 0.2f).SetEase(Ease.InOutSine).onComplete += () =>
+                    {
+                        isScaleDone = true;
+                    };
+                await UniTask.WaitUntil(() => isScaleDone, cancellationToken: cts.Token);
+                isScaleDone = false;
+                buttonEggController.GetTextAnswer().transform.DOScale(1.5f, 0.2f).SetEase(Ease.InOutSine).onComplete += () =>
+                    {
+                        isScaleDone = true;
+                    };
+                await UniTask.WaitUntil(() => isScaleDone, cancellationToken: cts.Token);
+            }
+
+            buttonEggController.SetActiveFirework(false);
+            buttonEggController.GetTextAnswer().transform.DOScale(1f, 0.5f).SetEase(Ease.Linear).onComplete += () => {
+                dependency.ListImageAnswer[buttonEggController.Index].transform.parent.transform.DOMove(dependency.TargetPointImageAnswer.position, 0.5f).SetEase(Ease.Linear);
+            };
 
             await UniTask.Delay(dependency.GameplayConfig.Delay3000, cancellationToken: cts.Token);
             dependency.ListImageAnswer[buttonEggController.Index].transform.parent.transform.DOMove(dependency.PointOutScreen.position, 0.5f).SetEase(Ease.Linear);
@@ -49,6 +71,7 @@ namespace Monkey.Game.BreakTheEgg
                 .OnComplete(() => {
                     buttonEggController.transform.SetSiblingIndex(1);
                     isMoveBackDone = true;
+                    //buttonEggController.ChangeTextColorToWhite();
                 });
             await UniTask.WaitUntil(() => isMoveBackDone, cancellationToken: cts.Token);
             HanldeNextEgg();

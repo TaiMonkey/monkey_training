@@ -1,5 +1,7 @@
 using MonkeyBase.Observer;
+using Spine;
 using Spine.Unity;
+using Spine.Unity.AttachmentTools;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,8 +17,10 @@ namespace Monkey.Game.BreakTheEgg
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private SkeletonGraphic spineFirework;
         [SerializeField] private Image imageFront;
+        [SerializeField] private Material sourceMaterial;
 
         private UnityEngine.UI.Button button;
+        private string originTextAnswer;
         public Vector3 OriginPos { get; set; }
         public Vector3 OriginalScale { get; private set; }
         public bool Isclicked { get; set; }
@@ -30,6 +34,31 @@ namespace Monkey.Game.BreakTheEgg
             button.onClick.AddListener(OnClick);
             OriginalScale = transform.localPosition;
             SetActiveFirework(false);
+        }
+
+        public void ChangeColorOfCharacter(string text, char targetChar, string color)
+        {
+           string result = "";
+           originTextAnswer = textAnswer.text;
+
+           foreach (char c in text)
+           {
+               if (c == targetChar)
+               {
+                   result += $"<color={color}>{c}</color>";
+               }
+               else
+               {
+                   result += $"<color=black>{c}</color>";
+               }
+           }
+            textAnswer.text = result;
+        }
+
+        public void ChangeTextColorToWhite()
+        {
+            textAnswer.text = originTextAnswer;
+            textAnswer.color = Color.white;
         }
 
         public void SetLastSiblingImageFront()
@@ -47,9 +76,9 @@ namespace Monkey.Game.BreakTheEgg
             spineEgg.AnimationState.SetAnimation(0, skinName, loop);
         }
 
-        public void SetAnimationFirework()
+        public void SetAnimationFirework(bool isLoop)
         {
-            spineFirework.AnimationState.SetAnimation(0, "Phao hoa 1", false);
+            spineFirework.AnimationState.SetAnimation(0, "Phao hoa 1", isLoop);
         }
 
         public void SetActiveFirework(bool isActive)

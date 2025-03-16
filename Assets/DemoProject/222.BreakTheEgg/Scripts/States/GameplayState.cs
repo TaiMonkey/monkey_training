@@ -35,8 +35,10 @@ namespace Monkey.Game.BreakTheEgg
                 SkinName skinName = GetSkinName(currentButtonEggController.TypeEgg);
                 currentButtonEggController.SetAnimation(SetAnim(numberClick, skinName), false);
             }
-
-            currentButtonEggController = (ButtonEggController)data;
+            else
+            {
+                currentButtonEggController = (ButtonEggController)data;
+            }
             this.ObserverStartListening<AnswerChanel>();
         }
 
@@ -56,7 +58,7 @@ namespace Monkey.Game.BreakTheEgg
                     SkinName skinName = GetSkinName(currentButtonEggController.TypeEgg);
                     currentButtonEggController.SetAnimation(SetAnim(numberClick, skinName), false);
 
-                    SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND, dependency.GameplayConfig.SfxBreak);
+                    SoundChannel soundChannel = new SoundChannel(SoundChannel.PLAY_SOUND_NEW_OBJECT, dependency.GameplayConfig.SfxBreak);
                     ObserverManager.TriggerEvent<SoundChannel>(soundChannel);
                 }
 

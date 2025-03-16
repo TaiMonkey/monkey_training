@@ -362,7 +362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82, y: -7}
+  m_AnchoredPosition: {x: 74, y: -7}
   m_SizeDelta: {x: 1723, y: 1160}
   m_Pivot: {x: 0.32955188, y: 0.26115322}
 --- !u!114 &222212947
@@ -404,7 +404,9 @@ MonoBehaviour:
   - {fileID: 2012034300}
   - {fileID: 1440224510}
   - {fileID: 178965134}
-  separatorSlotNames: []
+  separatorSlotNames:
+  - 
+  - 
   enableSeparatorSlots: 0
   separatorParts: []
   updateSeparatorPartLocation: 1
